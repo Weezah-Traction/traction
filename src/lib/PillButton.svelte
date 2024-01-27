@@ -1,5 +1,8 @@
+<!-- Pill Button -->
+<!-- Used to trigger a functions, such as Editing Widgets and Progressing in Slides -->
+
 <slot>
-    <button>Button</button>
+    <button>Pill Button</button>
 </slot>
 
 <style>

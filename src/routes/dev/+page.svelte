@@ -2,6 +2,7 @@
 	import Button from "../../lib/Button.svelte";
   import NavigationBar from "../../lib/NavigationBar.svelte";
   import NavigationBarButton from "../../lib/NavigationBarButton.svelte";
+	import PillButton from "../../lib/PillButton.svelte";
 	import TextSubmission from "../../lib/TextSubmission.svelte";
 </script>
 
@@ -13,3 +14,4 @@
 <TextSubmission purpose=fname></TextSubmission>
 <TextSubmission purpose=date></TextSubmission>
 
+<PillButton></PillButton>

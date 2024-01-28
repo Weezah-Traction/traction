@@ -1,5 +1,6 @@
 <script>
 	import Button from "../../lib/Button.svelte";
+	import Header from "../../lib/Header.svelte";
 	import LongButton from "../../lib/LongButton.svelte";
   import NavigationBar from "../../lib/NavigationBar.svelte";
   import NavigationBarButton from "../../lib/NavigationBarButton.svelte";
@@ -9,6 +10,8 @@
 
 
 <h1>Development Test</h1>
+
+<Header></Header>
 
 <NavigationBar></NavigationBar>
 <Button></Button>

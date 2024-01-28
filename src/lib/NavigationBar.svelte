@@ -17,5 +17,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        position: fixed;
     }
 </style>

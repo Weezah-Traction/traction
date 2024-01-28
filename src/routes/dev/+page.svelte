@@ -2,21 +2,36 @@
 	import Button from "../../lib/Button.svelte";
 	import Header from "../../lib/Header.svelte";
 	import LongButton from "../../lib/LongButton.svelte";
-  import NavigationBar from "../../lib/NavigationBar.svelte";
-  import NavigationBarButton from "../../lib/NavigationBarButton.svelte";
+  	import NavigationBar from "../../lib/NavigationBar.svelte";
+  	import NavigationBarButton from "../../lib/NavigationBarButton.svelte";
 	import PillButton from "../../lib/PillButton.svelte";
 	import TextSubmission from "../../lib/TextSubmission.svelte";
+	import ToggleSwitch from "../../lib/ToggleSwitch.svelte";
+	import EmojiRadio from "../../lib/EmojiRadio.svelte";
+	import SmallestWidget from '$lib/SmallestWidget.svelte';
 </script>
 
 
-<h1>Development Test</h1>
+<!--<h1>Development Test</h1>-->
+
 
 <Header></Header>
 
-<NavigationBar></NavigationBar>
 <Button></Button>
+<br>
+<ToggleSwitch></ToggleSwitch>
+<br>
+<EmojiRadio></EmojiRadio>
+<br>
+<SmallestWidget></SmallestWidget>
+<br>
 <TextSubmission purpose=fname></TextSubmission>
+<br>
 <TextSubmission purpose=date></TextSubmission>
 <br>
 <PillButton></PillButton>
+<br>
 <LongButton type='submit'></LongButton>
+
+<NavigationBar></NavigationBar>
+

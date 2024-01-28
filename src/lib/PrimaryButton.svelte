@@ -26,7 +26,10 @@
      button {
           display: flex;
           width: 123px;
+          height: 34px;
           padding: 7px 14px;
+          border-radius: 40px;
+          background: #D9D9D9;
           justify-content: center;
           align-items: center;
           gap: 4px;

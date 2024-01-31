@@ -1,5 +1,5 @@
 <!-- Long Button -->
-<!-- Generally used during the on-baording process to submit information. -->
+<!-- Generally used during the on-boarding process to submit information. -->
 
 <script>
     export let type = 'button';

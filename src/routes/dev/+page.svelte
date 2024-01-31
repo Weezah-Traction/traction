@@ -19,6 +19,7 @@
 	import BasicPlanList from "../../lib/BasicPlanList.svelte";
 	import PopUp from "../../lib/PopUp.svelte";
 	import EmotionPollContainer from "../../lib/EmotionPollContainer.svelte";
+	import TestComponent from "../../lib/TestComponent.svelte";
 </script>
 
 
@@ -54,4 +55,5 @@
 
 <BasicPlanList></BasicPlanList>
 
-
+<br>
+<TestComponent></TestComponent>

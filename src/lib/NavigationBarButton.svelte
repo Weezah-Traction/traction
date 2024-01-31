@@ -1,6 +1,7 @@
 <script>
     export let type = 'Type'; // Declares the property
     let icon;
+    let link;
 
     import catIcon from '$lib/assets/cat.svg'; // Tells app that these icons exist.
     import dogIcon from '$lib/assets/dog.svg';
@@ -14,29 +15,34 @@
     if (type == "cat"){ 
         alt = "Cat Page"
         icon = catIcon;
+        link = '/cat'
     }
 
     if (type == "dog"){
         alt = "Dog Page"
         icon = dogIcon;
+        link = '/dog'
     }
 
     if (type == "dove"){
         alt = "Dove Page"
         icon = doveIcon;
+        link = '/dove'
     }
     
 </script>
 
 <slot>
-    <button class={type}>
-        <img src={icon} alt={alt}>
-        <p>{alt}</p>
-    </button>
+    <li>
+        <a href={link} class={type}>
+            <img src={icon} alt={alt}>
+            <p>{alt}</p>
+        </a>
+    </li>
 </slot>
 
 <style>
-    button{
+    a{
         display: flex;
         flex-direction: column;
     }

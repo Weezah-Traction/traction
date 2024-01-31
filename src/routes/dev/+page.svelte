@@ -11,6 +11,7 @@
 	import SmallestWidget from '$lib/SmallestWidget.svelte';
 	import DropdownSubmission from "../../lib/DropdownSubmission.svelte";
 	import RunHeroText from "../../lib/RunHeroText.svelte"
+	import PopUpIntroduction from "../../lib/PopUpIntroduction.svelte";
 </script>
 
 
@@ -36,6 +37,8 @@
 <LongButton type='submit'></LongButton>
 <DropdownSubmission></DropdownSubmission>
 <RunHeroText></RunHeroText>
+
+<PopUpIntroduction></PopUpIntroduction>
 
 <NavigationBar></NavigationBar>
 

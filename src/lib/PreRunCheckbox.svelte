@@ -4,6 +4,8 @@
 </script>
 
 <slot>
-    <input type="checkbox" id={type} name={type} />
-    <label for={type}>{title}</label>
+    <div>
+        <input type="checkbox" id={type} name={type} />
+        <label for={type}>{title}</label>
+    </div>
 </slot>

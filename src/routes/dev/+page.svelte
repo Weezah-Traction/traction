@@ -12,6 +12,9 @@
 	import DropdownSubmission from "../../lib/DropdownSubmission.svelte";
 	import RunHeroText from "../../lib/RunHeroText.svelte"
 	import PopUpIntroduction from "../../lib/PopUpIntroduction.svelte";
+	import PreRunCheckbox from "../../lib/PreRunCheckbox.svelte";
+	import PreRunChecklist from "../../lib/PreRunChecklist.svelte";
+	import BasicPlanItem from "../../lib/BasicPlanItem.svelte";
 </script>
 
 
@@ -37,8 +40,12 @@
 <LongButton type='submit'></LongButton>
 <DropdownSubmission></DropdownSubmission>
 <RunHeroText></RunHeroText>
-
+<PreRunCheckbox></PreRunCheckbox>
 <PopUpIntroduction></PopUpIntroduction>
+<PreRunChecklist></PreRunChecklist>
+
+<ul>
+	<BasicPlanItem></BasicPlanItem>
+</ul>
 
 <NavigationBar></NavigationBar>
-

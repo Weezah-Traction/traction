@@ -7,6 +7,7 @@
 	import PillButton from "../../lib/PillButton.svelte";
 	import TextSubmission from "../../lib/TextSubmission.svelte";
 	import ToggleSwitch from "../../lib/ToggleSwitch.svelte";
+	import ToggleContainer from "../../lib/ToggleContainer.svelte";
 	import EmojiRadio from "../../lib/EmojiRadio.svelte";
 	import SmallestWidget from '$lib/SmallestWidget.svelte';
 	import DropdownSubmission from "../../lib/DropdownSubmission.svelte";
@@ -44,8 +45,9 @@
 <PopUpIntroduction></PopUpIntroduction>
 <PreRunChecklist></PreRunChecklist>
 
+<ToggleContainer></ToggleContainer>
+
 <ul>
 	<BasicPlanItem></BasicPlanItem>
 </ul>
 
-<NavigationBar></NavigationBar>

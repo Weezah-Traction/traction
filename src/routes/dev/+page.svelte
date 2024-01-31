@@ -18,6 +18,7 @@
 	import BasicPlanItem from "../../lib/BasicPlanItem.svelte";
 	import BasicPlanList from "../../lib/BasicPlanList.svelte";
 	import PopUp from "../../lib/PopUp.svelte";
+	import EmotionPollContainer from "../../lib/EmotionPollContainer.svelte";
 </script>
 
 
@@ -30,7 +31,7 @@
 <br>
 <ToggleSwitch></ToggleSwitch>
 <br>
-<EmojiRadio></EmojiRadio>
+<EmotionPollContainer></EmotionPollContainer>
 <br>
 <SmallestWidget></SmallestWidget>
 <br>

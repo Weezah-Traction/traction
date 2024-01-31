@@ -16,6 +16,7 @@
 	import PreRunCheckbox from "../../lib/PreRunCheckbox.svelte";
 	import PreRunChecklist from "../../lib/PreRunChecklist.svelte";
 	import BasicPlanItem from "../../lib/BasicPlanItem.svelte";
+	import PopUp from "../../lib/PopUp.svelte";
 </script>
 
 
@@ -46,6 +47,8 @@
 <PreRunChecklist></PreRunChecklist>
 
 <ToggleContainer></ToggleContainer>
+
+<PopUp></PopUp>
 
 <ul>
 	<BasicPlanItem></BasicPlanItem>

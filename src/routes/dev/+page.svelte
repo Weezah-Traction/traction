@@ -9,6 +9,8 @@
 	import ToggleSwitch from "../../lib/ToggleSwitch.svelte";
 	import EmojiRadio from "../../lib/EmojiRadio.svelte";
 	import SmallestWidget from '$lib/SmallestWidget.svelte';
+	import DropdownSubmission from "../../lib/DropdownSubmission.svelte";
+	import RunHeroText from "../../lib/RunHeroText.svelte"
 </script>
 
 
@@ -32,6 +34,8 @@
 <PillButton></PillButton>
 <br>
 <LongButton type='submit'></LongButton>
+<DropdownSubmission></DropdownSubmission>
+<RunHeroText></RunHeroText>
 
 <NavigationBar></NavigationBar>
 

@@ -27,6 +27,8 @@
 
 <style>
     .container {
+        font-family: 'Poppins';
+        background-color:  var(--lavender-400);
         display: flex;
         top: 0;
         justify-content: space-between;
@@ -44,6 +46,7 @@
         flex-direction: column;
         padding-bottom: 15px;
         padding-left: 15px;
+        font-family: 'Fugaz One';
     }
 
     .headerPageTitle {

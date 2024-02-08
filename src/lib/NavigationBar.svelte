@@ -15,7 +15,7 @@
 
 <style>
     ul{
-        background-color: var(--lavender-200);
+        background-color: var(--lavender-600);
         align-items: center;
         bottom: 0;
         display: flex;

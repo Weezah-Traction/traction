@@ -23,7 +23,7 @@
 
     div{
         text-align: center;
-        background-color: lightgray;
+        background-color: var(--lavender-100);
     }
 
 </style>

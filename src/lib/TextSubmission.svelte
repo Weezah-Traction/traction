@@ -26,3 +26,4 @@ if (purpose == 'date'){
     <label for="field">{label}</label>
     <input name="field" type={type} placeholder={placeholder}>
 </slot>
+

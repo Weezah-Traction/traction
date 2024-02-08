@@ -21,7 +21,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: lightgray;
+        background-color: var(--lavender-100);
     }
 
     img{

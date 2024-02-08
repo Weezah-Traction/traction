@@ -10,6 +10,16 @@
         header = 'Home';
     }
 
+    if (page == 'plans'){
+        subheading = 'Plan ahead, and get advice!';
+        header = 'Plans';
+    }
+
+    if (page == 'activity'){
+        subheading = '';
+        header = 'Activity';
+    }
+
 </script>
 
 <slot>
@@ -46,11 +56,11 @@
         flex-direction: column;
         padding-bottom: 15px;
         padding-left: 15px;
-        font-family: 'Fugaz One';
     }
 
     .headerPageTitle {
         margin: 0;
+        font-family: 'Fugaz One';
     }
 
     .headerPageSub {

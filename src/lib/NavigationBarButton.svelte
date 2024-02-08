@@ -12,22 +12,22 @@
 
     // These change the content in each button based on the value of property "type"
 
-    if (type == "cat"){ 
-        alt = "Cat Page"
+    if (type == "plans"){ 
+        alt = "Plans"
         icon = catIcon;
-        link = '/cat'
+        link = '/plans'
     }
 
-    if (type == "dog"){
-        alt = "Dog Page"
+    if (type == "home"){
+        alt = "Home"
         icon = dogIcon;
-        link = '/dog'
+        link = '/home'
     }
 
-    if (type == "dove"){
-        alt = "Dove Page"
+    if (type == "activity"){
+        alt = "Activity"
         icon = doveIcon;
-        link = '/dove'
+        link = '/activity'
     }
     
 </script>
@@ -47,15 +47,15 @@
         flex-direction: column;
     }
 
-    .cat{
+    .plans{
         background-color: rgb(255, 175, 218);
     }
 
-    .dog{
+    .home{
         background-color: rgb(199, 199, 250);
     }
 
-    .dove{
+    .activity{
         background-color: rgb(187, 248, 187);
     }
 </style>

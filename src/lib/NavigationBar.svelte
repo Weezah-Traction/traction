@@ -6,9 +6,9 @@
 <slot>
     <nav>
         <ul>
-        <NavigationBarButton type="dog"></NavigationBarButton>
-        <NavigationBarButton type="cat"></NavigationBarButton>
-        <NavigationBarButton type="dove"></NavigationBarButton>
+        <NavigationBarButton type="plans"></NavigationBarButton>
+        <NavigationBarButton type="home"></NavigationBarButton>
+        <NavigationBarButton type="activity"></NavigationBarButton>
         </ul>
     </nav>
 </slot>

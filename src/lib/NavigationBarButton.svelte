@@ -3,9 +3,12 @@
     let icon;
     let link;
 
-    import catIcon from '$lib/assets/cat.svg'; // Tells app that these icons exist.
-    import dogIcon from '$lib/assets/dog.svg';
-    import doveIcon from '$lib/assets/dove.svg';
+    // import catIcon from '$lib/assets/cat.svg'; // Tells app that these icons exist.
+    // import dogIcon from '$lib/assets/dog.svg';
+    // import doveIcon from '$lib/assets/dove.svg';
+    import planIcon from '$lib/assets/planicon.svg';
+    import homeIcon from '$lib/assets/homeicon.svg';
+    import activityIcon from '$lib/assets/activityicon.svg'
 
     let alt = "Alt Text"; // default value for icon alt-text.
 
@@ -14,19 +17,19 @@
 
     if (type == "plans"){ 
         alt = "Plans"
-        icon = catIcon;
+        icon = planIcon;
         link = '/plans'
     }
 
     if (type == "home"){
         alt = "Home"
-        icon = dogIcon;
+        icon = homeIcon;
         link = '/home'
     }
 
     if (type == "activity"){
         alt = "Activity"
-        icon = doveIcon;
+        icon = activityIcon;
         link = '/activity'
     }
     
@@ -36,7 +39,7 @@
     <li>
         <a href={link} class={type}>
             <img src={icon} alt={alt}>
-            <p>{alt}</p>
+            <!-- <p>{alt}</p> -->
         </a>
     </li>
 </slot>
@@ -46,17 +49,21 @@
         display: flex;
         flex-direction: column;
     }
-
+/* 
     .plans{
         background-color: rgb(255, 175, 218);
-    }
+    } */
 
-    .home{
+    /* .home{
         background-color: rgb(199, 199, 250);
-    }
-
+    } */
+/* 
     .activity{
         background-color: rgb(187, 248, 187);
+    } */
+
+    li {
+        padding: 0px 20px;
     }
 </style>
 

@@ -1,6 +1,6 @@
 <script>
 	import NavigationBarButton from "./NavigationBarButton.svelte";
-
+    
 </script>
 
 <slot>
@@ -15,6 +15,7 @@
 
 <style>
     ul{
+        background-color: var(--lavender-200);
         align-items: center;
         bottom: 0;
         display: flex;

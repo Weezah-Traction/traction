@@ -8,7 +8,7 @@
     // import doveIcon from '$lib/assets/dove.svg';
     import planIcon from '$lib/assets/plansWhiteicon.svg';
     import homeIcon from '$lib/assets/homeWhiteicon.svg';
-    import activityIcon from '$lib/assets/activityWhiteicon.svg'
+    import activityIcon from '$lib/assets/activityWhiteicon.svg';
 
     let alt = "Alt Text"; // default value for icon alt-text.
 

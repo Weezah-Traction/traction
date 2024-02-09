@@ -19,6 +19,7 @@
 	import BasicPlanList from "../../lib/BasicPlanList.svelte";
 	import PopUp from "../../lib/PopUp.svelte";
 	import EmotionPollContainer from "../../lib/EmotionPollContainer.svelte";
+	import StopButton from "../../lib/RunButtons.svelte";
 </script>
 
 
@@ -54,4 +55,4 @@
 
 <BasicPlanList></BasicPlanList>
 
-
+<StopButton type="stop"></StopButton>

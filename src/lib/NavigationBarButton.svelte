@@ -6,9 +6,9 @@
     // import catIcon from '$lib/assets/cat.svg'; // Tells app that these icons exist.
     // import dogIcon from '$lib/assets/dog.svg';
     // import doveIcon from '$lib/assets/dove.svg';
-    import planIcon from '$lib/assets/planicon.svg';
-    import homeIcon from '$lib/assets/homeicon.svg';
-    import activityIcon from '$lib/assets/activityicon.svg'
+    import planIcon from '$lib/assets/plansWhiteicon.svg';
+    import homeIcon from '$lib/assets/homeWhiteicon.svg';
+    import activityIcon from '$lib/assets/activityWhiteicon.svg'
 
     let alt = "Alt Text"; // default value for icon alt-text.
 
@@ -63,7 +63,7 @@
     } */
 
     li {
-        padding: 0px 20px;
+        padding: 10px 20px;
     }
 </style>
 

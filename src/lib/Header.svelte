@@ -38,7 +38,7 @@
 <style>
     .container {
         font-family: 'Poppins';
-        background-color:  var(--lavender-400);
+        background-color:  var(--lavender-200);
         display: flex;
         top: 0;
         justify-content: space-between;

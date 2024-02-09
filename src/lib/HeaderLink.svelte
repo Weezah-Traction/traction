@@ -1,15 +1,22 @@
 <script>
     export let page = 'home';
 
-    let text = 'Example'
+    let text = 'Example';
+    let goTo;
 
     if (page == 'home'){
-        let text = 'Go Home';
+        text = 'Widget';
+        goTo = '/widgets';
+    }
+
+    if (page == 'widget'){
+        text = 'Done';
+        goTo = '/home';
     }
 </script>
 
 <slot>
-    <a href="/home">{text}</a>
+    <a href={goTo}>{text}</a>
 </slot>
 
 <style>

@@ -20,6 +20,10 @@
         header = 'Activity';
     }
 
+    if (page == 'widget'){
+        header = 'Widgets';
+    }
+
 </script>
 
 <slot>
@@ -29,7 +33,7 @@
             <h1 class="headerPageTitle">{header}</h1>
         </div>
         <div class="headerButton">
-            <HeaderLink page="home"></HeaderLink>
+            <HeaderLink page = {page}></HeaderLink>
         </div>
     </div>
     
@@ -37,6 +41,7 @@
 
 <style>
     .container {
+        position: sticky;
         font-family: 'Poppins';
         background-color:  var(--lavender-200);
         /* display: flex; */

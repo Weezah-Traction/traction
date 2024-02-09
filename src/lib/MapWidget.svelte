@@ -24,7 +24,7 @@
     }
 
     .medium{
-        width: 30em;
+        width: 353px;
         height: 15em;
     }
 

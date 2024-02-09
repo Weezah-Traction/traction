@@ -22,6 +22,7 @@
         bottom: 0;
         display: flex;
         flex-direction: row;
+        margin: 0;
         justify-content: space-between;
         left: 0;
         list-style: none;

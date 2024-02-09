@@ -1,7 +1,7 @@
 <script>
-	import Header from "../../lib/Header.svelte";
+	import BlankHeader from "../../lib/BlankHeader.svelte";
     import NavigationBar from "../../lib/NavigationBar.svelte";
 </script>
 
-<Header page="activity"></Header>
+<BlankHeader page="activity"></BlankHeader>
 <NavigationBar></NavigationBar>

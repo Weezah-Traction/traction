@@ -3,7 +3,7 @@
     import Header from "$lib/Header.svelte";
     import NavigationBar from "$lib/NavigationBar.svelte";
     import PreRunChecklist from "$lib/PreRunChecklist.svelte"
-    import SmallestWidget from "$lib/SmallestWidget.svelte"
+    import MediumWidget from "../../lib/MediumWidget.svelte";
 	import MapWidget from "../../lib/MapWidget.svelte";
 	import RunButton from "../../lib/RunButton.svelte";
 
@@ -13,8 +13,8 @@
 <BasicPlanItem></BasicPlanItem>
 <MapWidget></MapWidget>
 <PreRunChecklist></PreRunChecklist>
-<SmallestWidget></SmallestWidget>
-<SmallestWidget></SmallestWidget>
+<MediumWidget widgetType = avgPace1></MediumWidget>
+<MediumWidget widgetType = totalDist1></MediumWidget>
 <RunButton></RunButton>
 <NavigationBar></NavigationBar>
 

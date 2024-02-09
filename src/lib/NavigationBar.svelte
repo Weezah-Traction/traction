@@ -14,6 +14,8 @@
 </slot>
 
 <style>
+  
+
     ul{
         background-color: var(--lavender-600);
         align-items: center;
@@ -27,5 +29,6 @@
         position: fixed;
         right: 0;
         z-index: 5;
+        margin: 0;
     }
 </style>

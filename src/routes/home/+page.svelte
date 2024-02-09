@@ -17,3 +17,17 @@
 <SmallestWidget></SmallestWidget>
 <RunButton></RunButton>
 <NavigationBar></NavigationBar>
+
+
+<style>
+
+:global(body) {
+    display: grid;
+    grid-template-columns: 20px 1fr 10px 1fr 10px 1fr 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+</style>
+

@@ -72,15 +72,18 @@
 
     .subheader{
         color: var(--blue-400);
+        margin-left: 10px;
     }
 
     .title{
         color: var(--lavender-700);
         font-weight: bold;
+        margin-left: 10px;
     }
 
     .description{
         color: var(--blue-400);
+        margin-left: 10px;
     }
 
 </style>

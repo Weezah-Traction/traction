@@ -39,12 +39,13 @@
     .container {
         font-family: 'Poppins';
         background-color:  var(--lavender-200);
-        display: flex;
-        top: 0;
-        justify-content: space-between;
-        align-items: flex-end;
-        width: 393px;
+        /* display: flex; */
+        /* top: 0; */
+        /* justify-content: space-between;
+        align-items: flex-end; */
+        /* width: 100%; */
         height: 150px;
+        grid-column: 1/ span 6;
     }
     .headerButton {
         padding-bottom: 15px;

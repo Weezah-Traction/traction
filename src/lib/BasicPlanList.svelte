@@ -4,8 +4,8 @@
 
 <slot>
     <ul>
-        <BasicPlanItem></BasicPlanItem>
-        <BasicPlanItem></BasicPlanItem>
-        <BasicPlanItem></BasicPlanItem>
+        <BasicPlanItem day="1"></BasicPlanItem>
+        <BasicPlanItem day="2"></BasicPlanItem>
+        <BasicPlanItem day="3"></BasicPlanItem>
     </ul>
 </slot>

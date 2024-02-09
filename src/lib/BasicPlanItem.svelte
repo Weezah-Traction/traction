@@ -1,12 +1,16 @@
 <script>
+ 
+    export let day = '1';
+    export let type = 'plan';
+
 	import BasicPlanText from "./BasicPlanText.svelte";
-import BasicPlanThumbnail from "./BasicPlanThumbnail.svelte";
+    import BasicPlanThumbnail from "./BasicPlanThumbnail.svelte";
 
 </script>
 <slot>
     <li>
         <BasicPlanThumbnail></BasicPlanThumbnail>
-        <BasicPlanText></BasicPlanText>
+        <BasicPlanText type={type} day={day}></BasicPlanText>
     </li>
 </slot>
 

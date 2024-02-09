@@ -1,12 +1,12 @@
 <script>
-
+    import gator from '$lib/assets/gator.svg';
 </script>
 
 <slot>
     <div class="container">
         <div class="main">
             <h1>Amazing Job!</h1>
-            <img src="../../lib/assets/gator.svg" alt="Crocodile">
+            <img src={gator} alt="Crocodile">
             <h5>Congratulations on your first run!</h5>
             <p>You are now a part of a community of millions of people that are making a positive change on their mind and body through the simple act of running!</p>
         </div>

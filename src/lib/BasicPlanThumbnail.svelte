@@ -13,5 +13,6 @@
 <style>
     img{
         width: 5em;
+        border-radius: 1em;
     }
 </style>

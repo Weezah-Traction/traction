@@ -15,16 +15,13 @@
 
 <style>
 
-    div{
-        font: 'Poppins';
-    }
-
     .subheader{
         color: var(--blue-400);
     }
 
     .title{
         color: var(--lavender-700);
+        font-weight: bold;
     }
 
     .description{

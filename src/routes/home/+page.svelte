@@ -4,6 +4,7 @@
     import NavigationBar from "$lib/NavigationBar.svelte";
     import SmallestWidget from "$lib/SmallestWidget.svelte"
 	import MapWidget from "../../lib/MapWidget.svelte";
+	import RunButton from "../../lib/RunButton.svelte";
 
 </script>
 
@@ -12,4 +13,5 @@
 <MapWidget></MapWidget>
 <SmallestWidget></SmallestWidget>
 <SmallestWidget></SmallestWidget>
+<RunButton></RunButton>
 <NavigationBar></NavigationBar>

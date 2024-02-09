@@ -1,23 +1,22 @@
 <script>
 	import HeaderLink from "./HeaderLink.svelte";
-import PillButton from "./PillButton.svelte";
 
     export let page = 'home';
-    let subheading;
+    // let subheading;
     let header;
 
     if (page == 'home'){
-        subheading = 'Good morning!';
+        // subheading = 'Good morning!';
         header = 'Home';
     }
 
     if (page == 'plans'){
-        subheading = 'Plan ahead, and get advice!';
+        // subheading = 'Plan ahead, and get advice!';
         header = 'Plans';
     }
 
     if (page == 'activity'){
-        subheading = '';
+        // subheading = '';
         header = 'Activity';
     }
 
@@ -26,7 +25,7 @@ import PillButton from "./PillButton.svelte";
 <slot>
     <div class="container">
         <div class="headerText">
-            <p class="headerPageSub">{subheading}</p>
+            <!-- <p class="headerPageSub">{subheading}</p> -->
             <h1 class="headerPageTitle">{header}</h1>
         </div>
         <div class="headerButton">

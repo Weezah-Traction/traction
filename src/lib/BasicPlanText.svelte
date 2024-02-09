@@ -1,7 +1,34 @@
 <script>
-    let text = 'This is the sample text for the basic plan element.'
+    let subheader = 'Day 1';
+    let title = 'Run For Fun'
+    let description = 'Aim for light jog for 5 mins'
+
 </script>
 
 <slot>
-    <p>{text}</p>
+    <div>
+        <p class="subheader">{subheader}</p>
+        <p class="title">{title}</p>
+        <p class="description">{description}</p>
+    </div>
 </slot>
+
+<style>
+
+    div{
+        font: 'Poppins';
+    }
+
+    .subheader{
+        color: var(--blue-400);
+    }
+
+    .title{
+        color: var(--lavender-700);
+    }
+
+    .description{
+        color: var(--blue-400);
+    }
+
+</style>

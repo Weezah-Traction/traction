@@ -14,5 +14,6 @@ import BasicPlanThumbnail from "./BasicPlanThumbnail.svelte";
     li{
         display: flex;
         flex-direction: row;
+        align-items: center;
     }
 </style>

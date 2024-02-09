@@ -1,5 +1,6 @@
 <script>
-	import PillButton from "./PillButton.svelte";
+	import HeaderLink from "./HeaderLink.svelte";
+import PillButton from "./PillButton.svelte";
 
     export let page = 'home';
     let subheading;
@@ -29,7 +30,7 @@
             <h1 class="headerPageTitle">{header}</h1>
         </div>
         <div class="headerButton">
-            <PillButton></PillButton>
+            <HeaderLink page="home"></HeaderLink>
         </div>
     </div>
     

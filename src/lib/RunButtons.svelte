@@ -20,11 +20,11 @@
 </script>
 
 <slot>
-    <button class={type}><img src={icon} alt={alt}></button>
+    <a href="/home" class={type}><img src={icon} alt={alt}></a>
 </slot>
 
 <style>
-    button {
+    a {
         border-style: none;
         background-color: transparent;
     }

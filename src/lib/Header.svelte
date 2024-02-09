@@ -41,6 +41,7 @@
 
 <style>
     .container {
+        position: sticky;
         font-family: 'Poppins';
         background-color:  var(--lavender-200);
         display: flex;

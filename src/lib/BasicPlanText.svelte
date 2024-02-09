@@ -24,6 +24,30 @@
             title = 'Run For Fun, Again!';
             description = 'Just enjoy nature and have fun!';
         }
+
+        if (day == "4"){
+            subheader = 'Day 4';
+            title = 'Small Steps';
+            description = 'Aim for a light jog for 10 mins';
+        }
+
+        if (day == "5"){
+            subheader = 'Day 5';
+            title = 'Touch Grass!';
+            description = 'After work, reconnect with nature@';
+        }
+
+        if (day == "6"){
+            subheader = 'Day 6';
+            title = 'First Challenge';
+            description = 'Try to keep pace for 1 mile!';
+        }
+
+        if (day == "7"){
+            subheader = 'Day 7';
+            title = 'Party Time!';
+            description = 'Celebrate your first week!';
+        }
     }
 
     if (type == "guidance"){

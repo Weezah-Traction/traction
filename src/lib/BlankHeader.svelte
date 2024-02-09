@@ -14,6 +14,10 @@ if (page == 'activity'){
     header = 'Activity';
 }
 
+if (page == 'plans'){
+    header = 'Plans';
+}
+
 </script>
 
 <slot>

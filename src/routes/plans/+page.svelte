@@ -1,11 +1,11 @@
 <script>
-	import Header from "../../lib/Header.svelte";
+	import BlankHeader from "../../lib/BlankHeader.svelte";
     import NavigationBar from "../../lib/NavigationBar.svelte";
     import BasicPlanList from "$lib/BasicPlanList.svelte";
 	import BasicPlanItem from "../../lib/BasicPlanItem.svelte";
 </script>
 
-<Header page="plans"></Header>
+<BlankHeader page="plans"></BlankHeader>
 <h2>Proper Guidance on How to Run</h2>
 <BasicPlanItem type="guidance"></BasicPlanItem>
 

@@ -7,7 +7,9 @@
 
 <style>
     button{
-        padding: 1em;
+        padding: .5em;
         border-radius: 5em;
+        border: none;
+        margin: 10px;
     }
 </style>

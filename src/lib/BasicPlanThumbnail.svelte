@@ -12,6 +12,9 @@
 
 <style>
     img{
-        width: 5em;
+        grid-column: 2 / span 2;
+        height: 100px;
+        border-radius: 1em;
+        margin-left: 20px;
     }
 </style>

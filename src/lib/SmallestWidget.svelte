@@ -4,7 +4,8 @@
 
 
 <slot>
-    <div class="smallWidget">
+   <div class ="widgetbox"> 
+     <div class="smallWidget">
          <div class="widgDisplay">
               <slot name="widgDisplay">No Display</slot>
          </div>
@@ -12,9 +13,18 @@
               <slot name="widgName">No Name</slot>
          </header>
     </div>
+</div>
 </slot>
 
 <style>
+    
+    .widgetbox {
+     display: flex;
+     flex-wrap: wrap;    
+ flex-direction: row;
+     margin: 10px 20px 10px 20px;
+     }
+
     .smallWidget{
          display: flex;
          align-items: center;

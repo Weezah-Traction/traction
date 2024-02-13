@@ -1,13 +1,27 @@
 <script>
-	import PillButton from "./PillButton.svelte";
+	import HeaderLink from "./HeaderLink.svelte";
 
     export let page = 'home';
-    let subheading;
+    // let subheading;
     let header;
 
     if (page == 'home'){
-        subheading = 'Good morning!';
+        // subheading = 'Good morning!';
         header = 'Home';
+    }
+
+    if (page == 'plans'){
+        // subheading = 'Plan ahead, and get advice!';
+        header = 'Plans';
+    }
+
+    if (page == 'activity'){
+        // subheading = '';
+        header = 'Activity';
+    }
+
+    if (page == 'widget'){
+        header = 'Widgets';
     }
 
 </script>
@@ -15,11 +29,11 @@
 <slot>
     <div class="container">
         <div class="headerText">
-            <p class="headerPageSub">{subheading}</p>
+            <!-- <p class="headerPageSub">{subheading}</p> -->
             <h1 class="headerPageTitle">{header}</h1>
         </div>
         <div class="headerButton">
-            <PillButton></PillButton>
+            <HeaderLink page = {page}></HeaderLink>
         </div>
     </div>
     
@@ -27,14 +41,16 @@
 
 <style>
     .container {
+        position: sticky;
         font-family: 'Poppins';
-        background-color:  var(--lavender-400);
-        display: flex;
-        top: 0;
-        justify-content: space-between;
-        align-items: flex-end;
-        width: 393px;
+        background-color:  var(--lavender-200);
+        /* display: flex; */
+        /* top: 0; */
+        /* justify-content: space-between;
+        align-items: flex-end; */
+        /* width: 100%; */
         height: 150px;
+        grid-column: 1/ span 6;
     }
     .headerButton {
         padding-bottom: 15px;
@@ -46,11 +62,11 @@
         flex-direction: column;
         padding-bottom: 15px;
         padding-left: 15px;
-        font-family: 'Fugaz One';
     }
 
     .headerPageTitle {
         margin: 0;
+        font-family: 'Fugaz One';
     }
 
     .headerPageSub {

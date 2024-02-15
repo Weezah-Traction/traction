@@ -1,17 +1,21 @@
 <script>
     import BlankHeader from "$lib/BlankHeader.svelte";
     import EmojiRadio from "$lib/EmojiRadio.svelte";
+
 </script>
 
 <slot>
     <BlankHeader></BlankHeader>
-    <div>
+    <div class="container">
         <div>
             <h6>How do you emotionally feel after this run?</h6>
             <EmojiRadio></EmojiRadio>
         </div>
         <div>
             <h6>How do you feel about your physical stress levels?</h6>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
         </div>
         <div class="continue">
             <a href="">Continue</a>
@@ -21,6 +25,12 @@
 </slot>
 
 <style>
+    .container {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
     .continue {
         width: 353px;
         height: 48px;
@@ -29,5 +39,42 @@
         align-items: center;
         background-color: var(--lavender-300);
         border-radius: 10px;
+        margin: 0px 0px 55px 0px;
+        position: absolute; bottom: 0;
+    }
+
+    h6 {
+        font-family: 'Poppins';
+        font-size: 19.2px;
+    }
+
+    .slidecontainer {
+        width: 100%;
+    }
+
+    .slider {
+        -webkit-appearance: none; 
+        appearance: none;
+        width: 100%;
+        height: 10px; 
+        background: var(--lavender-100); 
+        outline: none; 
+        opacity: 0.7; 
+        -webkit-transition: .2s; 
+        transition: opacity .2s;
+    }
+
+    .slider:hover {
+        opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;
+        width: 48px; /* Set a specific slider handle width */
+        height: 48px; /* Slider handle height */
+        background: var(--lavender-500); /* Green background */
+        cursor: pointer; /* Cursor on hover */
+        border-radius: 100px;
     }
 </style>

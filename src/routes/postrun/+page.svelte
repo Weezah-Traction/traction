@@ -19,17 +19,24 @@
 <style>
     .container {
         background-color: var(--lavender-100);
-        height: 852px;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
+    img {
+        height: 168px;
+        width: 176px;
+    }
+
     .main {
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 353px;
         margin: 20px;
-        padding: 150px 0px 300px 0px;
+        padding: 150px 0px 0px 0px;
     }
 
     h1 {
@@ -58,6 +65,8 @@
         align-items: center;
         background-color: var(--lavender-300);
         border-radius: 10px;
+        position: absolute; bottom: 0;
+        margin: 0px 0px 55px 0px;
     }
     
     a {

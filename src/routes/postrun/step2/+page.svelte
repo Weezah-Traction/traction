@@ -30,5 +30,7 @@
         align-items: center;
         background-color: var(--lavender-300);
         border-radius: 10px;
+        margin: 0px 0px 55px 0px;
+        position: absolute; bottom: 0;
     }
 </style>

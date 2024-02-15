@@ -18,6 +18,10 @@ if (page == 'plans'){
     header = 'Plans';
 }
 
+if (page == 'step3'){
+    header = 'Check-up';
+}
+
 </script>
 
 <slot>

@@ -52,12 +52,12 @@
 
     .continue {
         width: 353px;
-        height: 44px;
+        height: 48px;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: var(--lavender-300);
-        border-radius: 40px;
+        border-radius: 10px;
     }
     
     a {

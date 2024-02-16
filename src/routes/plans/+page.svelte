@@ -3,6 +3,9 @@
     import NavigationBar from "../../lib/NavigationBar.svelte";
     import BasicPlanList from "$lib/BasicPlanList.svelte";
 	import BasicPlanItem from "../../lib/BasicPlanItem.svelte";
+
+    export let data;
+
 </script>
 
 <BlankHeader page="plans"></BlankHeader>
@@ -11,7 +14,18 @@
     <BasicPlanItem type="guidance"></BasicPlanItem>
 
     <h6>Week 1 Plan</h6>
-    <BasicPlanList></BasicPlanList>
+
+    <ul> 
+        {#each data.plans as {date, header, description}}
+            <li>
+                <p>{date}</p>
+                <h6>{header}</h6>
+                <p>{description}</p>
+            </li>
+        {/each}
+    </ul>
+    
+
 </div>
 
 <NavigationBar></NavigationBar>

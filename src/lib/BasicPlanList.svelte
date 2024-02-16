@@ -3,7 +3,7 @@
 </script>
 
 <slot>
-    <ul>
+    <ul class="planList">
         <BasicPlanItem day="1"></BasicPlanItem>
         <BasicPlanItem day="2"></BasicPlanItem>
         <BasicPlanItem day="3"></BasicPlanItem>
@@ -15,3 +15,8 @@
     </ul>
 </slot>
 
+<style>
+    .planList {
+        padding: 0;
+    }
+</style>

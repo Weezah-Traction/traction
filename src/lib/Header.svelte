@@ -1,13 +1,17 @@
 <script>
-	import HeaderLink from "./HeaderLink.svelte";
+	import PillButton from "./PillButton.svelte";
 
     export let page = 'home';
+    let link;
+    let linkText;
     // let subheading;
     let header;
 
     if (page == 'home'){
         // subheading = 'Good morning!';
-        header = 'Home';
+        header = 'Traction';
+        link = "/widgets";
+        linkText = "Edit Widgets"
     }
 
     if (page == 'plans'){
@@ -22,18 +26,23 @@
 
     if (page == 'widget'){
         header = 'Widgets';
+        link = "/home";
+        linkText = "Done"
+    }
+
+    if (page == 'guidance'){
+        header = 'Guidance';
+        link = "/plans";
+        linkText = "Back"
     }
 
 </script>
 
 <slot>
     <div class="container">
-        <div class="headerText">
-            <!-- <p class="headerPageSub">{subheading}</p> -->
+        <div class="headerContent">
             <h1 class="headerPageTitle">{header}</h1>
-        </div>
-        <div class="headerButton">
-            <HeaderLink page = {page}></HeaderLink>
+            <PillButton link={link} text={linkText}></PillButton>
         </div>
     </div>
     
@@ -44,24 +53,12 @@
         position: sticky;
         font-family: 'Poppins';
         background-color:  var(--lavender-200);
-        /* display: flex; */
-        /* top: 0; */
-        /* justify-content: space-between;
-        align-items: flex-end; */
-        /* width: 100%; */
-        height: 150px;
-        grid-column: 1/ span 6;
-    }
-    .headerButton {
-        padding-bottom: 15px;
-        padding-right: 15px;
-    }
-
-    .headerText {
         display: flex;
-        flex-direction: column;
-        padding-bottom: 15px;
-        padding-left: 15px;
+        top: 0;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        height: 120px;
     }
 
     .headerPageTitle {
@@ -69,7 +66,11 @@
         font-family: 'Fugaz One';
     }
 
-    .headerPageSub {
-        margin: 0;
+    .headerContent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 20px;
     }
 </style>

@@ -14,8 +14,16 @@ if (page == 'activity'){
     header = 'Activity';
 }
 
+if (page == 'achievements'){
+    header = 'Achievements';
+}
+
 if (page == 'plans'){
     header = 'Plans';
+}
+
+if (page == 'guidance'){
+    header = 'Guidance';
 }
 
 </script>

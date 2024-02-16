@@ -6,9 +6,22 @@
 </script>
 
 <BlankHeader page="plans"></BlankHeader>
-<h2>Proper Guidance on How to Run</h2>
-<BasicPlanItem type="guidance"></BasicPlanItem>
+<div class="bodyContent">
+    <h6>Guidance</h6>
+    <BasicPlanItem type="guidance"></BasicPlanItem>
 
-<h2>Week 1 Plan</h2>
-<BasicPlanList></BasicPlanList>
+    <h6>Week 1 Plan</h6>
+    <BasicPlanList></BasicPlanList>
+</div>
+
 <NavigationBar></NavigationBar>
+
+<style>
+    .bodyContent {
+         display: flex;
+         flex-direction: column;
+         margin: 0 20px;
+         padding: 20px 0;
+         gap: 20px;
+    }
+</style>

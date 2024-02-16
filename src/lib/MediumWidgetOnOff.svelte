@@ -47,7 +47,6 @@
 <style>
      .mediumWidgetOnOff {
           display: flex;
-          padding: 0px 20px;
           flex-direction: column;
           justify-content: center;
           align-items: center;

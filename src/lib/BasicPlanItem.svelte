@@ -19,7 +19,7 @@
         display: flex;
         flex-direction: row;
         grid-column: 2/ span 5;
-        margin-top: 10px;
+        padding: 10px 0;
     }
 
     

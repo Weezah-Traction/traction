@@ -61,7 +61,7 @@
 </script>
 
 <slot>
-    <div>
+    <div class="basicPlanText">
         <p class="subheader">{subheader}</p>
         <p class="title">{title}</p>
         <p class="description">{description}</p>
@@ -70,20 +70,27 @@
 
 <style>
 
-    .subheader{
-        color: var(--blue-400);
+    .basicPlanText {
+        display: flex;
+        flex-direction: column;
         margin-left: 10px;
+        gap: 10px;
+    }
+
+    .subheader{
+        color: var(--blue-400); /*Remove when text styles global */
+        margin: 0;
     }
 
     .title{
-        color: var(--lavender-700);
-        font-weight: bold;
-        margin-left: 10px;
+        color: var(--lavender-700); /*Remove when text styles global */
+        font-weight: bold; /*Remove when text styles global */
+        margin: 0;
     }
 
     .description{
-        color: var(--blue-400);
-        margin-left: 10px;
+        color: var(--blue-400); /*Remove when text styles global */
+        margin: 0;
     }
 
 </style>

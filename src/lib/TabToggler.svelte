@@ -18,10 +18,12 @@
 <slot>
      <label class="TabToggler">
                <div class="TabToggler_TextBox">
-                    <p class="TabToggler_text">{leftText}</p>
-                    <p class="TabToggler_text">{rightText}</p>
+                    <input type="radio" id="left" name="toggler" value="left" checked>
+                    <label for="left" class="TabToggler_text">{leftText}</label>
+                    <input type="radio" id="right" name="toggler" value="right">
+                    <label for="right" class="TabToggler_text">{rightText}</label>
                </div>
-          <input type="checkbox">
+          <!--<input type="checkbox">-->
           <span class="slider"></span>
      </label>
      <!--<label class="switch">
@@ -104,5 +106,6 @@
           font-weight: 400;
           line-height: normal;
           letter-spacing: 0.8px;
+          text-align: center;
      }
 </style>

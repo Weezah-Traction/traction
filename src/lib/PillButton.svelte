@@ -1,13 +1,26 @@
-<!-- Pill Button -->
+<!-- Pil Button -->
 <!-- Used to trigger a functions, such as Editing Widgets and Progressing in Slides -->
+<script>
+    export let link = "/home"
+    export let text = "Button"
+</script>
+
 
 <slot>
-    <button>Pill Button</button>
+    <a href={link}>{text}</a>
 </slot>
 
 <style>
-    button{
-        padding: 1em;
-        border-radius: 5em;
-    }
+     a{
+          display: flex;
+          width: 123px;
+          height: 34px;
+          padding: 7px 14px;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5em;
+
+          border-radius: 40px;
+          background: var(--Lavender-300, #DFCEFD);
+     }
 </style>

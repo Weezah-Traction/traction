@@ -1,5 +1,5 @@
 <script>
-    let link = 'link';
+    let link = 'plans/guidance';
     import thumb from '$lib/assets/purple.jpg';
     let alt = 'A solid purple block.'
 </script>

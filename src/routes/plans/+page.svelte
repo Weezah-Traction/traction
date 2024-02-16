@@ -6,6 +6,7 @@
 </script>
 
 <BlankHeader page="plans"></BlankHeader>
+
 <h2>Run Guidance</h2>
 <BasicPlanItem  type="guidance"></BasicPlanItem>
 
@@ -17,6 +18,5 @@
 <style>
     h2 {
         margin: 24px 0px 0px 20px;
-    }
-
+  }
 </style>

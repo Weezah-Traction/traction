@@ -20,7 +20,7 @@
 </script>
 
 <slot>
-    <a href="/home" class={type}><img src={icon} alt={alt}></a>
+    <a href="/postrun" class={type}><img src={icon} alt={alt}></a>
 </slot>
 
 <style>

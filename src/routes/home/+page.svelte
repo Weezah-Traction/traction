@@ -1,6 +1,6 @@
 <script>
 	import BasicPlanItem from "$lib/BasicPlanItem.svelte";
-    import Header from "$lib/Header.svelte";
+    import BlankHeader from "../../lib/BlankHeader.svelte";
     import NavigationBar from "$lib/NavigationBar.svelte";
     import PreRunChecklist from "$lib/PreRunChecklist.svelte"
     import MediumWidget from "../../lib/MediumWidget.svelte";
@@ -9,17 +9,36 @@
 
 </script>
 
-<Header></Header>
-<BasicPlanItem></BasicPlanItem>
-<MapWidget></MapWidget>
-<PreRunChecklist></PreRunChecklist>
-<MediumWidget widgetType = avgPace1></MediumWidget>
-<MediumWidget widgetType = totalDist1></MediumWidget>
-<RunButton></RunButton>
+
+<slot>
+
+<BlankHeader page="home"></BlankHeader>
+
+<div class = "homehead">
+    <BasicPlanItem></BasicPlanItem>
+</div>
+
+<div class="homebody">
+    <MapWidget></MapWidget>
+    <!-- <PreRunChecklist></PreRunChecklist> -->
+    <MediumWidget widgetType = avgPace1></MediumWidget>
+    <MediumWidget widgetType = totalDist1></MediumWidget>
+    <!-- <MediumWidget widgetType = fastestRun></MediumWidget> -->
+    <RunButton></RunButton>
+</div>
+
+
 <NavigationBar></NavigationBar>
+</slot>
 
 
 <style>
+    .homehead {
+        margin: 8px 0px 0px 0px;
+    }
+    .homebody {
+        margin: 0px 0px 8px 0px;
+    }
 
 :global(body) {
     display: grid;

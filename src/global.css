@@ -589,4 +589,14 @@ h5.Fugaz {
   [hidden] {
     display: none;
   }
+
+  ul {
+    padding: 0px;
+    margin-top: 0px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+  }
   

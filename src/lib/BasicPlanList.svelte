@@ -14,9 +14,3 @@
      
     </ul>
 </slot>
-
-<style>
-    .planList {
-        padding: 0;
-    }
-</style>

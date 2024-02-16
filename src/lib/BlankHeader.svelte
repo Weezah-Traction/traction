@@ -6,6 +6,10 @@ if (page == 'run'){
     header = 'Run';
 }
 
+if (page == 'home'){
+        header = 'Home';
+    }
+
 if (page == 'postrun'){
     header = 'Cooldown';
 }

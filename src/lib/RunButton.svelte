@@ -6,7 +6,7 @@
     a{
         display: flex;
         align-items: center;
-        height: 44px;
+        height: 56px;
         justify-content: center;
         padding: 0 1em;
         margin: 1em;
@@ -15,7 +15,6 @@
         position: fixed;
         right: 0;
         z-index: 1;
-
         border-radius: 20px;
         border: 3px solid #2D4871;
         background: #FCD29F;

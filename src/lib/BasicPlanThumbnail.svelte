@@ -1,5 +1,5 @@
 <script>
-    let link = 'link';
+    let link = 'plans/guidance';
     import thumb from '$lib/assets/purple.jpg';
     let alt = 'A solid purple block.'
 </script>
@@ -12,6 +12,9 @@
 
 <style>
     img{
-        width: 5em;
+        grid-column: 2 / span 2;
+        height: 100px;
+        border-radius: 1em;
+        margin-left: 8px 0px 16px 20px;
     }
 </style>

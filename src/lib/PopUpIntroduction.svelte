@@ -5,7 +5,7 @@
 <slot>
     <div class="container">
         <div class="text">
-            <h1>Welcome to Weezer</h1>
+            <h1 class="title-head">Welcome to Weezer</h1>
             <p>This is filler text, hello hi.</p>
             <p>Does anyone know where to get a light?</p>
             <p>If you need a martini, let me know.</p>
@@ -24,5 +24,9 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .text {
+        font-family: 'Poppins';
     }
 </style>

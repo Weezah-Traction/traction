@@ -22,7 +22,7 @@
         if (day == "3"){
             subheader = 'Day 3';
             title = 'Run For Fun, Again!';
-            description = 'Just enjoy nature and have fun!';
+            description = 'Just enjoy nature!';
         }
 
         if (day == "4"){
@@ -34,7 +34,7 @@
         if (day == "5"){
             subheader = 'Day 5';
             title = 'Touch Grass!';
-            description = 'After work, reconnect with nature@';
+            description = ' Reconnect with nature';
         }
 
         if (day == "6"){
@@ -53,7 +53,7 @@
     if (type == "guidance"){
         subheader = 'Running Guides';
         title = 'Learn how run enjoyably!';
-        description = 'Check out this guide before runs!';
+        description = 'Check out this run guide!';
     }
     
 
@@ -62,7 +62,7 @@
 
 <slot>
     <div class="basicPlanText">
-        <p class="subheader">{subheader}</p>
+        <!-- <p class="subheader">{subheader}</p> -->
         <p class="title">{title}</p>
         <p class="description">{description}</p>
     </div>
@@ -70,10 +70,10 @@
 
 <style>
 
-    .subheader{
+    /* .subheader{
         color: var(--blue-400);
         margin: 10px 0px 8px 10px;
-    }
+    } */
 
     .title{
         color: var(--lavender-700);

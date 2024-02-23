@@ -32,16 +32,17 @@
          display: flex;
          flex-direction: row;
          grid-column: 2/ span 5;
-         margin-top: 10px;
+         margin-top: 0px;
      }
  
      .guidanceItem {
           display: flex;
           flex-direction: column;
-          gap: 10px;
+          /* gap: 10px; */
+          margin: 8px 0px 8px 0px
      }
      .guidanceItemHeader {
-
+margin-bottom: 10px;
      }
      
      .guidanceItemContent {

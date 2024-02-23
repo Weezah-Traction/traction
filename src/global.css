@@ -599,4 +599,10 @@ h5.Fugaz {
     display: flex;
     align-items: center;
   }
+
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
   

@@ -3,11 +3,14 @@
 </slot>
 
 <style>
-    a{
+  a{
         display: flex;
         align-items: center;
         height: 56px;
         justify-content: center;
+        font-family: Poppins;
+        font-size: 19.2px;
+        
         padding: 0 1em;
         margin: 1em;
         bottom: 70px;
@@ -17,7 +20,7 @@
         z-index: 1;
         border-radius: 20px;
         border: 3px solid #2D4871;
-        background: #FCD29F;
+        background: #DE6813;
 
     }
 </style>

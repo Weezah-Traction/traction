@@ -1,5 +1,7 @@
 <script>
     import gator from '$lib/assets/gator.svg';
+    import ContinueButton from "../../lib/ContinueButton.svelte";
+    
 </script>
 
 <slot>
@@ -10,6 +12,7 @@
             <h5>Congratulations on your first run!</h5>
             <p>You are now a part of a community of millions of people that are making a positive change on their mind and body through the simple act of running!</p>
         </div>
+
         <div class="nav-butts">
             <div class="continue">
                 <a href="">Continue</a>
@@ -18,16 +21,20 @@
                 <a href="">Skip All</a>
             </div>
         </div>
+
     </div>
 </slot>
 
 <style>
     .container {
+
         background-color: var(--lavender-100);
         height: auto;
         display: flex;
+
         flex-direction: column;
-        align-items: center;
+       
+       
     }
 
     img {
@@ -42,6 +49,7 @@
         width: 353px;
         margin: 20px;
         padding: 150px 0px 0px 0px;
+
     }
 
     h1 {
@@ -62,7 +70,7 @@
         margin: 10px;
     }
 
-    .continue {
+    /* .continue {
         width: 353px;
         height: 48px;
         display: flex;
@@ -101,9 +109,9 @@
         position: absolute; bottom: 0;
     }
     
-    a {
+    /* a {
         text-decoration: none;
         font-family: 'Poppins';
         color: var(--lavender-700);
-    }
+    } */
 </style>

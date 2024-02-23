@@ -181,6 +181,64 @@
 
 
 
+/* --------- OUR TEXT STYLES --------- */
+/* --------- OUR TEXT STYLES --------- */
+/* --------- OUR TEXT STYLES --------- */
+
+
+/* Poppins/Bold/H6 */
+h6 {
+    font-family: Poppins;
+    font-size: 19.2px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.96px;
+    margin: 0;
+}
+
+/* Poppins/Regular/Body */
+p {
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    margin: 0;
+}
+
+/* Fugaz/H3 */
+h3.Fugaz {
+    font-family: "Fugaz One";
+    font-size: 33.18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.659px;
+    margin: 0;
+}
+
+/* Fugaz/H5 */
+h5.Fugaz {
+    font-family: "Fugaz One";
+    font-size: 23.04px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.152px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -530,5 +588,15 @@
   
   [hidden] {
     display: none;
+  }
+
+  ul {
+    padding: 0px;
+    margin-top: 0px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
   }
   

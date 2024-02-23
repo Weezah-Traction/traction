@@ -61,7 +61,7 @@
 </script>
 
 <slot>
-    <div>
+    <div class="basicPlanText">
         <p class="subheader">{subheader}</p>
         <p class="title">{title}</p>
         <p class="description">{description}</p>
@@ -72,18 +72,20 @@
 
     .subheader{
         color: var(--blue-400);
-        margin-left: 10px;
+        margin: 10px 0px 8px 10px;
     }
 
     .title{
         color: var(--lavender-700);
         font-weight: bold;
-        margin-left: 10px;
+        margin: 8px 0px 8px 10px;
+
     }
+
 
     .description{
         color: var(--blue-400);
-        margin-left: 10px;
+        margin: 8px 0px 8px 10px;
     }
 
 </style>

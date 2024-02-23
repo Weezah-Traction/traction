@@ -6,6 +6,10 @@ if (page == 'run'){
     header = 'Run';
 }
 
+if (page == 'home'){
+        header = 'Home';
+    }
+
 if (page == 'postrun'){
     header = 'Cooldown';
 }
@@ -14,12 +18,20 @@ if (page == 'activity'){
     header = 'Activity';
 }
 
+if (page == 'achievements'){
+    header = 'Achievements';
+}
+
 if (page == 'plans'){
     header = 'Plans';
 }
 
 if (page == 'step3'){
     header = 'Check-up';
+}
+
+if (page == 'guidance'){
+    header = 'Guidance';
 }
 
 </script>

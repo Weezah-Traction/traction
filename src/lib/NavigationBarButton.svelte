@@ -39,7 +39,7 @@
     <li>
         <a href={link} class={type}>
             <img src={icon} alt={alt}>
-            <!-- <p>{alt}</p> -->
+            <p>{alt}</p>
         </a>
     </li>
 </slot>
@@ -48,6 +48,14 @@
     a{
         display: flex;
         flex-direction: column;
+        color: var(--lavender-100);
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    p{
+                font-weight: bold;
     }
 /* 
     .plans{

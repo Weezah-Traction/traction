@@ -10,8 +10,13 @@
             <h5>Congratulations on your first run!</h5>
             <p>You are now a part of a community of millions of people that are making a positive change on their mind and body through the simple act of running!</p>
         </div>
-        <div class="continue">
-            <a href="">Continue</a>
+        <div class="nav-butts">
+            <div class="continue">
+                <a href="">Continue</a>
+            </div>
+            <div class="skip">
+                <a href="">Skip All</a>
+            </div>
         </div>
     </div>
 </slot>
@@ -19,7 +24,7 @@
 <style>
     .container {
         background-color: var(--lavender-100);
-        height: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -65,8 +70,35 @@
         align-items: center;
         background-color: var(--lavender-300);
         border-radius: 10px;
-        position: absolute; bottom: 0;
+        margin: 0px 0px 15px 0px;
+        text-decoration: none;
+    }
+
+    .continue a {
+        text-decoration: none;
+        font-family: 'Poppins';
+        color: var(--lavender-700);
+    }
+
+    .skip {
+        width: 353px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--lavender-200);
+        border-radius: 10px;
         margin: 0px 0px 55px 0px;
+    }
+
+    .skip a {
+        color: var(--lavender-700);
+        text-decoration: none;
+        font-family: 'Poppins';
+    }
+
+    .nav-butts {
+        position: absolute; bottom: 0;
     }
     
     a {

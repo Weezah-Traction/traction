@@ -1,18 +1,18 @@
 <script>
-    import gator from '$lib/assets/gator.svg';
-    import ContinueButton from "../../lib/ContinueButton.svelte";
-    
+    import BlankHeader from "../../../lib/BlankHeader.svelte";
 </script>
 
 <slot>
+    <BlankHeader></BlankHeader>
     <div class="container">
-        <div class="main">
-            <h1>Amazing Job!</h1>
-            <img src={gator} alt="Crocodile">
-            <h5>Congratulations on your first run!</h5>
-            <p>You are now a part of a community of millions of people that are making a positive change on their mind and body through the simple act of running!</p>
+        <div>
+            <h2>Stretches</h2>
+            <p>You can find some more cooldown stretches & Recommendation to relax your body on the home screen </p>
         </div>
-
+        <div> <!--Might need to add a gallery component here for the stretches-->
+            <h2>Dynamic Leg Swings</h2>
+            <img src="" alt="Gif image">
+        </div>
         <div class="nav-butts">
             <div class="continue">
                 <a href="">Continue</a>
@@ -21,56 +21,18 @@
                 <a href="">Skip All</a>
             </div>
         </div>
-
     </div>
 </slot>
 
 <style>
     .container {
-
-        background-color: var(--lavender-100);
-        height: auto;
-        display: flex;
-
-        flex-direction: column;
-       
-       
-    }
-
-    img {
-        height: 168px;
-        width: 176px;
-    }
-
-    .main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 353px;
-        margin: 20px;
-        padding: 150px 0px 0px 0px;
-
+        padding: 20px;
     }
 
-    h1 {
-        font-family: 'Fugaz One';
-        font-size: 47.78px;
-        margin: 10px;
-    }
-
-    h5 {
-        font-family: 'Poppins';
-        font-size: 23.04px;
-        margin: 10px;
-    }
-
-    p {
-        font-family: 'Poppins';
-        font-size: 16px;
-        margin: 10px;
-    }
-
-    /* .continue {
+    .continue {
         width: 353px;
         height: 48px;
         display: flex;
@@ -108,10 +70,8 @@
     .nav-butts {
         position: absolute; bottom: 0;
     }
-    
-    /* a {
-        text-decoration: none;
-        font-family: 'Poppins';
-        color: var(--lavender-700);
-    } */
+
+    h2 {
+        font-family: 'Fugaz One';
+    }
 </style>

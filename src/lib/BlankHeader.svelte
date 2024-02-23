@@ -26,6 +26,10 @@ if (page == 'plans'){
     header = 'Plans';
 }
 
+if (page == 'step3'){
+    header = 'Check-up';
+}
+
 if (page == 'guidance'){
     header = 'Guidance';
 }

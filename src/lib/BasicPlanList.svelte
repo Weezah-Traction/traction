@@ -1,16 +1,37 @@
 <script>
-        import BasicPlanItem from '$lib/BasicPlanItem.svelte';
+        import BasicPlanItemSmall from '$lib/BasicPlanItemSmall.svelte';
 </script>
 
 <slot>
     <ul class="planList">
-        <BasicPlanItem day="1"></BasicPlanItem>
-        <BasicPlanItem day="2"></BasicPlanItem>
-        <BasicPlanItem day="3"></BasicPlanItem>
-        <BasicPlanItem day="4"></BasicPlanItem>
-        <BasicPlanItem day="5"></BasicPlanItem>
-        <BasicPlanItem day="6"></BasicPlanItem>
-        <BasicPlanItem day="7"></BasicPlanItem>
-     
+        
+      
+     <div class="lav300">
+        <BasicPlanItemSmall day="1"></BasicPlanItemSmall>
+        <BasicPlanItemSmall day="3"></BasicPlanItemSmall>
+        <BasicPlanItemSmall day="5"></BasicPlanItemSmall>
+        <BasicPlanItemSmall day="7"></BasicPlanItemSmall>
+     </div>   
+
+
+     <div class="lav100">
+        <BasicPlanItemSmall day="2"></BasicPlanItemSmall>
+        <BasicPlanItemSmall day="4"></BasicPlanItemSmall>
+        <BasicPlanItemSmall day="6"></BasicPlanItemSmall>
+     </div>
+
+
     </ul>
 </slot>
+
+
+<style>
+    .lav300 {
+        background-color: var(--Lavender-300);
+    }
+
+    .lav100 {
+        background-color: var(--Lavender-100);
+    }
+
+</style>

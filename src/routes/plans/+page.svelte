@@ -8,7 +8,10 @@
 <BlankHeader page="plans"></BlankHeader>
 
 <h2>Run Guidance</h2>
-<BasicPlanItem  type="guidance"></BasicPlanItem>
+        
+<div class="l300"> 
+    <BasicPlanItem  type="guidance"></BasicPlanItem>
+    </div>
 
 <h2>Week 1 Plan</h2>
 <BasicPlanList></BasicPlanList>
@@ -19,4 +22,10 @@
     h2 {
         margin: 24px 0px 0px 20px;
   }
+
+  .l300 {
+    background-color: var(--Lavender-300);
+  }
+
+
 </style>

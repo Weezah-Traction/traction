@@ -4,13 +4,12 @@
     export let type = 'plan';
 
 	import BasicPlanText from "./BasicPlanText.svelte";
-    import BasicPlanThumbnail from "./BasicPlanThumbnail.svelte";
-
+    import BasicPlanThumbnailSmall from "./BasicPlanThumbnailSmall.svelte";
 
 </script>
 <slot>
-    <li class="lav300">
-        <BasicPlanThumbnail></BasicPlanThumbnail>
+    <li>
+        <BasicPlanThumbnailSmall></BasicPlanThumbnailSmall>
         <BasicPlanText type={type} day={day}></BasicPlanText>
     </li>
 </slot>
@@ -23,10 +22,6 @@
         margin: 8px 0px 8px 20px;
         
     }
-
-    /* .lav300 {
-        background-color: var(--lavender-100);
-    } */
 
     
 </style>

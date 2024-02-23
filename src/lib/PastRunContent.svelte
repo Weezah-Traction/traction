@@ -1,6 +1,11 @@
 <script>
      import CommonProblemsButtonContainer from "$lib/CommonProblemsButtonContainer.svelte";
 
+     import fakeMap from '$lib/assets/fakeMap.png';
+     import normalIcon from '$lib/assets/faceIcons/NormalIcon.svg';
+     import homeIcon from '$lib/assets/homeWhiteicon.svg';
+     import activityIcon from '$lib/assets/activityWhiteicon.svg';
+
      export let date = "January 1st, 2024";
      export let timeOfDay = "10:30pm";
 
@@ -21,7 +26,7 @@
                <h3 class="Fugaz">{miles}</h3>
                <p>Miles</p>
           </div>
-          <img class="faceIcon" src='$lib/assets/faceIcons/NormalIcon.svg' alt="Normal Icon">
+          <img class="faceIcon" src={normalIcon} alt="Normal Icon">
      </div>
      <div class="otherStats">
           <div class="statContainer">
@@ -38,7 +43,7 @@
           </div>
      </div>
      <CommonProblemsButtonContainer></CommonProblemsButtonContainer>
-     <img class="map" src='$lib/assets/faceIcons/fakeMap.png' alt="Map">
+     <img class="map" src={fakeMap} alt="Map">
 </slot>
 
 <style>

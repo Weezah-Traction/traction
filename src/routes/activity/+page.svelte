@@ -2,6 +2,7 @@
 	import ActivityStats from "../../lib/ActivityStats.svelte";
     import BlankHeader from "../../lib/BlankHeader.svelte";
     import NavigationBar from "../../lib/NavigationBar.svelte";
+	import PillButton from "../../lib/PillButton.svelte";
 	import RunThumbnail from "../../lib/RunThumbnail.svelte";
     import TabToggler from "../../lib/TabToggler.svelte";
 	import TimeToggler from "../../lib/TimeToggler.svelte";
@@ -10,6 +11,7 @@
 <BlankHeader page="activity"></BlankHeader>
 
 <div class="bodyContent">
+    <PillButton link="/achievements" text="Achievements"></PillButton>
     <TabToggler page="activity"></TabToggler>
     <TimeToggler></TimeToggler>
     <ActivityStats></ActivityStats>

@@ -219,6 +219,18 @@ h3.Fugaz {
     margin: 0;
 }
 
+/* Fugaz/H4 */
+h4.Fugaz {
+  font-family: "Fugaz One";
+  font-size: 27.65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.382px;
+  margin: 0;
+}
+
+
 /* Fugaz/H5 */
 h5.Fugaz {
     font-family: "Fugaz One";

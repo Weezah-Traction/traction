@@ -1,6 +1,5 @@
 <script>
      let thisPage = "Run Info";
-     let link = "/activity";
 
      import HeaderImage from "$lib/HeaderImage.svelte";
 	import GuidancePageHeader from "../../../lib/GuidancePageHeader.svelte";

@@ -12,11 +12,14 @@
             <EmojiRadio></EmojiRadio>
         </div>
         <div>
+            <h6>Select any issues you dealt with on this run.</h6>
+        </div>
+        <!-- <div>
             <h6>How do you feel about your physical stress levels?</h6>
             <div class="slidecontainer">
                 <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
             </div>
-        </div>
+        </div> -->
         <div class="continue">
             <a href="">Continue</a>
         </div>
@@ -48,7 +51,7 @@
         font-size: 19.2px;
     }
 
-    .slidecontainer {
+    /* .slidecontainer {
         width: 100%;
     }
 
@@ -66,15 +69,15 @@
 
     .slider:hover {
         opacity: 1;
-    }
+    } */
 
-    .slider::-webkit-slider-thumb {
-        -webkit-appearance: none; /* Override default look */
+    /* .slider::-webkit-slider-thumb {
+        -webkit-appearance: none; 
         appearance: none;
-        width: 48px; /* Set a specific slider handle width */
-        height: 48px; /* Slider handle height */
-        background: var(--lavender-500); /* Green background */
-        cursor: pointer; /* Cursor on hover */
+        width: 48px; 
+        height: 48px;
+        background: var(--lavender-500); 
+        cursor: pointer;
         border-radius: 100px;
-    }
+    } */
 </style>

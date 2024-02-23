@@ -15,11 +15,11 @@ if (page == 'postrun'){
 }
 
 if (page == 'activity'){
-    header = 'Activity';
+    header = 'Summary';
 }
 
 if (page == 'achievements'){
-    header = 'Achievements';
+    header = 'Summary';
 }
 
 if (page == 'plans'){

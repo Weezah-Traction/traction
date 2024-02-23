@@ -1,6 +1,6 @@
 <script>
 	import PillButton from "./PillButton.svelte";
-     let link = "/plans/guidance";
+     export let link = "/plans/guidance";
      export let page = "Undefined";
 </script>
 

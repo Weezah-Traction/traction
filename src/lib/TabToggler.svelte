@@ -60,7 +60,7 @@
           right: 0;
           bottom: 0;
           border-radius: 20px;
-          background-color: #D9D9D9;
+          background-color: #DFCEFD;
           -webkit-transition: .4s;
           transition: .4s;
           }

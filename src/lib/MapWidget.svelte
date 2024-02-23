@@ -18,8 +18,7 @@
         background-size: cover;
         background-position: center;
         border-radius: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin: 16px 0px 16px 20px;
         /* grid-column: 2/ span 5; */
     }
 

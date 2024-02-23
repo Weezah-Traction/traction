@@ -6,6 +6,10 @@ if (page == 'run'){
     header = 'Run';
 }
 
+if (page == 'home'){
+        header = 'Home';
+    }
+
 if (page == 'postrun'){
     header = 'Cooldown';
 }
@@ -20,6 +24,10 @@ if (page == 'achievements'){
 
 if (page == 'plans'){
     header = 'Plans';
+}
+
+if (page == 'step3'){
+    header = 'Check-up';
 }
 
 if (page == 'guidance'){

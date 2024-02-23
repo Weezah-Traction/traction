@@ -70,27 +70,22 @@
 
 <style>
 
-    .basicPlanText {
-        display: flex;
-        flex-direction: column;
-        margin-left: 10px;
-        gap: 10px;
-    }
-
     .subheader{
-        color: var(--blue-400); /*Remove when text styles global */
-        margin: 0;
+        color: var(--blue-400);
+        margin: 10px 0px 8px 10px;
     }
 
     .title{
-        color: var(--lavender-700); /*Remove when text styles global */
-        font-weight: bold; /*Remove when text styles global */
-        margin: 0;
+        color: var(--lavender-700);
+        font-weight: bold;
+        margin: 8px 0px 8px 10px;
+
     }
 
+
     .description{
-        color: var(--blue-400); /*Remove when text styles global */
-        margin: 0;
+        color: var(--blue-400);
+        margin: 8px 0px 8px 10px;
     }
 
 </style>

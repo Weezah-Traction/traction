@@ -20,13 +20,38 @@
 
     if (widgetType == 'avgPace1'){
           name = "Average Pace";
-          data = '0.0 mi/min';
+          data = '0.0 min/mile';
     }
 
     if (widgetType == 'avgPace2'){
           name = "Average Pace";
+          data = '12.2 min/mile';
+    }
+    
+    if (widgetType == 'Fastest Run'){
+          name = "Fastest Run";
           data = '4.2 mi/min';
     }
+
+    if (widgetType == 'currentPace'){
+          name = "Current Pace";
+          data = '10.2 mi/min';
+    }
+
+    if (widgetType == 'distanceCovered'){
+          name = "Distance Covered";
+          data = '2.1 miles';
+    }
+    if (widgetType == 'elevationGain'){
+          name = "Elevation Gain";
+          data = '453 ft';
+    }
+
+    if (widgetType == 'time'){
+          name = "Time";
+          data = '22:36';
+    }
+
 </script>
 
 <slot>
@@ -43,8 +68,8 @@
           justify-content: center;
           align-items: center;
           width: 353px;
-          padding: 10px 0;
-          gap: 10px;
+          margin: 8px 0px 8px 20px  ;
+          /* gap: 10px; */
 
           border-radius: 22px;
           background: var(--Lavender-300, #DFCEFD);

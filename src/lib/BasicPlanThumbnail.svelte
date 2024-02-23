@@ -15,5 +15,6 @@
         grid-column: 2 / span 2;
         height: 100px;
         border-radius: 1em;
+        margin-left: 8px 0px 16px 20px;
     }
 </style>

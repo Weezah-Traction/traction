@@ -1,16 +1,12 @@
 <script>
-     let thisPage = "Run Info";
-
-     import HeaderImage from "$lib/HeaderImage.svelte";
-	import GuidancePageHeader from "../../../lib/GuidancePageHeader.svelte";
+     import HeaderWithBack from "../../../lib/HeaderWithBack.svelte";
 	import NavigationBar from "../../../lib/NavigationBar.svelte";
 	import PastRunContent from "../../../lib/PastRunContent.svelte";
 </script>
 
 <slot>
-     <HeaderImage></HeaderImage>
+     <HeaderWithBack page="pastrun"></HeaderWithBack>
      <div class="bodyContent">
-          <GuidancePageHeader page = {thisPage} link = "/activity"></GuidancePageHeader>
           <PastRunContent></PastRunContent>
      </div>
      <NavigationBar></NavigationBar>

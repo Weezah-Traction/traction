@@ -1,13 +1,14 @@
 <script>
      export let link = "/activity/pastrun";
+     import mapThumb from '$lib/assets/fakeMap.png';
+
+     let alt;
+     let thumb;
      
      export let date = '00/00/0000';
      export let distance = '0.0';
      export let pace = '0.00';
      export let emotion = 'normal';
-
-     let alt;
-     let thumb;
 
      import vsadIcon from '$lib/assets/faceIcons/VSadIcon.svg';
      import sadIcon from '$lib/assets/faceIcons/SadIcon.svg';
@@ -45,7 +46,7 @@
 <slot>
      <a class="runThumbnail" href={link}>
           <div class="mapNInfo">
-               <img class="map" src='$lib/assets/faceIcons/fakeMap.png' alt="Map">
+               <img class="map" src={mapThumb} alt="Map">
                <div class="infoContainer">
                     <h6 class="Poppins">{date}</h6>
                     <p>{distance} mi</p>

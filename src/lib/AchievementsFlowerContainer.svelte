@@ -14,6 +14,9 @@
 </slot>
 
 <style>
+     p {
+          text-align: center;
+     }
      .achievementsFlowerContainer {
           display: flex;
           width: 100px;

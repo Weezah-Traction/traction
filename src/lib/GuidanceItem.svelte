@@ -39,10 +39,10 @@
           display: flex;
           flex-direction: column;
           /* gap: 10px; */
-          margin: 8px 0px 8px 0px
+          margin: 16px 0px 16px 20px
      }
      .guidanceItemHeader {
-margin-bottom: 10px;
+margin-bottom: 8px;
      }
      
      .guidanceItemContent {

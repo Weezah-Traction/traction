@@ -20,13 +20,14 @@
         display: flex;
         flex-direction: row;
         grid-column: 1/ span 5;
-        margin: 8px 0px 8px 20px;
+        padding: 8px 0px 8px 20px;
+        margin: 8px 0px 16px 0px;
         
     }
 
     /* .lav300 {
-        background-color: var(--lavender-100);
-    } */
+        background-color:lavender;
+    }  */
 
     
 </style>

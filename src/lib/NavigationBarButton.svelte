@@ -39,7 +39,7 @@
     <li>
         <a href={link} class={type}>
             <img src={icon} alt={alt}>
-            <!-- <p>{alt}</p> -->
+            <p>{alt}</p>
         </a>
     </li>
 </slot>
@@ -48,6 +48,15 @@
     a{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--lavender-100);
+    }
+
+    img {
+        max-width: 48px;
+        max-height: 48px;
     }
 /* 
     .plans{

@@ -1,5 +1,5 @@
 <script>
-     export let link = "/home"
+     export let link = "../"
      export let text = "Button"
  </script>
  

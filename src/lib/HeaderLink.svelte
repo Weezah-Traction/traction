@@ -11,7 +11,7 @@
 
     if (page == 'widget'){
         text = 'Done';
-        goTo = '/home';
+        goTo = '../';
     }
 </script>
 

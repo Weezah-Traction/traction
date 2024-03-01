@@ -24,7 +24,7 @@
     if (type == "home"){
         alt = "Home"
         icon = homeIcon;
-        link = '/home'
+        link = '../'
     }
 
     if (type == "activity"){

@@ -26,7 +26,7 @@
 
     if (page == 'widget'){
         header = 'Widgets';
-        link = "/home";
+        link = "../";
         linkText = "Done"
     }
 

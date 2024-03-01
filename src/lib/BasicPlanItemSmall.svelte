@@ -19,7 +19,7 @@
         display: flex;
         flex-direction: row;
         grid-column: 1/ span 5;
-        margin: 8px 0px 8px 20px;
+        padding: 10px 0px 10px 20px;
         
     }
 

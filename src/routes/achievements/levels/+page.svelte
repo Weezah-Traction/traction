@@ -1,18 +1,15 @@
 <script>
      let thisPage = "Levels";
 
-     import HeaderImage from "$lib/HeaderImage.svelte";
+     import HeaderWithBack from "../../../lib/HeaderWithBack.svelte";
 	import GuidancePageHeader from "$lib/GuidancePageHeader.svelte";
 	import NavigationBar from "$lib/NavigationBar.svelte";
      import LevelCard from "$lib/LevelCard.svelte";
 </script>
 
 <slot>
-     <HeaderImage></HeaderImage>
+     <HeaderWithBack page="levels"></HeaderWithBack>
      <div class="levelsContent">
-          <div class="headerContainer">
-               <GuidancePageHeader page = {thisPage} link = "/achievements"></GuidancePageHeader>
-          </div>
           <div class="currentLevel">
                <h6 class="levelHeader">Current Level</h6>
                <LevelCard
@@ -54,16 +51,11 @@
           flex-direction: column;
           gap: 20px;
      }
-     .headerContainer {
-          display: flex;
-          flex-direction: column;
-          margin: 0 20px;
-          padding: 20px 0;
-     }
      .currentLevel {
           display: flex;
           flex-direction: column;
           gap: 10px;
+          margin: 20px 0 0 0;
      }
      .nextLevels {
           display: flex;

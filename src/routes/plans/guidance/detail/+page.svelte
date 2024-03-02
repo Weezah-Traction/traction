@@ -1,16 +1,12 @@
-<script>
-     let thisPage = "Prerun";
-     
+<script>     
+     import HeaderWithBack from "../../../../lib/HeaderWithBack.svelte";
 	import GuidancePageContent from "../../../../lib/GuidancePageContent.svelte";
-	import GuidancePageHeader from "../../../../lib/GuidancePageHeader.svelte";
-	import HeaderImage from "../../../../lib/HeaderImage.svelte";
 	import NavigationBar from "../../../../lib/NavigationBar.svelte";
 
 </script>
 
-<HeaderImage></HeaderImage>
+<HeaderWithBack page="detail"></HeaderWithBack>
 <div class="bodyContent">
-<GuidancePageHeader page = {thisPage}></GuidancePageHeader>
 <GuidancePageContent></GuidancePageContent>
 </div>
 

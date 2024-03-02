@@ -1,15 +1,15 @@
 <script>
-	import Header from "$lib/Header.svelte";
      import NavigationBar from "$lib/NavigationBar.svelte";
      import GuidanceItem from "$lib/GuidanceItem.svelte";
+	import HeaderWithBack from "../../../lib/HeaderWithBack.svelte";
 </script>
 
-<Header page="guidance"></Header>
+<HeaderWithBack page="guidance"></HeaderWithBack>
 <div class="bodyContent">
      <GuidanceItem 
           header="Pre-Run" 
           desc="Stretches, mindset, and what to eat/drink." 
-          link="/plans/guidance/prerun"
+          link="/plans/guidance/detail"
      ></GuidanceItem>
 
      <GuidanceItem 

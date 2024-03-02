@@ -6,21 +6,12 @@
 
 </script>
 
-<HeaderWithButton page="widgets"></HeaderWithButton>
-
-<div class="bodyContent">
-     <TabToggler></TabToggler>
-     <MediumWidgetOnOff widgetType = 'totalDist1'></MediumWidgetOnOff>
-     <MediumWidgetOnOff widgetType = 'avgPace1'></MediumWidgetOnOff>
+<slot>
+     <HeaderWithButton page="widgets"></HeaderWithButton>
+     <div class="bodyContent">
+          <TabToggler></TabToggler>
+          <MediumWidgetOnOff widgetType = 'totalDist1'></MediumWidgetOnOff>
+          <MediumWidgetOnOff widgetType = 'avgPace1'></MediumWidgetOnOff>
+     </div>
      <NavigationBar></NavigationBar>
-</div>
-
-<style>
-     .bodyContent {
-          display: flex;
-          flex-direction: column;
-          margin: 0 20px;
-          padding: 20px 0;
-          gap: 20px;
-     }
-</style>
+</slot>

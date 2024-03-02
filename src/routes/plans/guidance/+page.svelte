@@ -4,38 +4,30 @@
 	import HeaderWithBack from "../../../lib/HeaderWithBack.svelte";
 </script>
 
-<HeaderWithBack page="guidance"></HeaderWithBack>
-<div class="bodyContent">
-     <GuidanceItem 
-          header="Pre-Run" 
-          desc="Stretches, mindset, and what to eat/drink." 
-          link="/plans/guidance/detail"
-     ></GuidanceItem>
-
-     <GuidanceItem 
-          header="During Runs" 
-          desc="Learn the importance of proper posture and breathing tech."
-     ></GuidanceItem>
-
-     <GuidanceItem
-          header="After Runs"
-          desc="Cool down and close your runs out with this guide."
-     ></GuidanceItem>
-
-     <GuidanceItem
-          header="General Care & Motivation"
-          desc="Take care of yourself! This guide will help."
-     ></GuidanceItem>
-
+<slot>
+     <HeaderWithBack page="guidance"></HeaderWithBack>
+     <div class="bodyContent">
+          <GuidanceItem 
+               header="Pre-Run" 
+               desc="Stretches, mindset, and what to eat/drink." 
+               link="/plans/guidance/detail"
+          ></GuidanceItem>
+          <GuidanceItem 
+               header="During Runs" 
+               desc="Learn the importance of proper posture and breathing tech."
+          ></GuidanceItem>
+          <GuidanceItem
+               header="After Runs"
+               desc="Cool down and close your runs out with this guide."
+          ></GuidanceItem>
+          <GuidanceItem
+               header="General Care & Motivation"
+               desc="Take care of yourself! This guide will help."
+          ></GuidanceItem>
+     </div>
      <NavigationBar></NavigationBar>
-</div>
+</slot>
 
 <style>
-     .bodyContent {
-          display: flex;
-          flex-direction: column;
-          margin: 0 20px;
-          padding: 20px 0;
-          gap: 20px;
-     }
+
 </style>

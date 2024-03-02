@@ -4,22 +4,27 @@
     import MediumWidget from "../../lib/MediumWidget.svelte";
     import RunButtons from "../../lib/RunButtons.svelte";
 </script>
+
 <slot>
-<BlankHeader></BlankHeader>
-<MapWidget size="medium"></MapWidget>
-<MediumWidget widgetType = currentPace></MediumWidget>
-<MediumWidget widgetType = distanceCovered></MediumWidget>
-<MediumWidget widgetType = elevationGain></MediumWidget>
-<MediumWidget widgetType = time></MediumWidget>
+    <BlankHeader></BlankHeader>
+    <div class="bodyContent">
+        <MapWidget size="medium"></MapWidget>
+        <MediumWidget widgetType = currentPace></MediumWidget>
+        <MediumWidget widgetType = distanceCovered></MediumWidget>
+        <MediumWidget widgetType = elevationGain></MediumWidget>
+        <MediumWidget widgetType = time></MediumWidget>
 
-<div class="runbuttons">
-    <RunButtons type="stop"></RunButtons>
-    <RunButtons type="pause"></RunButtons>
-</div>
-
+        <div class="runbuttons">
+            <RunButtons type="stop"></RunButtons>
+            <RunButtons type="pause"></RunButtons>
+        </div>
+    </div>
 </slot>
 
 <style>
+    .bodyContent {
+        margin: 0;
+    }
     .runbuttons {
         height: 120px;  
         width: 100%;

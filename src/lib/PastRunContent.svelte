@@ -17,36 +17,44 @@
 </script>
 
 <slot>
-     <div class="dateNTime">
-          <h6>{date}</h6>
-          <h6>{timeOfDay}</h6>
+     <div class="pastRunContent">
+          <div class="dateNTime">
+               <h6>{date}</h6>
+               <h6>{timeOfDay}</h6>
+          </div>
+          <div class="milesNEmotion">
+               <div class="milesContainer">
+                    <h3 class="Fugaz">{miles}</h3>
+                    <p>Miles</p>
+               </div>
+               <img class="faceIcon" src={normalIcon} alt="Normal Icon">
+          </div>
+          <div class="otherStats">
+               <div class="statContainer">
+                    <h5 class="Fugaz">{runs}</h5>
+                    <p>Runs</p>
+               </div>
+               <div class="statContainer">
+                    <h5 class="Fugaz">{avgPace}</h5>
+                    <p>Avg. Pace</p>
+               </div>
+               <div class="statContainer">
+                    <h5 class="Fugaz">{time}</h5>
+                    <p>Time</p>
+               </div>
+          </div>
+          <CommonProblemsButtonContainer></CommonProblemsButtonContainer>
+          <img class="map" src={fakeMap} alt="Map">
      </div>
-     <div class="milesNEmotion">
-          <div class="milesContainer">
-               <h3 class="Fugaz">{miles}</h3>
-               <p>Miles</p>
-          </div>
-          <img class="faceIcon" src={normalIcon} alt="Normal Icon">
-     </div>
-     <div class="otherStats">
-          <div class="statContainer">
-               <h5 class="Fugaz">{runs}</h5>
-               <p>Runs</p>
-          </div>
-          <div class="statContainer">
-               <h5 class="Fugaz">{avgPace}</h5>
-               <p>Avg. Pace</p>
-          </div>
-          <div class="statContainer">
-               <h5 class="Fugaz">{time}</h5>
-               <p>Time</p>
-          </div>
-     </div>
-     <CommonProblemsButtonContainer></CommonProblemsButtonContainer>
-     <img class="map" src={fakeMap} alt="Map">
 </slot>
 
 <style>
+     .pastRunContent {
+          display: flex;
+          flex-direction: column;
+          margin: 20px 20px;
+          gap: 20px;
+     }
      .dateNTime {
           display: flex;
           justify-content: space-between;
@@ -80,7 +88,7 @@
      }
 
      .map {
-          width: 300px;
+          width: 100%;
           height: 350px;
      }
 

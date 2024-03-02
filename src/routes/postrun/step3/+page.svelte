@@ -6,26 +6,28 @@
 
 <slot>
     <BlankHeader></BlankHeader>
-    <div class="container">
-        <div>
-            <h6>How do you emotionally feel after this run?</h6>
-            <EmojiRadio></EmojiRadio>
-        </div>
-        <div>
-            <h6>Select any issues you dealt with on this run.</h6>
-        </div>
-        <!-- <div>
-            <h6>How do you feel about your physical stress levels?</h6>
-            <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    <div class="bodyContent">
+        <div class="container">
+            <div>
+                <h6>How do you emotionally feel after this run?</h6>
+                <EmojiRadio></EmojiRadio>
             </div>
-        </div> -->
-        <div class="nav-butts">
-            <div class="continue">
-                <a href="">Continue</a>
+            <div>
+                <h6>Select any issues you dealt with on this run.</h6>
             </div>
-            <div class="skip">
-                <a href="">Skip All</a>
+            <!-- <div>
+                <h6>How do you feel about your physical stress levels?</h6>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+            </div> -->
+            <div class="nav-butts">
+                <div class="continue">
+                    <a href="/postrun/step4">Continue</a>
+                </div>
+                <div class="skip">
+                    <a href="../">Skip All</a>
+                </div>
             </div>
         </div>
     </div>

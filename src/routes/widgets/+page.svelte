@@ -1,11 +1,13 @@
 <script>
-	import Header from "../../lib/Header.svelte";
 	import TabToggler from "../../lib/TabToggler.svelte";
 	import MediumWidgetOnOff from "../../lib/MediumWidgetOnOff.svelte";
      import NavigationBar from "$lib/NavigationBar.svelte";
+	import HeaderWithButton from "../../lib/HeaderWithButton.svelte";
 
 </script>
-<Header page="widget"></Header>
+
+<HeaderWithButton page="widgets"></HeaderWithButton>
+
 <div class="bodyContent">
      <TabToggler></TabToggler>
      <MediumWidgetOnOff widgetType = 'totalDist1'></MediumWidgetOnOff>

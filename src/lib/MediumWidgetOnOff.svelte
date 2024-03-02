@@ -51,6 +51,7 @@
           justify-content: center;
           align-items: center;
           gap: 10px;
+          margin: 0 20px;
      }
      .nameAndToggle {
           width: 353px;

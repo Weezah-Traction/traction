@@ -1,24 +1,28 @@
 <script>
     import BlankHeader from "../../../lib/BlankHeader.svelte";
+
+    import fakeMap from '$lib/assets/fakeMap.png'; /* Replace with actual stretch image later*/
 </script>
 
 <slot>
     <BlankHeader></BlankHeader>
-    <div class="container">
-        <div>
-            <h2>Stretches</h2>
-            <p>You can find some more cooldown stretches & Recommendation to relax your body on the home screen </p>
-        </div>
-        <div> <!--Might need to add a gallery component here for the stretches-->
-            <h2>Dynamic Leg Swings</h2>
-            <img src="" alt="Gif image">
-        </div>
-        <div class="nav-butts">
-            <div class="continue">
-                <a href="">Continue</a>
+    <div class="bodyContent">
+        <div class="container">
+            <div>
+                <h2>Stretches</h2>
+                <p>You can find some more cooldown stretches & Recommendation to relax your body on the home screen </p>
             </div>
-            <div class="skip">
-                <a href="">Skip All</a>
+            <div> <!--Might need to add a gallery component here for the stretches-->
+                <h2>Dynamic Leg Swings</h2>
+                <img src={fakeMap} alt="Gif">
+            </div>
+            <div class="nav-butts">
+                <div class="continue">
+                    <a href="../">Continue</a>
+                </div>
+                <!--<div class="skip">
+                    <a href="">Skip All</a>
+                </div>-->
             </div>
         </div>
     </div>
@@ -50,6 +54,7 @@
         color: var(--lavender-700);
     }
 
+    /*
     .skip {
         width: 353px;
         height: 48px;
@@ -60,6 +65,7 @@
         border-radius: 10px;
         margin: 0px 0px 55px 0px;
     }
+    */
 
     .skip a {
         color: var(--lavender-700);
@@ -73,5 +79,10 @@
 
     h2 {
         font-family: 'Fugaz One';
+    }
+
+    img {
+        width: 250px;
+        height: 215px;
     }
 </style>

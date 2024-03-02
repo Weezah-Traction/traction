@@ -9,7 +9,7 @@
 
 <slot>
      <HeaderWithBack page="levels"></HeaderWithBack>
-     <div class="levelsContent">
+     <div class="bodyContent">
           <div class="currentLevel">
                <h6 class="levelHeader">Current Level</h6>
                <LevelCard
@@ -41,16 +41,10 @@
                ></LevelCard>
           </div>
      </div>
-
      <NavigationBar></NavigationBar>
 </slot>
 
 <style>
-     .levelsContent {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-     }
      .currentLevel {
           display: flex;
           flex-direction: column;

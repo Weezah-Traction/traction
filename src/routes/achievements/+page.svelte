@@ -9,65 +9,62 @@
 
 </script>
 
-<BlankHeader page="achievements"></BlankHeader>
-<PillButton link="/activity" text="Activity"></PillButton>
-<div class="achievementsContent">
-	<TabToggler page="activity"></TabToggler>
-	<div class="levelSection">
-		<LevelCard
-			levelName = "New Runner"
-			currentXP = "320"
-			nextXP = "680"
-			streakNum = "1"
-		></LevelCard>
-		<AchievementsButton link="/achievements/levels" text="View All Run Levels"></AchievementsButton>
-	</div>
-	<div class="otherSections">
-		<h6>Personal Records</h6>
-		<div class="threeFlower">
-			<AchievementsFlowerContainer
-				name = "Farthest Run"
-				stat = "1.93mi"
-			></AchievementsFlowerContainer>
-			<AchievementsFlowerContainer
-				name = "Farthest Run"
-				stat = "1.93mi"
-			></AchievementsFlowerContainer>
-			<AchievementsFlowerContainer
-				name = "Farthest Run"
-				stat = "1.93mi"
-			></AchievementsFlowerContainer>
+<slot>
+	<BlankHeader page="achievements"></BlankHeader>
+	<PillButton link="/activity" text="Activity"></PillButton>
+	<div class="bodyContent">
+		<TabToggler page="activity"></TabToggler>
+		<div class="levelSection">
+			<LevelCard
+				levelName = "New Runner"
+				currentXP = "320"
+				nextXP = "680"
+				streakNum = "1"
+			></LevelCard>
+			<AchievementsButton link="/achievements/levels" text="View All Run Levels"></AchievementsButton>
 		</div>
-		<AchievementsButton link="/achievements/records" text="View Your Records"></AchievementsButton>
-	</div>
-	<div class="otherSections">
-		<h6>Awards Badges</h6>
-		<div class="threeFlower">
-			<AchievementsFlowerContainer
-				name = "Farthest Run"
-				stat = "1.93mi"
-			></AchievementsFlowerContainer>
-			<AchievementsFlowerContainer
-				name = "Farthest Run"
-				stat = "1.93mi"
-			></AchievementsFlowerContainer>
-			<AchievementsFlowerContainer
-				name = "Farthest Run"
-				stat = "1.93mi"
-			></AchievementsFlowerContainer>
+		<div class="otherSections">
+			<h6>Personal Records</h6>
+			<div class="threeFlower">
+				<AchievementsFlowerContainer
+					name = "Farthest Run"
+					stat = "1.93mi"
+				></AchievementsFlowerContainer>
+				<AchievementsFlowerContainer
+					name = "Farthest Run"
+					stat = "1.93mi"
+				></AchievementsFlowerContainer>
+				<AchievementsFlowerContainer
+					name = "Farthest Run"
+					stat = "1.93mi"
+				></AchievementsFlowerContainer>
+			</div>
+			<AchievementsButton link="/achievements/records" text="View Your Records"></AchievementsButton>
 		</div>
-		<AchievementsButton link="/achievements/awards" text="View All Awards"></AchievementsButton>
+		<div class="otherSections">
+			<h6>Awards Badges</h6>
+			<div class="threeFlower">
+				<AchievementsFlowerContainer
+					name = "Farthest Run"
+					stat = "1.93mi"
+				></AchievementsFlowerContainer>
+				<AchievementsFlowerContainer
+					name = "Farthest Run"
+					stat = "1.93mi"
+				></AchievementsFlowerContainer>
+				<AchievementsFlowerContainer
+					name = "Farthest Run"
+					stat = "1.93mi"
+				></AchievementsFlowerContainer>
+			</div>
+			<AchievementsButton link="/achievements/awards" text="View All Awards"></AchievementsButton>
+		</div>
 	</div>
-</div>
+</slot>
 
 <NavigationBar></NavigationBar>
 
 <style>
-	.achievementsContent {
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-	}
 	.levelSection {
 		display: flex;
 		flex-direction: column;

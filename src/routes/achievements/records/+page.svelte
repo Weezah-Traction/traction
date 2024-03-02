@@ -2,8 +2,8 @@
 	import HeaderWithBack from "../../../lib/HeaderWithBack.svelte";
 	import NavigationBar from "../../../lib/NavigationBar.svelte";
 	import RecordItem from "../../../lib/RecordItem.svelte";
-
 </script>
+
 <slot>
      <HeaderWithBack page="records"></HeaderWithBack>
      <div class="bodyContent">

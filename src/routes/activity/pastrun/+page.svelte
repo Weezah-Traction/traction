@@ -12,13 +12,5 @@
      <NavigationBar></NavigationBar>
 </slot>
 
-<style>
-     .bodyContent {
-          display: flex;
-          flex-direction: column;
-          margin: 0 20px;
-          padding: 20px 0;
-          gap: 20px;
-     }
-</style>
+
 

@@ -3,30 +3,32 @@
 </script>
 
 <slot>
-    <div class="container">
-        <div class="container-post">
-            <img src="" alt="Reward Flower">
-            <h1>Woohoo! Level Up!</h1>
-            <div class="container-post-1">
-                <h2>1</h2>
-                <h2>Day</h2>
-            </div>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-bar-header">
-                <h2>New Runner</h2>
+    <div class="bodyContent">
+        <div class="container">
+            <div class="container-post">
                 <img src="" alt="Reward Flower">
+                <h1>Woohoo! Level Up!</h1>
+                <div class="container-post-1">
+                    <h2>1</h2>
+                    <h2>Day</h2>
+                </div>
             </div>
-            <div>
-                <p>320 XP</p>
+            <div class="progress-bar">
+                <div class="progress-bar-header">
+                    <h2>New Runner</h2>
+                    <img src="" alt="Reward Flower">
+                </div>
+                <div>
+                    <p>320 XP</p>
+                </div>
             </div>
-        </div>
-        <div class="nav-butts">
-            <div class="continue">
-                <a href="">Continue</a>
-            </div>
-            <div class="skip">
-                <a href="">Skip All</a>
+            <div class="nav-butts">
+                <div class="continue">
+                    <a href="/postrun/step3">Continue</a>
+                </div>
+                <div class="skip">
+                    <a href="../">Skip All</a>
+                </div>
             </div>
         </div>
     </div>

@@ -10,28 +10,23 @@
  </script>
  
  
- <slot>
- 
- <HeaderWithButton page="home"></HeaderWithButton>
- 
- <div class = "homehead">
-     <BasicPlanItem></BasicPlanItem>
- </div>
- 
- <div class="homebody">
-    <MapWidget></MapWidget>
-     <!-- <PreRunChecklist></PreRunChecklist> -->
-     <div class="lav300"><MediumWidget widgetType = totalDist1></MediumWidget></div>
-     <div class="lav100"><MediumWidget widgetType = avgPace1></MediumWidget></div>
-     <div class="lav300"><MediumWidget widgetType = time></MediumWidget></div>
-     <div class="lav100"><MediumWidget widgetType = distanceCovered></MediumWidget></div>   
-     
+<slot>
+     <HeaderWithButton page="home"></HeaderWithButton>
+     <div class="bodyContent">
+          <div class = "homehead">
+               <BasicPlanItem></BasicPlanItem>
+          </div>
+          <div class="homebody">
+               <MapWidget></MapWidget>
+               <div class="lav300"><MediumWidget widgetType = totalDist1></MediumWidget></div>
+               <div class="lav100"><MediumWidget widgetType = avgPace1></MediumWidget></div>
+               <div class="lav300"><MediumWidget widgetType = time></MediumWidget></div>
+               <div class="lav100"><MediumWidget widgetType = distanceCovered></MediumWidget></div>   
+          </div>
+     </div>
      <RunButton></RunButton>
- </div>
- 
- 
- <NavigationBar></NavigationBar>
- </slot>
+     <NavigationBar></NavigationBar>
+</slot>
  
  
  <style>

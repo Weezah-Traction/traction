@@ -17,7 +17,7 @@
      }
 
      if (page == 'detail'){
-     header = 'Detail (CHANGE ME!!)';
+     header = 'Detail';
      backLink = '/plans/guidance'
      }
 

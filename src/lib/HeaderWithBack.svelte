@@ -8,22 +8,22 @@
 
      if (page == 'und'){
      header = 'Undefined';
-     backLink = '../'
+     backLink = '/'
      }
 
      if (page == 'pastrun'){
      header = 'Run Info';
-     backLink = '../activity'
+     backLink = '/activity'
      }
 
      if (page == 'detail'){
      header = 'Detail (CHANGE ME!!)';
-     backLink = '../guidance'
+     backLink = '/plans/guidance'
      }
 
      if (page == 'guidance'){
      header = 'Guidance';
-     backLink = '../plans'
+     backLink = '/plans'
      }
 
      if (page == 'levels'){
@@ -33,13 +33,13 @@
      
      if (page == 'awards'){
      header = 'Awards';
-     backLink = '../achievements'
+     backLink = '/achievements'
      }
 
      
      if (page == 'records'){
      header = 'Records';
-     backLink = '../achievements'
+     backLink = '/achievements'
      }
 </script>
 

@@ -1,38 +1,23 @@
 <script>
-export let page = 'run';
-let header;
+	import PillButton from "./PillButton.svelte";
 
-if (page == 'run'){
-    header = 'Run';
-}
+export let page = 'home';
+let header;
+let link;
+let text;
 
 if (page == 'home'){
-        header = 'Home';
-    }
-
-if (page == 'postrun'){
-    header = 'Cooldown';
+    header = 'Traction';
+    link = "/widgets";
+    text = "Add Widgets";
 }
 
-if (page == 'activity'){
-    header = 'Summary';
+if (page == 'widgets'){
+    header = 'Widgets';
+    link = "../";
+    text = "Home";
 }
 
-if (page == 'achievements'){
-    header = 'Summary';
-}
-
-if (page == 'plans'){
-    header = 'Plans';
-}
-
-if (page == 'step3'){
-    header = 'Check-up';
-}
-
-if (page == 'guidance'){
-    header = 'Guidance';
-}
 
 </script>
 
@@ -40,6 +25,7 @@ if (page == 'guidance'){
     <div class="container">
         <div class="headerText">
             <h1 class="headerPageTitle">{header}</h1>
+            <PillButton link={link} text={text}></PillButton>
         </div>
     </div> 
 </slot>
@@ -53,15 +39,17 @@ if (page == 'guidance'){
         top: 0;
         justify-content: space-between;
         align-items: flex-end;
-        width: 393px;
+        max-width: 100%;
         height: 70px;
     }
 
     .headerText {
+        width: 393px;
         display: flex;
-        flex-direction: column;
-        padding-bottom: 15px;
-        padding-left: 15px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
     }
 
     .headerPageTitle {

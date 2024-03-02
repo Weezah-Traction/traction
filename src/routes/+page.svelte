@@ -1,18 +1,18 @@
 <script>
      import BasicPlanItem from "$lib/BasicPlanItem.svelte";
-     import BlankHeader from "$lib/BlankHeader.svelte";
      import NavigationBar from "$lib/NavigationBar.svelte";
      import PreRunChecklist from "$lib/PreRunChecklist.svelte"
      import MediumWidget from "$lib/MediumWidget.svelte";
       import MapWidget from "$lib/MapWidget.svelte";
       import RunButton from "$lib/RunButton.svelte";
+     import HeaderWithButton from "$lib/HeaderWithButton.svelte";
  
  </script>
  
  
  <slot>
  
- <BlankHeader page="home"></BlankHeader>
+ <HeaderWithButton page="home"></HeaderWithButton>
  
  <div class = "homehead">
      <BasicPlanItem></BasicPlanItem>

@@ -28,7 +28,7 @@
 
      if (page == 'levels'){
      header = 'Levels';
-     backLink = '../achievements'
+     backLink = '/achievements'
      }
      
      if (page == 'awards'){

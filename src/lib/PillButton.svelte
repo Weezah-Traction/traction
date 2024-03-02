@@ -1,7 +1,7 @@
 <!-- Pil Button -->
 <!-- Used to trigger a functions, such as Editing Widgets and Progressing in Slides -->
 <script>
-    export let link = "/home"
+    export let link = "../"
     export let text = "Button"
 </script>
 

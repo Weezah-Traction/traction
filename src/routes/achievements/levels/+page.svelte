@@ -45,6 +45,9 @@
 </slot>
 
 <style>
+     .bodyContent {
+          margin: 0;
+     }
      .currentLevel {
           display: flex;
           flex-direction: column;

@@ -18,7 +18,7 @@
             </div>
             <div class="nav-butts">
                 <div class="continue">
-                    <a href="../">Continue</a>
+                    <a href="../../">Continue</a>
                 </div>
                 <!--<div class="skip">
                     <a href="">Skip All</a>

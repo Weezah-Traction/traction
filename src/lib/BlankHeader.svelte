@@ -26,8 +26,12 @@ if (page == 'plans'){
     header = 'Plans';
 }
 
-if (page == 'step3'){
-    header = 'Check-up';
+if (page == 'checkup'){
+    header = 'Check-Up';
+}
+
+if (page == 'cooldown'){
+    header = 'Stretches';
 }
 
 if (page == 'guidance'){

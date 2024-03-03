@@ -4,7 +4,7 @@
      import PreRunChecklist from "$lib/PreRunChecklist.svelte"
      import MediumWidget from "$lib/MediumWidget.svelte";
       import MapWidget from "$lib/MapWidget.svelte";
-      import RunButton from "$lib/RunButton.svelte";
+      import StartRunButton from "$lib/StartRunButton.svelte";
      import HeaderWithButton from "$lib/HeaderWithButton.svelte";
  
  </script>
@@ -24,7 +24,7 @@
                <div class="lav100"><MediumWidget widgetType = distanceCovered></MediumWidget></div>   
           </div>
      </div>
-     <RunButton></RunButton>
+     <StartRunButton></StartRunButton>
      <NavigationBar></NavigationBar>
 </slot>
  

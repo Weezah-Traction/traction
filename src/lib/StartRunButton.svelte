@@ -16,6 +16,7 @@
         position: fixed;
         z-index: 1;
     }
+
     a{
         display: flex;
         width: 353px;

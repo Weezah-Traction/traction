@@ -19,7 +19,7 @@
 
 <style>
      .bodyContent {
-          display: flex;
-          flex-direction: column;
+          gap: 0;
+          margin: 0;
      }
 </style>

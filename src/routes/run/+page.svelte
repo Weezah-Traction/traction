@@ -3,16 +3,19 @@
     import MapWidget from "$lib/MapWidget.svelte";
     import MediumWidget from "../../lib/MediumWidget.svelte";
     import RunButtons from "../../lib/RunButtons.svelte";
+	import RunWidget from "../../lib/RunWidget.svelte";
 </script>
 
 <slot>
     <BlankHeader></BlankHeader>
     <div class="bodyContent">
-        <MapWidget size="medium"></MapWidget>
-        <MediumWidget widgetType = currentPace></MediumWidget>
-        <MediumWidget widgetType = distanceCovered></MediumWidget>
-        <MediumWidget widgetType = elevationGain></MediumWidget>
-        <MediumWidget widgetType = time></MediumWidget>
+        <div class="widgetList">
+            <MapWidget size="medium"></MapWidget>
+            <div class="lav100"><RunWidget widgType = "distance" data = "0.00"></RunWidget></div>
+            <div class="lav200"><RunWidget widgType = "pace" data = "0.00"></RunWidget></div>
+            <div class="lav100"><RunWidget widgType = "timer" data = "0:00"></RunWidget></div>
+            <div class="lav200"><RunWidget widgType = "c25k" data = "WALK"></RunWidget></div>
+        </div>
 
         <div class="runbuttons">
             <RunButtons type="stop"></RunButtons>

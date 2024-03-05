@@ -8,7 +8,7 @@ let text;
 
 if (page == 'home'){
     header = 'Traction';
-    link = "/widgets";
+    link = "/widgetshome";
     text = "Add Widgets";
 }
 

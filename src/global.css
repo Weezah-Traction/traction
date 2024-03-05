@@ -190,6 +190,13 @@
   padding-bottom: 125px;
 }
 
+.lav200 {
+  background-color: var(--lavender-200);
+}
+.lav100 {
+  background-color: var(--lavender-100);
+}
+
 
 
 

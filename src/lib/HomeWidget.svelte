@@ -10,11 +10,26 @@
      import iconRecords from '$lib/assets/widgIcons/recordsIcon.svg';
      import iconLastRun from '$lib/assets/widgIcons/lastrunIcon.svg';
 
+     import expanderOpen from '$lib/assets/expOpen.svg';
+     import expanderClosed from '$lib/assets/expClose.svg';
+     
+     export let status;
+     let expanderType;
+
      export let widgType = "default";
      export let data;
      let end;
      let name;
      let icon;
+
+     if (status == 'closed'){
+          expanderType = expanderOpen;
+     }
+
+     if (status == 'opened'){
+          expanderType = expanderClosed;
+     }
+
 
 
      if (widgType == "default"){
@@ -70,28 +85,41 @@
 
 <slot>
      <div class="homeWidg">
-          <div class="iconandtext"> 
-               <div class="icon">
-                    <img src={icon} alt="Widget Icon">
+          <div class="widgContent">
+               <div class="iconandtext"> 
+                    <div class="icon">
+                         <img class="iconImg" src={icon} alt="Widget Icon">
+                    </div>
+                    <p class="widgetName">{name}</p>
                </div>
-               <p class="widgetName">{name}</p>
+               <div class="expandIconandtext">
+                    <h4 class="widgetData">{data} {end}</h4>
+               </div>
           </div>
-          <div class="expandIconandtext">
-               <h4 class="widgetData">{data} {end}</h4>
-               <div class="expandIcon"></div>
+          <div class="expander">
+               <img class='expanderImg' src={expanderType} alt='Expander'>
           </div>
-          
      </div>
 </slot>
 
 <style>
      .homeWidg {  
           display: flex;
+          width: 393px;
+          height: 100px;
+          align-items: center;
+          gap: 10px;
+          flex-shrink: 0;
+     }
+
+     .widgContent {
+          padding-left: 20px;
+          display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
           width: 100%;
-          margin: 0px  ;
+          margin: 0px;
           height: 100px;
           /* gap: 10px; */
 
@@ -99,8 +127,12 @@
           /* background: var(--Lavender-300, #DFCEFD); */
      }
 
+     .expander {
+          display: flex;
+          padding-right: 20px;
+     }
+
      .widgetName {
-          padding-left: 8px;
           color: var(--Lavender-700, #2A2534);
           text-align: center;
           /* Poppins/Bold/Body */
@@ -114,7 +146,7 @@
      }
 
      .widgetData {
-          padding-left: 20px;
+          /*padding-left: 20px;*/
           color: var(--Lavender-700, #2A2534);
           text-align: center;
           /* Fugaz/H4 */
@@ -125,25 +157,27 @@
           line-height: normal;
           letter-spacing: 1.382px;
           margin: 0;
+          
      }
 
      .iconandtext{
           display: flex;
           flex-direction: row;
-          margin-left: 20px;
+          /*margin-left: 20px;*/
           justify-content: start;
           align-items: center;
+          gap: 10px;
      }
 
-     .icon {
+     .iconImg {
           width: 22px;
           height: 22px;
-    }
+     }
 
-     img {
-          width: 22px;
-          height: 22px;
-    }
+     .expanderImg {
+          width: 28px;
+          height: 14px;
+     }
 
     /* .expandIcon {
      display: flex;

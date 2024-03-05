@@ -11,13 +11,25 @@
      import iconLastRun from '$lib/assets/widgIcons/lastrunIcon.svg';
 
      import expanderOpen from '$lib/assets/expOpen.svg';
-     import expanderClose from '$lib/assets/expClose.svg';     
+     import expanderClosed from '$lib/assets/expClose.svg';
+     
+     export let status;
+     let expanderType;
 
      export let widgType = "default";
      export let data;
      let end;
      let name;
      let icon;
+
+     if (status == 'closed'){
+          expanderType = expanderOpen;
+     }
+
+     if (status == 'opened'){
+          expanderType = expanderClosed;
+     }
+
 
 
      if (widgType == "default"){
@@ -85,7 +97,7 @@
                </div>
           </div>
           <div class="expander">
-               <img class="expanderImg" src={expanderOpen} alt="Expander">
+               <img class='expanderImg' src={expanderType} alt='Expander'>
           </div>
      </div>
 </slot>
@@ -145,6 +157,7 @@
           line-height: normal;
           letter-spacing: 1.382px;
           margin: 0;
+          
      }
 
      .iconandtext{

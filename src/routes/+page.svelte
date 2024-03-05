@@ -19,13 +19,13 @@
         </div>
         <div class="homebody">
             <MapWidget></MapWidget>
-            <div class="lav200"><HomeWidget widgType = "prerun" data = "0/4"></HomeWidget></div>
-            <div class="lav100"><HomeWidget widgType = "experience" data = "320"></HomeWidget></div>
-            <div class="lav200"><HomeWidget widgType = "dist" data = "0.0"></HomeWidget></div>
-            <div class="lav100"><HomeWidget widgType = "pace" data = "0.0"></HomeWidget></div>
-            <div class="lav200"><HomeWidget widgType = "awards" data = "Explain to See More"></HomeWidget></div>
-            <div class="lav100"><HomeWidget widgType = "records" data = "Explain to See More"></HomeWidget></div>
-            <div class="lav200"><HomeWidget widgType = "lastrun" data = "2/24/2024; 2.53 mi, 5 hr 24 min"></HomeWidget></div>
+            <div class="lav200"><HomeWidget widgType = "prerun" status = 'closed'data = "0/4"></HomeWidget></div>
+            <div class="lav100"><HomeWidget widgType = "experience" status = 'closed' data = "320"></HomeWidget></div>
+            <div class="lav200"><HomeWidget widgType = "dist" status = 'closed' data = "0.0"></HomeWidget></div>
+            <div class="lav100"><HomeWidget widgType = "pace" status = 'closed' data = "0.0"></HomeWidget></div>
+            <div class="lav200"><HomeWidget widgType = "awards" status = 'closed' data = "Explain to See More"></HomeWidget></div>
+            <div class="lav100"><HomeWidget widgType = "records" status = 'closed' data = "Explain to See More"></HomeWidget></div>
+            <div class="lav200"><HomeWidget widgType = "lastrun" status = 'closed' data = "2/24/2024"></HomeWidget></div>
             <!--<div class="lav300"><MediumWidget widgetType = totalDist1></MediumWidget></div>
             <div class="lav100"><MediumWidget widgetType = avgPace1></MediumWidget></div>
             <div class="lav300"><MediumWidget widgetType = time></MediumWidget></div>

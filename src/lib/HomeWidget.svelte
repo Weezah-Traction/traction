@@ -84,7 +84,7 @@
 </script>
 
 <slot>
-     <div class="homeWidg">
+     <!--<div class="homeWidg">
           <div class="widgContent">
                <div class="iconandtext"> 
                     <div class="icon">
@@ -99,7 +99,41 @@
           <div class="expander">
                <img class='expanderImg' src={expanderType} alt='Expander'>
           </div>
-     </div>
+     </div>-->
+     <details>
+          <summary>
+               <div class="homeWidg">
+                    <div class="widgContent">
+                         <div class="iconandtext"> 
+                              <div class="icon">
+                                   <img class="iconImg" src={icon} alt="Widget Icon">
+                              </div>
+                              <p class="widgetName">{name}</p>
+                         </div>
+                         <div class="expandIconandtext">
+                              <h4 class="widgetData">{data} {end}</h4>
+                         </div>
+                    </div>
+                    <div class="expander">
+                         <img class='expanderImg' src={expanderType} alt='Expander'>
+                    </div>
+               </div>
+          </summary>
+          <div class="widgContentExpanded">
+               <div class="iconandtext"> 
+                    <div class="icon">
+                         <img class="iconImg" src={icon} alt="Widget Icon">
+                    </div>
+                    <p class="widgetName">{name}</p>
+               </div>
+               <div class="expandIconandtext">
+                    <h4 class="widgetData">{data} {end}</h4>
+               </div>
+          </div>
+          <div class="expander">
+               <img class='expanderImg' src={expanderType} alt='Expander'>
+          </div>
+     </details>
 </slot>
 
 <style>

@@ -8,7 +8,6 @@
      import HeaderWithButton from "$lib/HeaderWithButton.svelte";
 	import HomeWidget from "../lib/HomeWidget.svelte";
 	import HomePlanItem from "../lib/HomePlanItem.svelte";
-	import ExpandButton from "../lib/ExpandButton.svelte";
  
  </script>
  

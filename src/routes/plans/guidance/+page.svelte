@@ -11,19 +11,22 @@
                <div class="lav100"><GuidanceItem 
                     header="Pre-Run" 
                     desc="Stretches, mindset, and what to eat/drink." 
-                    link="/plans/guidance/detail"
+                    link="/plans/guidance/one"
                ></GuidanceItem></div>
                <div class="lav200"><GuidanceItem 
                     header="During Runs" 
                     desc="Learn the importance of proper posture and breathing tech."
+                    link="/plans/guidance/two"
                ></GuidanceItem></div>
                <div class="lav100"><GuidanceItem
                     header="After Runs"
                     desc="Cool down and close your runs out with this guide."
+                    link="/plans/guidance/three"
                ></GuidanceItem></div>
                <div class="lav200"><GuidanceItem
                     header="General Care & Motivation"
                     desc="Take care of yourself! This guide will help."
+                    link="/plans/guidance/four"
                ></GuidanceItem></div>
           </div>
      </div>

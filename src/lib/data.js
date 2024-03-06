@@ -3,7 +3,7 @@ export const plans = [
 ];
 
 export const widgets = [
-    {title: 'Title', icon: 'Icon', value: 'Value', details: 'Details'}
+    {title: 'Title', icon: 'Icon', value: 'Small information', details: 'Full information'}
 ];
 
 export const levels = [

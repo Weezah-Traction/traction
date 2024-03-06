@@ -1,8 +1,8 @@
 <script>
      import thumb from '$lib/assets/backIcon.svg';
-     let header;
+     export let header;
      let backLink;
-     export let page = "und";
+     export let page;
 
      //How to make this change based on the name of the section we're viewing in Guidance??
 
@@ -17,7 +17,6 @@
      }
 
      if (page == 'detail'){
-     header = 'Detail';
      backLink = '/plans/guidance'
      }
 

@@ -4,20 +4,12 @@
 
 <slot>
      <div class="detailContent">
-          <DetailContentBlock 
-               title="Stretches"
-               content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-          ></DetailContentBlock>
-
-          <DetailContentBlock 
-               title="Hydration"
-               content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-          ></DetailContentBlock>
-
-          <DetailContentBlock 
-               title="Gear"
-               content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-          ></DetailContentBlock>
+          <h6>{title}</h6>
+          <p>{content}</p>
+          <h6>{title}</h6>
+          <p>{content}</p>
+          <h6>{title}</h6>
+          <p>{content}</p>
      </div>
 </slot>
 

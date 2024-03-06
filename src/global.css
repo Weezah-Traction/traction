@@ -190,11 +190,14 @@
   padding-bottom: 125px;
 }
 
+.lav100 {
+  background-color: var(--lavender-100);
+}
 .lav200 {
   background-color: var(--lavender-200);
 }
-.lav100 {
-  background-color: var(--lavender-100);
+.lav300 {
+  background-color: var(--Lavender-300);
 }
 
 

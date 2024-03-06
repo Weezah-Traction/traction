@@ -7,6 +7,8 @@
       import StartRunButton from "$lib/StartRunButton.svelte";
      import HeaderWithButton from "$lib/HeaderWithButton.svelte";
 	import HomeWidget from "../lib/HomeWidget.svelte";
+	import HomePlanItem from "../lib/HomePlanItem.svelte";
+	import ExpandButton from "../lib/ExpandButton.svelte";
  
  </script>
  
@@ -15,11 +17,11 @@
     <HeaderWithButton page="home"></HeaderWithButton>
     <div class="bodyContent">
         <div class = "homehead">
-            <BasicPlanItem></BasicPlanItem>
+            <HomePlanItem></HomePlanItem>
         </div>
         <div class="homebody">
             <MapWidget></MapWidget>
-            <div class="lav200"><HomeWidget widgType = "prerun" status = 'closed'data = "0/4"></HomeWidget></div>
+            <div class="lav200"><HomeWidget widgType = "prerun" status = 'closed' data = "0/4"></HomeWidget></div>
             <div class="lav100"><HomeWidget widgType = "experience" status = 'closed' data = "320"></HomeWidget></div>
             <div class="lav200"><HomeWidget widgType = "dist" status = 'closed' data = "0.0"></HomeWidget></div>
             <div class="lav100"><HomeWidget widgType = "pace" status = 'closed' data = "0.0"></HomeWidget></div>
@@ -35,9 +37,6 @@
  
  
  <style>
-     .homehead {
-         margin: 8px 0px 0px 0px;
-     }
      .homebody {
          margin: 0px 0px 8px 0px;
      }

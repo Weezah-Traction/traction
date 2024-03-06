@@ -11,10 +11,8 @@
 <slot>
     <BlankHeader page="plans"></BlankHeader>
     <div class="bodyContent">
-        <h2>Run Guidance</h2> 
-        <div class="l300"> 
-            <BasicPlanItem  type="guidance"></BasicPlanItem>
-        </div>
+        <h2>Guidance</h2> 
+        <div class="lav200"><BasicPlanItem  type="guidance"></BasicPlanItem></div>
         <!-- Database linking demo
             <h6>Week 1 Plan</h6>
             <ul> 

@@ -3,30 +3,29 @@
 
 <script>
     export let type = 'button';
+    export let content = 'text'
+    export let color = 'highlighted';
+    let backgroundColor = 'background-color: var(--lavender-400)'
+
+    if (color == 'highlighted') {
+        backgroundColor = 'background-color: var(--lavender-300)';
+    }
 
 </script>
 
 
 <slot>
-    <button type="{type}">Long Button</button>
+    <button style="{backgroundColor}" type="{type}">{content}</button>
 </slot>
 
 <style>
-     a{
-        display: flex;
-        align-items: center;
-        height: 50px;
-        justify-content: center;
-        padding: 0 1em;
-        margin: 1em;
-        bottom: 70px;
-        left: 0;
-        position: fixed;
-        right: 0;
-        z-index: 1;
-        border-radius: 20px;
-        border: 3px solid #2D4871;
-        background: var(--Lavender-300);
-
+    button {
+        border-radius: 10px;
+        width: 100%;
+        height: 48px;
+        border-style: none;
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
     }
 </style>

@@ -19,14 +19,16 @@
         <RunThumbnail
             date = "2/11/24"
             distance = "2.2"
-            pace = "5:24"
+            pace = "5.24"
             emotion = 'vhappy'
+            link = '/activity/pastrun/2_11_24'
         ></RunThumbnail>
         <RunThumbnail
             date = "2/9/24"
             distance = "3.4"
             pace = "4.45"
             emotion = 'vhappy'
+            link = '/activity/pastrun/2_9_24'
         ></RunThumbnail>
     </div>
     <NavigationBar></NavigationBar>

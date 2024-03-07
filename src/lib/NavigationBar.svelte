@@ -23,7 +23,7 @@
         display: flex;
         flex-direction: row;
         margin: 0;
-        justify-content: space-between;
+        justify-content: space-around;
         left: 0;
         list-style: none;
         padding: 0;

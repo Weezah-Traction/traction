@@ -27,12 +27,33 @@
         -->
 
         <h2>Week 1 Plan</h2>
-        <BasicPlanList></BasicPlanList>
+        <!--Database Linking-->
+        <ul> 
+            {#each data.plans as {num, header, description}}
+                <li>
+                    <div class="dayBox">
+                        <p>DAY</p>
+                        <h3>{num}</h3>
+                    </div>
+                    <h6>{header}</h6>
+                    <p>{description}</p>
+                </li>
+            {/each}
+        </ul>
+        <!--<BasicPlanList></BasicPlanList>-->
     </div>
     <NavigationBar></NavigationBar>
 </slot>
 
 <style>
+
+li{ 
+        display: flex;
+        flex-direction: row;
+        grid-column: 1/ span 5;
+        padding: 10px 0px 10px 20px;
+    }
+
     h2 {
         margin: 0 20px;
   }

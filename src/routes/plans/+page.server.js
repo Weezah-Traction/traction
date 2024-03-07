@@ -11,7 +11,7 @@ import { plans } from '$lib/data';
 export function load() {
   return {
     plans: plans.map((plans) => ({
-      date: plans.date,
+      num: plans.num,
       header: plans.header,
       description: plans.description
 

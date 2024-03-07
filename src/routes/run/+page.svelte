@@ -32,7 +32,7 @@
         height: 120px;  
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: row;
         justify-content: space-around;
         margin-top: 40px;
         

@@ -9,7 +9,7 @@
 
 </script>
 <slot>
-    <li class="lav300">
+    <li>
         <BasicPlanThumbnail></BasicPlanThumbnail>
         <BasicPlanText type={type} day={day}></BasicPlanText>
     </li>

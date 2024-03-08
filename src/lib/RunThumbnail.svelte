@@ -61,22 +61,26 @@
      .runThumbnail {
           display: flex;
           justify-content: space-between;
-          background-color: #FBF9C2;
+          background-color: var(--lavender-200);
           width: 393px;
           height: 100px;
           align-items: center;
           gap: 10px;
+          padding-top: 8px;
+          padding: 8px;
      }
 
      .mapNInfo {
           display: flex;
           justify-content: center;
+          
      }
 
      .infoContainer {
           display: flex;
           flex-direction: column;
           gap: 10px;
+          padding-left: 16px;
      }
 
      .faceIcon {

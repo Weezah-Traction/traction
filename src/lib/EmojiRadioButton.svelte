@@ -29,7 +29,7 @@
     if (type == "neutral"){
         alt = "Neutral";
         icon = emojiNeutral;
-        value = "1";
+        value = "3";
     }
 
     if (type == "good"){

@@ -28,7 +28,12 @@
      .detailContent {
           display: flex;
           flex-direction: column;
-          padding: 0 20px;
-          gap: 20px;
+          padding: 0 16px;
+          gap: 16px;
+     }
+
+
+     p {
+          padding-bottom: 32px;
      }
 </style>

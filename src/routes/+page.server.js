@@ -1,4 +1,4 @@
-import { plans } from '$lib/data';
+/*import { plans } from '$lib/data';*/
 
 /**
  * The load function iterates over the `teams` array and returns an object.
@@ -8,13 +8,19 @@ import { plans } from '$lib/data';
  * @module {Function} load
  * @returns {{plans: {date: string, header: string, description: string}[]}} - An object with teams array
  */
-export function load() {
-  return {
-    plans: plans.map((plans) => ({
-      num: plans.num,
-      header: plans.header,
-      description: plans.description
 
-    }))
-  };
-}
+/*export function load() {
+     return {
+          plans: plans.map((plans) => ({
+               num: plans.num,
+               header: plans.header,
+               description: plans.description
+          }))
+     };
+}*/
+
+/*if (plans.current == 'no'){
+     plans.num = "";
+     plans.header = "";
+     plans.description = "";
+}*/

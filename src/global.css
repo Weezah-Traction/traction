@@ -227,6 +227,17 @@ h6 {
     margin: 0;
 }
 
+/* Poppins/Bold/H3 */
+h3 {
+    font-family: Poppins;
+    font-size: 33.18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.659px;
+}
+
+
 /* Poppins/Regular/Body */
 p {
     font-family: Poppins;

@@ -7,6 +7,14 @@
 	import AchievementsButton from "../../lib/AchievementsButton.svelte";
 	import AchievementsFlowerContainer from "../../lib/AchievementsFlowerContainer.svelte";
 
+	import { levels } from '$lib/data';
+
+	function filter_levels(id) {
+	return levels.find((levels) => levels.id === id);
+	}
+
+	const filtered_data = filter_levels(1);
+
 </script>
 
 <slot>
@@ -16,10 +24,10 @@
 		<TabToggler page="activity"></TabToggler>
 		<div class="levelSection">
 			<LevelCard
-				levelName = "New Runner"
-				currentXP = "320"
-				nextXP = "680"
-				streakNum = "1"
+				levelName = {filtered_data.title}
+				currentXP = {filtered_data.currentXP}
+				nextXP = {filtered_data.xp}
+				streakNum = {filtered_data.streak}
 			></LevelCard>
 			<AchievementsButton link="/achievements/levels" text="View All Run Levels"></AchievementsButton>
 		</div>

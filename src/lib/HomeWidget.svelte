@@ -31,6 +31,8 @@
      }
 
 
+     let isOpen = false;
+
 
      if (widgType == "default"){
           name = 'Default Widget';
@@ -79,12 +81,11 @@
           icon = iconLastRun;
           end = "";
      }
-
-
+ 
 </script>
 
 <slot>
-     <div class="homeWidg">
+     <!--<div class="homeWidg">
           <div class="widgContent">
                <div class="iconandtext"> 
                     <div class="icon">
@@ -99,7 +100,41 @@
           <div class="expander">
                <img class='expanderImg' src={expanderType} alt='Expander'>
           </div>
-     </div>
+     </div>-->
+     <details bind:open={isOpen}>
+          <summary>
+               <div class="homeWidg">
+                    <div class="widgContent">
+                         <div class="iconandtext"> 
+                              <div class="icon">
+                                   <img class="iconImg" src={icon} alt="Widget Icon">
+                              </div>
+                              <p class="widgetName">{name}</p>
+                         </div>
+                         <div class="expandIconandtext">
+                              <h4 class="widgetData">{data} {end}</h4>
+                         </div>
+                    </div>          
+                    <div class="expander">
+                    {#if isOpen}
+                              <img class='expanderImg' src={expanderClosed} alt='Expander'>
+                    {:else}
+                              <img class='expanderImg' src={expanderOpen} alt='Expander'>
+                    {/if}
+                    </div>
+
+               </div>
+          </summary>
+          <div class="widgContentExpanded">
+               <ul>
+                    <li>Hydrate</li>
+                    <li>Stretch</li>
+                    <li>Gear</li>
+                    <li>Fuel Up</li>
+               </ul>
+          </div>
+     </details>
+
 </slot>
 
 <style>
@@ -113,6 +148,21 @@
      }
 
      .widgContent {
+          padding-left: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          width: 100%;
+          margin: 0px;
+          height: 100px;
+          /* gap: 10px; */
+
+          border-radius: 0px;
+          /* background: var(--Lavender-300, #DFCEFD); */
+     }
+
+     .widgContentExpanded {
           padding-left: 20px;
           display: flex;
           flex-direction: column;
@@ -177,6 +227,20 @@
      .expanderImg {
           width: 28px;
           height: 14px;
+     }
+
+     details {
+          cursor: pointer;
+     }
+
+     details > summary{
+          list-style-type: none;
+          list-style-image: url({expanderOpen});
+     }
+
+     details[open] > summary{
+          list-style-type: none;
+          list-style-image: url({expanderClosed});
      }
 
     /* .expandIcon {

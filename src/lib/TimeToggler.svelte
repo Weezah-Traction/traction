@@ -16,20 +16,21 @@
      </script>
 
      <slot>
-          <label class="TimeToggler">
-                    <div class="TimeToggler_TextBox">
-                         <input type="radio" id="week" name="toggler" value="week" checked>
-                         <label for="week" class="TimeToggler_text">Week</label>
-                         <input type="radio" id="month" name="toggler" value="month">
-                         <label for="month" class="TimeToggler_text">Month</label>
-                         <input type="radio" id="year" name="toggler" value="year">
-                         <label for="year" class="TimeToggler_text">Year</label>
-                         <input type="radio" id="all" name="toggler" value="all">
-                         <label for="all" class="TimeToggler_text">All</label>
-                    </div>
-               <!--<input type="checkbox">-->
-               <span class="slider"></span>
-          </label>
+          <div class="container">
+               <div class="tabs">
+                    <input type="radio" id="radio-1" name="tabs" checked />
+                    <label class="tab" for="radio-1">Activity</label>
+                    <input type="radio" id="radio-2" name="tabs" />
+                    <label class="tab" for="radio-2">Achievements</label>
+                    <input type="radio" id="radio-3" name="tabs" />
+                    <label class="tab" for="radio-3">Achievements</label>
+                    <input type="radio" id="radio-4" name="tabs" />
+                    <label class="tab" for="radio-4">Achievements</label>
+
+                    <span class="glider"></span>
+               </div>
+          </div>
+
           <!--<label class="switch">
                <input type="checkbox">
                <span class="slider round"></span>
@@ -37,79 +38,120 @@
      </slot>
 
      <style>
-          .TimeToggler {
-               display: flex;
-               justify-content: center;
-               max-width: 353px;
-               height: 44px;
-               justify-content: center;
-               align-items: center;
-               border-radius: 20px;
-          }
+          
+          @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
-          .TimeToggler input {
-               opacity: 0;
-               width: 0;
-               height: 0;
-          }
+:root {
+	--primary-color: #185ee0;
+	--secondary-color: #e6eef9;
+}
 
-          .slider {
-               display: flex;
-               z-index: 0;
-               cursor: pointer;
-               width: 88px;
-               height: 44px;
-               top: 0;
-               left: 0;
-               right: 0;
-               bottom: 0;
-               border-radius: 20px;
-               background-color: #DFCEFD;
-               -webkit-transition: .4s;
-               transition: .4s;
-               }
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
 
-          .slider:before {
-               content: "";
-               height: 44px;
-               width: 88px;
-               left: 2px;
-               top: 1px;
-               border-radius: 20px;
-               background-color: white;
-               -webkit-transition: .4s;
-               transition: .4s;
-               }
+body {
+	font-family: "Inter", sans-serif;
+	background-color: rgba(#e6eef9, 0.5);
+}
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.tabs {
+	display: flex;
+	position: relative;
+	background-color: #fff;
+	box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
+	padding: 0.75rem;
+	border-radius: 99px;
 
-          input:checked + .slider {
-               background-color: #D9D9D9;
-               }
+}
 
-          input:focus + .slider {
-               box-shadow: 0 0 1px #34C759;
-               }
+input[type="radio"] {
+	display: none;
+}
 
-          input:checked + .slider:before {
-               -webkit-transform: translateX(176.5px);
-               -ms-transform: translateX(176.5px);
-               transform: translateX(176.5px);
-               }
+.tab {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 54px;
+	width: 200px;
+	font-size: 1.25rem;
+	font-weight: 500;
+	border-radius: 99px; 
+	cursor: pointer;
+	transition: color 0.15s ease-in;
+     z-index: 2;
+}
 
-          .TimeToggler_TextBox {
-               position: fixed;
-               z-index: 1;
-               display: flex;
-               width: 353px;
-               justify-content: space-around;
-          }
+.notification {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 2rem;
+	margin-left: 0.75rem;
+	border-radius: 50%;
+	background-color: var(--secondary-color);
+	transition: 0.15s ease-in;
+}
 
-          .TimeToggler_text {
-               font-family: Poppins;
-               font-size: 16px;
-               font-style: normal;
-               font-weight: 400;
-               line-height: normal;
-               letter-spacing: 0.8px;
-               text-align: center;
-          }
+input[type="radio"] {
+	&:checked {
+		& + label {
+			color: var(--primary-color);
+			& > .notification {
+				background-color: var(--primary-color);
+				color: #fff;
+			}
+		}
+	}
+}
+
+input[id="radio-1"] {
+	&:checked {
+		& ~ .glider {
+			transform: translateX(0);
+		}
+	}
+}
+
+input[id="radio-2"] {
+	&:checked {
+		& ~ .glider {
+			transform: translateX(100%);
+		}
+	}
+}
+
+input[id="radio-3"] {
+	&:checked {
+		& ~ .glider {
+			transform: translateX(200%);
+		}
+	}
+}
+
+.glider {
+	position: absolute;
+	display: flex;
+	height: 54px;
+	width: 200px;
+	background-color: var(--secondary-color);
+	z-index: 0;
+	border-radius: 99px;
+	transition: 0.25s ease-out;
+}
+
+@media (max-width: 700px) {
+	.tabs {
+		transform: scale(0.6);
+	}
+}
+
      </style>

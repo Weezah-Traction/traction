@@ -20,6 +20,7 @@
 	import PopUp from "../../lib/PopUp.svelte";
 	import EmotionPollContainer from "../../lib/EmotionPollContainer.svelte";
 	import StopButton from "../../lib/RunButtons.svelte";
+	import ModalComponent from "../../lib/ModalComponent.svelte";
 </script>
 
 
@@ -56,3 +57,5 @@
 <BasicPlanList></BasicPlanList>
 
 <StopButton type="stop"></StopButton>
+
+<ModalComponent title="End Run" modalContent="Are you sure you want to end your run?"></ModalComponent>

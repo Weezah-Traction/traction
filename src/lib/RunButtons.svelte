@@ -2,8 +2,8 @@
     export let type = 'Type'; // Declares the property
     let icon;
 
-    import stopIcon from '$lib/assets/btnStop.svg';
-    import pauseIcon from '$lib/assets/btnPause.svg';
+    import stopIcon from '$lib/assets/Stop_Button.svg';
+    import pauseIcon from '$lib/assets/Pause_Button.svg';
     
     let alt = "Alt Text";
 

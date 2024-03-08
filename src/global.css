@@ -197,7 +197,10 @@
   background-color: var(--lavender-200);
 }
 .lav300 {
-  background-color: var(--Lavender-300);
+  background-color: var(--lavender-300);
+}
+.lav600 {
+  background-color: var(--lavender-600);
 }
 
 a {

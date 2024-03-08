@@ -4,9 +4,16 @@
 
 <slot>
      <div class="commonProblemsContainer">
-          <CommonProblemsButton text="Example"></CommonProblemsButton>
-          <CommonProblemsButton text="Example"></CommonProblemsButton>
-          <CommonProblemsButton text="Example"></CommonProblemsButton>
+          <CommonProblemsButton type="1"></CommonProblemsButton>
+          <CommonProblemsButton type="2"></CommonProblemsButton>
+          <CommonProblemsButton type="3"></CommonProblemsButton>
+          <CommonProblemsButton type="4"></CommonProblemsButton>
+          <CommonProblemsButton type="5"></CommonProblemsButton>
+          <CommonProblemsButton type="6"></CommonProblemsButton>
+          <CommonProblemsButton type="7"></CommonProblemsButton>
+          <CommonProblemsButton type="8"></CommonProblemsButton>
+          <CommonProblemsButton type="9"></CommonProblemsButton>
+          <CommonProblemsButton type="10"></CommonProblemsButton>
      </div>
 </slot>
 

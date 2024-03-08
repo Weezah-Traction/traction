@@ -31,6 +31,8 @@
      }
 
 
+     let isOpen = false;
+
 
      if (widgType == "default"){
           name = 'Default Widget';
@@ -79,8 +81,7 @@
           icon = iconLastRun;
           end = "";
      }
-
-
+ 
 </script>
 
 <slot>
@@ -100,7 +101,7 @@
                <img class='expanderImg' src={expanderType} alt='Expander'>
           </div>
      </div>-->
-     <details>
+     <details bind:open={isOpen}>
           <summary>
                <div class="homeWidg">
                     <div class="widgContent">
@@ -113,10 +114,15 @@
                          <div class="expandIconandtext">
                               <h4 class="widgetData">{data} {end}</h4>
                          </div>
-                    </div>
+                    </div>          
                     <div class="expander">
-                         <img class='expanderImg' src={expanderType} alt='Expander'>
+                    {#if isOpen}
+                              <img class='expanderImg' src={expanderClosed} alt='Expander'>
+                    {:else}
+                              <img class='expanderImg' src={expanderOpen} alt='Expander'>
+                    {/if}
                     </div>
+
                </div>
           </summary>
           <div class="widgContentExpanded">
@@ -128,6 +134,7 @@
                </ul>
           </div>
      </details>
+
 </slot>
 
 <style>
@@ -220,6 +227,20 @@
      .expanderImg {
           width: 28px;
           height: 14px;
+     }
+
+     details {
+          cursor: pointer;
+     }
+
+     details > summary{
+          list-style-type: none;
+          list-style-image: url({expanderOpen});
+     }
+
+     details[open] > summary{
+          list-style-type: none;
+          list-style-image: url({expanderClosed});
      }
 
     /* .expandIcon {

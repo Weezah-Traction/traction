@@ -27,13 +27,13 @@ export const progress = [
 ]*/
 
 export const plans = [
-    {id: "1", num: '1', header: 'Run for Fun', description: 'Aim for light jog for 5 mins', current: '1'},
-    {id: "2", num: '2', header: 'Relax & Assess', description: 'Give yourself some love!', current: '0'},
-    {id: "3", num: '3', header: 'Run for Fun, Again!', description: 'Just enjoy nature!', current: '0'},
-    {id: "4", num: '4', header: 'Small Steps', description: 'Aim for a light jog for 10 mins', current: '0'},
-    {id: "5", num: '5', header: 'Touch Grass!', description: 'Reconnect with nature', current: '0'},
-    {id: "6", num: '6', header: 'First Challenge', description: 'Try to keep pace for 1 minute!', current: '0'},
-    {id: "7", num: '7', header: 'Party Time!', description: 'Celebrate your first week!', current: '0'},
+    {id: 1, num: '1', header: 'Run for Fun', description: 'Aim for light jog for 5 mins'},
+    {id: 2, num: '2', header: 'Relax & Assess', description: 'Give yourself some love!'},
+    {id: 3, num: '3', header: 'Run for Fun, Again!', description: 'Just enjoy nature!'},
+    {id: 4, num: '4', header: 'Small Steps', description: 'Aim for a light jog for 10 mins'},
+    {id: 5, num: '5', header: 'Touch Grass!', description: 'Reconnect with nature'},
+    {id: 6, num: '6', header: 'First Challenge', description: 'Try to keep pace for 1 minute!'},
+    {id: 7, num: '7', header: 'Party Time!', description: 'Celebrate your first week!'},
 ];
 
 export const widgets = [
@@ -41,12 +41,12 @@ export const widgets = [
 ];
 
 export const levels = [
-    {id: "1",level: '1', title: 'New Runner', icon: '$lib/assets/flower.svg', xp: '1000', currentXP: '320', streak: '1'},
-    {id: "2",level: '2', title: 'Beginner', icon: '$lib/assets/flower.svg', xp: '2000', currentXP: '', streak: '1'},
-    {id: "3",level: '3', title: 'Regular', icon: '$lib/assets/flower.svg', xp: '3000', currentXP: '', streak: '1'},
-    {id: "4",level: '4', title: 'Run Lover', icon: '$lib/assets/flower.svg', xp: '4000', currentXP: '', streak: '1'},
-    {id: "5",level: '5', title: 'Marathoner', icon: '$lib/assets/flower.svg', xp: '5000', currentXP: '', streak: '1'},
-    {id: "6",level: '6', title: 'Beast', icon: '$lib/assets/flower.svg', xp: '6000', currentXP: '', streak: '1'},
+    {id: 1, level: '1', title: 'New Runner', icon: '$lib/assets/flower.svg', xp: '1000', currentXP: '320', streak: '1'},
+    {id: 2, level: '2', title: 'Beginner', icon: '$lib/assets/flower.svg', xp: '2000', currentXP: '0', streak: '1'},
+    {id: 3, level: '3', title: 'Regular', icon: '$lib/assets/flower.svg', xp: '3000', currentXP: '0', streak: '1'},
+    {id: 4, level: '4', title: 'Run Lover', icon: '$lib/assets/flower.svg', xp: '4000', currentXP: '0', streak: '1'},
+    {id: 5, level: '5', title: 'Marathoner', icon: '$lib/assets/flower.svg', xp: '5000', currentXP: '0', streak: '1'},
+    {id: 6, level: '6', title: 'Beast', icon: '$lib/assets/flower.svg', xp: '6000', currentXP: '0', streak: '1'},
 ];
 
 export const records = [

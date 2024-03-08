@@ -34,7 +34,7 @@
         if (day == "5"){
             subheader = 'Day 5';
             title = 'Touch Grass!';
-            description = ' Reconnect with nature';
+            description = 'Reconnect with nature';
         }
 
         if (day == "6"){

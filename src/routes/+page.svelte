@@ -1,23 +1,36 @@
 <script>
-     import BasicPlanItem from "$lib/BasicPlanItem.svelte";
-     import NavigationBar from "$lib/NavigationBar.svelte";
-     import PreRunChecklist from "$lib/PreRunChecklist.svelte"
-     import MediumWidget from "$lib/MediumWidget.svelte";
-      import MapWidget from "$lib/MapWidget.svelte";
-      import StartRunButton from "$lib/StartRunButton.svelte";
-     import HeaderWithButton from "$lib/HeaderWithButton.svelte";
+    import BasicPlanItem from "$lib/BasicPlanItem.svelte";
+    import NavigationBar from "$lib/NavigationBar.svelte";
+    import PreRunChecklist from "$lib/PreRunChecklist.svelte"
+    import MediumWidget from "$lib/MediumWidget.svelte";
+    import MapWidget from "$lib/MapWidget.svelte";
+    import StartRunButton from "$lib/StartRunButton.svelte";
+    import HeaderWithButton from "$lib/HeaderWithButton.svelte";
 	import HomeWidget from "../lib/HomeWidget.svelte";
 	import HomePlanItem from "../lib/HomePlanItem.svelte";
- 
- </script>
- 
- 
+
+    export let data;
+
+</script>
+
 <slot>
     <HeaderWithButton page="home"></HeaderWithButton>
     <div class="bodyContent">
         <div class = "homehead">
             <HomePlanItem></HomePlanItem>
         </div>
+        <!--{#each data.plans as {num, header, description}}
+            <li>
+                <a class="dayBox" href="/plans">
+                    <p class="dayBoxText">DAY</p>
+                    <h3 class="dayBoxText">{num}</h3>
+                </a>
+                <div class="dayContent">
+                    <h6>{header}</h6>
+                    <p>{description}</p>
+                </div>
+            </li>
+        {/each}-->
         <div class="homebody">
             <MapWidget></MapWidget>
             <div class="lav200"><HomeWidget widgType = "prerun" status = 'closed' data = "0/4"></HomeWidget></div>
@@ -33,22 +46,20 @@
     <StartRunButton></StartRunButton>
     <NavigationBar></NavigationBar>
 </slot>
- 
- 
- <style>
-     .homebody {
-         margin: 0px 0px 8px 0px;
-     }
 
- /* :global(body) {
-     display: grid;
-     grid-template-columns: 20px 1fr 10px 1fr 10px 1fr 20px;
-     display: flex;
-     flex-wrap: wrap;
-     flex-direction: column;
- } */
- 
- 
- 
- 
- </style>
+
+<style>
+
+    .homebody {
+        margin: 0px 0px 8px 0px;
+    }
+
+/* :global(body) {
+    display: grid;
+    grid-template-columns: 20px 1fr 10px 1fr 10px 1fr 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+} */
+
+</style>

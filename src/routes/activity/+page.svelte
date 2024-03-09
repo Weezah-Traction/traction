@@ -6,6 +6,9 @@
 	import RunThumbnail from "../../lib/RunThumbnail.svelte";
     import TabToggler from "../../lib/TabToggler.svelte";
 	import TimeToggler from "../../lib/TimeToggler.svelte";
+
+    import { runs } from '$lib/data';
+
 </script>
 
 <BlankHeader page="activity"></BlankHeader>
@@ -16,20 +19,15 @@
         <TabToggler page="activity"></TabToggler>
         <TimeToggler></TimeToggler>
         <ActivityStats></ActivityStats>
-        <RunThumbnail
-            date = "2/11/24"
-            distance = "2.2"
-            pace = "5.24"
-            emotion = 'vhappy'
-            link = '/activity/pastrun/2_11_24'
-        ></RunThumbnail>
-        <RunThumbnail
-            date = "2/9/24"
-            distance = "3.4"
-            pace = "4.45"
-            emotion = 'vhappy'
-            link = '/activity/pastrun/2_9_24'
-        ></RunThumbnail>
+        {#each runs as {id, date, distance, pace, emotion }}
+            <RunThumbnail
+                date = {date}
+                distance = {distance}
+                pace = {pace}
+                emotion = {emotion}
+                link = '/activity/pastrun/run{id}'
+            ></RunThumbnail>
+        {/each}
     </div>
     <NavigationBar></NavigationBar>
 </slot>

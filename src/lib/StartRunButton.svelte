@@ -29,7 +29,6 @@
         border-radius: 10px;
         border: 3px solid var(--Beige-300, #FCD29F);
         background: #FFB800;
-        box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.25);
     }
 </style>
 

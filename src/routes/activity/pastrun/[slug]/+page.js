@@ -1,6 +1,6 @@
 
 export function load({ params }) {
-     if (params.slug === '2_11_24') {
+     if (params.slug === 'run1') {
        return {
           date: "2/11/24", 
           timeOfDay: "12:30pm", 
@@ -11,7 +11,7 @@ export function load({ params }) {
        };
      }
  
-     if (params.slug === '2_9_24') {
+     if (params.slug === 'run2') {
        return {
           date: "2/9/24", 
           timeOfDay: "2:34pm", 

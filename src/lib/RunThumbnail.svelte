@@ -62,7 +62,7 @@
           display: flex;
           justify-content: space-between;
           background-color: var(--lavender-200);
-          width: 393px;
+          width: 100%;
           height: 100px;
           align-items: center;
           gap: 10px;

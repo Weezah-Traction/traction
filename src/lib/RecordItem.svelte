@@ -31,7 +31,6 @@
           align-items: center;
           gap: 20px;
           align-self: stretch;
-          background: var(--Lavender-300, #DFCEFD);
      }
 
      .nameNStat {

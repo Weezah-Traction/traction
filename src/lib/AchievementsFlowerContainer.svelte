@@ -1,15 +1,15 @@
 <script>
-     import flower from '$lib/assets/flower.svg';
+     import thumb from '$lib/assets/flower.svg';
 
      export let name = "Name";
-     export let stat = "Stat";
+     export let xp = "Und";
 </script>
 
 <slot>
      <div class="achievementsFlowerContainer">
-          <img class="flower" src={flower} alt="Flower">
+          <img class="flower" src={thumb} alt="Flower">
           <p>{name}</p>
-          <p><b>{stat}</b></p>
+          <p><b>{xp} XP</b></p>
      </div>
 </slot>
 

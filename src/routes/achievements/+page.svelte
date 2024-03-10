@@ -85,7 +85,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 10px;
-		margin: 0 20px;
+		margin: 20px 0 10px 20px;
 	}
 
 	.threeFlower {

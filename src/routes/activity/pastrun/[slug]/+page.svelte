@@ -2,7 +2,13 @@
      import CommonProblemsButtonContainer from "$lib/CommonProblemsButtonContainer.svelte";
 
      import fakeMap from '$lib/assets/fakeMap.png';
+
+     import vhappyIcon from '$lib/assets/faceIcons/VHappyIcon.svg';
+     import happyIcon from '$lib/assets/faceIcons/HappyIcon.svg';
      import normalIcon from '$lib/assets/faceIcons/NormalIcon.svg';
+     import sadIcon from '$lib/assets/faceIcons/SadIcon.svg';
+     import vsadIcon from '$lib/assets/faceIcons/VSadIcon.svg';
+
      import homeIcon from '$lib/assets/homeWhiteicon.svg';
      import activityIcon from '$lib/assets/activityWhiteicon.svg';
 
@@ -10,8 +16,36 @@
 	import NavigationBar from "$lib/NavigationBar.svelte";
 	import PastRunContent from "$lib/PastRunContent.svelte";
 
-     export let data;
-     const {date, timeOfDay, miles, runs, avgPace, time} = data
+     import { runs } from '$lib/data';
+
+     function filter_runs(id) {
+     return runs.find((runs) => runs.id === id);
+     }
+
+     const filtered_data = filter_runs(2);
+
+
+     let pulledEmotion;
+
+     if (filtered_data.emotion == 'vsad'){
+          pulledEmotion = vsadIcon;
+     }
+
+     if (filtered_data.emotion == 'sad'){
+          pulledEmotion = sadIcon;
+     }
+
+     if (filtered_data.emotion == 'normal'){
+          pulledEmotion = normalIcon;
+     }
+
+     if (filtered_data.emotion == 'happy'){
+          pulledEmotion = happyIcon;
+     }
+
+     if (filtered_data.emotion == 'vhappy'){
+          pulledEmotion = vhappyIcon;
+     }
 </script>
 
 <slot>
@@ -19,28 +53,28 @@
      <div class="bodyContent">
           <div class="pastRunContent">
                <div class="dateNTime">
-                    <h6>{date}</h6>
-                    <h6>{timeOfDay}</h6>
+                    <h6>{filtered_data.date}</h6>
+                    <h6>{filtered_data.starttime}</h6>
                </div>
                <div class="milesNEmotion">
                     <div class="milesContainer">
-                         <h3 class="Fugaz">{miles}</h3>
+                         <h3 class="Fugaz">{filtered_data.distance}</h3>
                          <p>Miles</p>
                     </div>
-                    <img class="faceIcon" src={normalIcon} alt="Normal Icon"> <!--Need to make this change-->
+                    <img class="faceIcon" src={pulledEmotion} alt="Emotion Icon"> <!--Need to make this change-->
                </div>
                <div class="otherStats">
-                    <div class="statContainer">
+                    <!-- <div class="statContainer">
                          <h5 class="Fugaz">{runs}</h5>
                          <p>Runs</p>
-                    </div>
+                    </div> -->
                     <div class="statContainer">
-                         <h5 class="Fugaz">{avgPace}</h5>
+                         <h5 class="Fugaz">{filtered_data.pace}</h5>
                          <p>Avg. Pace</p>
                     </div>
                     <div class="statContainer">
-                         <h5 class="Fugaz">{time}</h5>
-                         <p>Time</p>
+                         <h5 class="Fugaz">{filtered_data.duration}</h5>
+                         <p>Duration</p>
                     </div>
                </div>
                <CommonProblemsButtonContainer></CommonProblemsButtonContainer> <!--Need to make this change-->
@@ -65,6 +99,7 @@
      .milesNEmotion {
           display: flex;
           justify-content: space-between;
+          align-items: center;
      }
 
      .milesContainer {

@@ -71,7 +71,7 @@
      }
 
      if (widgType == "records"){
-          name = 'Average Pace';
+          name = 'Records';
           icon = iconRecords;
           end = "";
      }

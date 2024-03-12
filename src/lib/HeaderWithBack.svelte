@@ -27,18 +27,18 @@
 
      if (page == 'levels'){
      header = 'Levels';
-     backLink = '/achievements'
+     backLink = '/activity'
      }
      
      if (page == 'awards'){
      header = 'Awards';
-     backLink = '/achievements'
+     backLink = '/activity'
      }
 
      
      if (page == 'records'){
      header = 'Records';
-     backLink = '/achievements'
+     backLink = '/activity'
      }
 </script>
 

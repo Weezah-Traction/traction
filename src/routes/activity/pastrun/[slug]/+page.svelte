@@ -18,11 +18,12 @@
 
      import { runs } from '$lib/data';
 
-     function filter_runs(id) {
-     return runs.find((runs) => runs.id === id);
-     }
+     // function filter_runs(id) {
+     // return runs.find((runs) => runs.id === id);
+     // }
 
-     const filtered_data = filter_runs(2);
+     // const filtered_data = filter_runs(2);
+
 
 
      let pulledEmotion;
@@ -49,84 +50,7 @@
 </script>
 
 <slot>
-     <HeaderWithBack page="pastrun"></HeaderWithBack>
-     <div class="bodyContent">
-          <div class="pastRunContent">
-               <div class="dateNTime">
-                    <h6>{filtered_data.date}</h6>
-                    <h6>{filtered_data.starttime}</h6>
-               </div>
-               <div class="milesNEmotion">
-                    <div class="milesContainer">
-                         <h3 class="Fugaz">{filtered_data.distance}</h3>
-                         <p>Miles</p>
-                    </div>
-                    <img class="faceIcon" src={pulledEmotion} alt="Emotion Icon"> <!--Need to make this change-->
-               </div>
-               <div class="otherStats">
-                    <!-- <div class="statContainer">
-                         <h5 class="Fugaz">{runs}</h5>
-                         <p>Runs</p>
-                    </div> -->
-                    <div class="statContainer">
-                         <h5 class="Fugaz">{filtered_data.pace}</h5>
-                         <p>Avg. Pace</p>
-                    </div>
-                    <div class="statContainer">
-                         <h5 class="Fugaz">{filtered_data.duration}</h5>
-                         <p>Duration</p>
-                    </div>
-               </div>
-               <CommonProblemsButtonContainer></CommonProblemsButtonContainer> <!--Need to make this change-->
-               <img class="map" src={fakeMap} alt="Map"> <!--Need to make this change-->
-          </div>
-     </div>
-     <NavigationBar></NavigationBar>
+
 </slot>
 
-<style>
-     .pastRunContent {
-          display: flex;
-          flex-direction: column;
-          margin: 20px 20px;
-          gap: 20px;
-     }
-     .dateNTime {
-          display: flex;
-          justify-content: space-between;
-     }
 
-     .milesNEmotion {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-     }
-
-     .milesContainer {
-          display: flex;
-          align-items: flex-end;
-          gap: 10px;
-     }
-
-     .statContainer {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-     }
-
-     .otherStats {
-          display: flex;
-          justify-content: space-between
-     }
-     
-     .faceIcon {
-          width: 30px;
-          height: 30px;
-     }
-
-     .map {
-          width: 100%;
-          height: 350px;
-     }
-
-</style>

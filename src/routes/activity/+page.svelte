@@ -46,7 +46,7 @@
                             distance = {distance}
                             pace = {pace}
                             emotion = {emotion}
-                            link = '/activity/pastrun/run{id}'
+                            link = '/activity/pastrun/?id={id}'
                         ></RunThumbnail>
                     {/each}
                 </div>

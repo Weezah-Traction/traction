@@ -116,11 +116,11 @@
                          </div>
                     </div>          
                     <div class="expander">
-                    {#if isOpen}
-                              <img class='expanderImg' src={expanderClosed} alt='Expander'>
-                    {:else}
-                              <img class='expanderImg' src={expanderOpen} alt='Expander'>
-                    {/if}
+                         {#if isOpen}
+                                   <img class='expanderImg' src={expanderClosed} alt='Expander'>
+                         {:else}
+                                   <img class='expanderImg' src={expanderOpen} alt='Expander'>
+                         {/if}
                     </div>
 
                </div>
@@ -163,19 +163,15 @@
      }
 
      .widgContentExpanded {
-          padding-left: 20px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
-          width: 100%;
           margin: 0px;
           height: 100px;
-          /* gap: 10px; */
-
+          padding-left: 20px;
           border-radius: 0px;
-          /* background: var(--Lavender-300, #DFCEFD); */
-     }
+     } 
 
      .expander {
           display: flex;
@@ -231,6 +227,11 @@
 
      details {
           cursor: pointer;
+          width: 100%;
+     }
+
+     details summary::-webkit-details-marker {
+          display:none;
      }
 
      details > summary{

@@ -1,7 +1,8 @@
 <script>
     import LongButton from "./LongButton.svelte";
-    export let title="Fugaz baby"; 
+    export let title="Are you sure you want to end your run?"; 
     export let modalContent="textcontent";
+
 
 </script>
 

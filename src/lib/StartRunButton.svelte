@@ -24,11 +24,10 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
-
+        color: white;
 
         border-radius: 10px;
-        border: 3px solid var(--Beige-300, #FCD29F);
-        background: #FFB800;
+        background: #fcbd83;
     }
 </style>
 

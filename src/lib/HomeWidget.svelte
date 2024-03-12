@@ -176,10 +176,11 @@
      .homeWidg {  
           display: flex;
           width: 393px;
-          height: 100px;
+          height: 120px;
           align-items: center;
           gap: 10px;
           flex-shrink: 0;
+          border-top: 2px solid var(--lavender-100);
      }
 
      .widgContent {
@@ -224,7 +225,7 @@
      }
 
      .widgetName {
-          color: var(--Lavender-700, #2A2534);
+          color: var(--Lavender-700, #27085A);
           text-align: center;
           /* Poppins/Bold/Body */
           font-family: "Fugaz One";

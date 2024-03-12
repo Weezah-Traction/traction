@@ -34,12 +34,15 @@
 <style>
      .levelCard {
           display: flex;
-          width: 393px;
+          margin: 0 auto;
+          padding: .75em;
           height: 150px;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background: #FFE5C6;
+          background: #ffeffe;
+          border-radius: 1em;
+
      }
 
      .nameNFlower {

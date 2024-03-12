@@ -25,6 +25,7 @@
      let name;
      let icon;
      let details;
+     let map = false;
 
      if (status == 'closed'){
           expanderType = expanderOpen;
@@ -86,6 +87,13 @@
           icon = iconLastRun;
           end = "";
      }
+
+     if (widgType == "map"){
+          name = 'Map';
+          icon = iconMap;
+          end = "";
+          map = true;
+     }
  
    
 
@@ -108,6 +116,8 @@
                <img class='expanderImg' src={expanderType} alt='Expander'>
           </div>
      </div>-->
+
+     
      <details bind:open={isOpen}>
           <summary>
                <div class="homeWidg">
@@ -135,8 +145,13 @@
           <div class="widgContentExpanded">
                {#if (widgType == "prerun")}
                     <PreRunChecklist></PreRunChecklist>
+
+               {:else if (widgType == "map")}
+                    <div class="map"></div>
+
                {:else if (widgType == "experience")}
                     <LevelCard></LevelCard>
+
                {:else if (widgType == "dist")}
                     <div class="milesContainer">
                          <h3 class="Fugaz">0.0</h3>
@@ -253,6 +268,10 @@
      .expanderImg {
           width: 28px;
           height: 14px;
+     }
+
+     .map{
+          height: 12em;
      }
 
      details {

@@ -14,12 +14,15 @@
 <slot>
      <div class="levelCard">
           <div class="nameNFlower">
-               <h4 class="Fugaz">{levelName}</h4>
-               <img class="flower" src={flower} alt="Flower">
+               <h5 class="Fugaz">{levelName}</h5>
+               <div class="flower-container">
+                    <img class="flower" src={flower} alt="Flower">
+               </div>
           </div>
           <div class="levelCardInfo">
                <p>{currentXP} XP</p>
-               <img class="progbar" src={progbar} alt="Progbar">
+               <!-- <img class="progbar" src={progbar} alt="Progbar"> -->
+               <progress value="10" max="50"></progress>
                <div class="nextNStreak">
                     <p>{nextXP} XP to next level</p>
                     <div class="streakContainer">
@@ -40,8 +43,40 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background: #ffeffe;
+          background-color: #fff3eb;
+          color: var(--lavender-700);
           border-radius: 1em;
+          margin-bottom: 1em;
+          margin-top: -1em;
+
+     }
+
+     progress{
+          -webkit-appearance: none;
+          width: 340px;
+          background: rgb(255, 255, 255);
+          border-radius: 2em;
+          /* border: 2px solid var(--lavender-500); */
+     }
+
+     ::-webkit-progress-bar {
+          background-color: rgb(255, 255, 255);
+          border-radius: 2em;
+     }
+
+     ::-webkit-progress-value {
+          background-color: var(--lavender-700);
+          border-radius: 2em;
+
+     }
+
+     .flower-container{
+          background-color: white;
+          border-radius: 1em;
+          display: flex;
+          padding: .75em;
+          align-items: center;
+          justify-content: center;
 
      }
 
@@ -50,7 +85,6 @@
           justify-content: space-between;
           align-items: center;
           align-self: stretch;
-          margin: 0 20px;
      }
 
      .levelCardInfo {

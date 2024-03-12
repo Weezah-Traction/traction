@@ -63,9 +63,10 @@
 
 
     .map{
-        background-image: url($lib/assets/fakeMap.png);
+     /*    background-image: url($lib/assets/fakeMap.png);
         background-size: cover;
-        background-position: center;
+        background-position: center; */
+        background-color: var(--blue-100);
         border-radius: 0px;
         /* margin: 16px 0px 16px 20px; */
         /* grid-column: 2/ span 5; */

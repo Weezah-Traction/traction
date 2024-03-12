@@ -34,7 +34,7 @@ if (page == 'widgets'){
     .container {
         position: sticky;
         font-family: 'Poppins';
-        background-color:  var(--lavender-200);
+        background-color:  var(--lavender-100);
         display: flex;
         top: 0;
         justify-content: space-between;
@@ -55,5 +55,6 @@ if (page == 'widgets'){
     .headerPageTitle {
         margin: 0;
         font-family: 'Fugaz One';
+        font-weight: 100;
     }
 </style>

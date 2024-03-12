@@ -61,12 +61,15 @@
      .runThumbnail {
           display: flex;
           justify-content: space-between;
-          background-color: var(--lavender-200);
-          width: 100%;
+          background-color: #e6f7fe;
+          margin: 0 auto;
+          width: 340px;
           height: 100px;
           align-items: center;
           gap: 10px;
-          padding-top: 8px;
+          padding: .75em;
+          margin-bottom: 1em;
+          border-radius: 1em;
           /* padding: 8px; */ 
           
           /* ^^^ Had to comment this out for the homescreen widget. 

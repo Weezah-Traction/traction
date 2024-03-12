@@ -82,5 +82,6 @@
      .headerPageTitle {
           margin: 0;
           font-family: 'Fugaz One';
+          font-weight: 100;
      }
 </style>

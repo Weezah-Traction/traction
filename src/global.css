@@ -260,6 +260,7 @@ h3.Fugaz {
     line-height: normal;
     letter-spacing: 1.659px;
     margin: 0;
+    font-weight: 100;
 }
 
 /* Fugaz/H4 */
@@ -270,6 +271,7 @@ h4.Fugaz {
   line-height: normal;
   letter-spacing: 1.382px;
   margin: 0;
+  font-weight: 100;
 }
 
 
@@ -281,6 +283,7 @@ h5.Fugaz {
     line-height: normal;
     letter-spacing: 1.152px;
     margin: 0;
+    font-weight: 100;
 }
 
 
@@ -319,6 +322,7 @@ h5.Fugaz {
     font-family: 'Poppins';
     height: 100vh;
     width: 100vw;
+    color: var(--lavender-700);
   }
 
   /**

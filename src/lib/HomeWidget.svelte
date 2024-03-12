@@ -231,7 +231,7 @@
           font-family: "Fugaz One";
           font-size: 23.5px;
           font-style: normal;
-          font-weight: 700;
+          font-weight: 100;
           line-height: normal;
           letter-spacing: 0.8px;
           margin: 0;
@@ -309,7 +309,7 @@
 
      details summary {
           cursor: pointer;
-          margin-bottom: -10px; /* for more prominent move */
+  /*         margin-bottom: -10px;  for more prominent move */ 
           transition: margin 150ms ease-out;
      }
 

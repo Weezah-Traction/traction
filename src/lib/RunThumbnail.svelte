@@ -67,7 +67,11 @@
           align-items: center;
           gap: 10px;
           padding-top: 8px;
-          padding: 8px;
+          /* padding: 8px; */ 
+          
+          /* ^^^ Had to comment this out for the homescreen widget. 
+          Too tired to fix tonight, so I'll just talk about this some other day.
+          - Roger */
      }
 
      .mapNInfo {

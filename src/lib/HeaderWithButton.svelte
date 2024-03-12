@@ -40,7 +40,7 @@ if (page == 'widgets'){
         justify-content: space-between;
         align-items: flex-end;
         max-width: 100%;
-        height: 70px;
+        height: 120px;
     }
 
     .headerText {

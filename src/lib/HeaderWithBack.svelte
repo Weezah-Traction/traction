@@ -67,7 +67,7 @@
           justify-content: space-between;
           align-items: flex-end;
           width: 393px;
-          height: 70px;
+          height: 120px;
      }
 
      .headerText {

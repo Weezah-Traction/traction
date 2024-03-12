@@ -4,6 +4,7 @@
     import PreRunChecklist from "$lib/PreRunChecklist.svelte"
     import MediumWidget from "$lib/MediumWidget.svelte";
     import MapWidget from "$lib/MapWidget.svelte";
+    import map from '$lib/assets/fakeMap.png';
     import StartRunButton from "$lib/StartRunButton.svelte";
     import HeaderWithButton from "$lib/HeaderWithButton.svelte";
 	import HomeWidget from "../lib/HomeWidget.svelte";
@@ -42,7 +43,7 @@
         </div>
 
         <div class="homebody">
-            <MapWidget></MapWidget>
+            <div class="map"><HomeWidget widgType = "map" data=" " status = 'closed'></HomeWidget></div>
             <div class="lav200"><HomeWidget widgType = "prerun" status = 'closed' data = "0/4"></HomeWidget></div>
             <div class="lav100"><HomeWidget widgType = "experience" status = 'closed' data = "320"></HomeWidget></div>
             <div class="lav200"><HomeWidget widgType = "dist" status = 'closed' data = "0.0"></HomeWidget></div>
@@ -59,6 +60,16 @@
 
 
 <style>
+
+
+    .map{
+        background-image: url($lib/assets/fakeMap.png);
+        background-size: cover;
+        background-position: center;
+        border-radius: 0px;
+        /* margin: 16px 0px 16px 20px; */
+        /* grid-column: 2/ span 5; */
+    }
 
     .homebody {
         margin: 0px 0px 8px 0px;

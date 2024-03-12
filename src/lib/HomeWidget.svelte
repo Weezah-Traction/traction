@@ -3,6 +3,8 @@
 
      import iconMap from '$lib/assets/widgIcons/mapIcon.svg';
      import iconPreRun from '$lib/assets/widgIcons/prerunIcon.svg';
+     import PreRunChecklist from '$lib/PreRunChecklist.svelte';
+     import RunThumbnail from '$lib/RunThumbnail.svelte';
      import iconExp from '$lib/assets/widgIcons/expIcon.svg';
      import iconDist from '$lib/assets/widgIcons/distIcon.svg';
      import iconPace from '$lib/assets/widgIcons/paceIcon.svg';
@@ -12,6 +14,7 @@
 
      import expanderOpen from '$lib/assets/expOpen.svg';
      import expanderClosed from '$lib/assets/expClose.svg';
+	import LevelCard from './LevelCard.svelte';
      
      export let status;
      let expanderType;
@@ -21,6 +24,7 @@
      let end;
      let name;
      let icon;
+     let details;
 
      if (status == 'closed'){
           expanderType = expanderOpen;
@@ -44,6 +48,7 @@
           name = 'Pre-Run Checklist';
           icon = iconPreRun;
           end = "done";
+          details = PreRunChecklist;
      }
 
      if (widgType == "experience"){
@@ -82,6 +87,8 @@
           end = "";
      }
  
+   
+
 </script>
 
 <slot>
@@ -126,12 +133,25 @@
                </div>
           </summary>
           <div class="widgContentExpanded">
-               <ul>
-                    <li>Hydrate</li>
-                    <li>Stretch</li>
-                    <li>Gear</li>
-                    <li>Fuel Up</li>
-               </ul>
+               {#if (widgType == "prerun")}
+                    <PreRunChecklist></PreRunChecklist>
+               {:else if (widgType == "experience")}
+                    <LevelCard></LevelCard>
+               {:else if (widgType == "dist")}
+                    <div class="milesContainer">
+                         <h3 class="Fugaz">0.0</h3>
+                         <p class="miles_text">miles ran total</p>
+                    </div>
+                    <RunThumbnail></RunThumbnail>
+                    
+               {:else if (widgType == "pace")}
+                    <div class="milesContainer">
+                         <h3 class="Fugaz">0.0</h3>
+                         <p class="miles_text">min/mi on average</p>
+                    </div>
+                    <RunThumbnail></RunThumbnail>
+
+               {/if}
           </div>
      </details>
 
@@ -168,14 +188,24 @@
           justify-content: center;
           align-items: flex-start;
           margin: 0px;
-          height: 100px;
-          padding-left: 20px;
           border-radius: 0px;
      } 
 
      .expander {
           display: flex;
           padding-right: 20px;
+     }
+
+     .milesContainer {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          width: 100%;
+     }
+
+     .miles_text{
+          font-weight: bold;
      }
 
      .widgetName {
@@ -254,6 +284,18 @@
      height: 22px;
      margin-right: 20px;
      /* margin-bottom: 20px; */
+
+
+
+     details summary {
+          cursor: pointer;
+          margin-bottom: -10px; /* for more prominent move */
+          transition: margin 150ms ease-out;
+     }
+
+     details[open] summary {
+          margin-bottom: 10px;
+     }
      
     
 </style>

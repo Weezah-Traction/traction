@@ -4,28 +4,18 @@
 
 <slot>
     <div>
-        <h2>Pre-Run Checklist</h2>
         <form>
-            <PreRunCheckbox></PreRunCheckbox>
-            <PreRunCheckbox></PreRunCheckbox>
-            <PreRunCheckbox></PreRunCheckbox>
-            <PreRunCheckbox></PreRunCheckbox>
+            <PreRunCheckbox title="Hydrate: Drink some water!"></PreRunCheckbox>
+            <PreRunCheckbox title="Stretch: Stretch your legs!"></PreRunCheckbox>
+            <PreRunCheckbox title="Gear: Get geared up!"></PreRunCheckbox>
+            <PreRunCheckbox title="Fuel: Have a healthy snack!"></PreRunCheckbox>
         </form>
     </div>
 </slot>
 
 <style>
-    form{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
-
     div{
-        text-align: center;
-        background-color: var(--lavender-100);
-        margin:10px 20px 10px 20px;
-        padding: 20px;
+        padding-left: 20px;
     }
 
 </style>

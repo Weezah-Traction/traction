@@ -58,7 +58,6 @@
         justify-content: space-between;
         align-items: flex-end;
         width: 100%;
-        height: 250px;
     }
 
     .headerPageTitle {

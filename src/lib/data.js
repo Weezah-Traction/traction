@@ -1,3 +1,5 @@
+import normalIcon from '$lib/assets/faceIcons/NormalIcon.svg';
+
 /*export const plans = [
     {title: 'Day 1', icon: 'Icon File', date: 'Aim for light jog for 5 mins', description: 'This is a sample description'}
 ];
@@ -57,7 +59,7 @@ export const runs = [
         distance: '1.9',
         pace: "12.45",
         duration: '25:57',
-        emotion: 'vhappy',
+        emotion: "normal",
         problems: 'Problems',
         map: 'Map'
     },
@@ -68,7 +70,7 @@ export const runs = [
         distance: '2.1',
         pace: "13.34",
         duration: '23:03',
-        emotion: 'normal',
+        emotion: "vhappy",
         problems: 'Problems',
         map: 'Map'
     }

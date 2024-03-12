@@ -20,8 +20,8 @@
 <slot>
 	<BlankHeader page="achievements"></BlankHeader>
 	<PillButton link="/activity" text="Activity"></PillButton>
+	<TabToggler page="activity"></TabToggler>
 	<div class="bodyContent">
-		<TabToggler page="activity"></TabToggler>
 		<div class="levelSection">
 			<LevelCard
 				levelName = {filtered_data.title}

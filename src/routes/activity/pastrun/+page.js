@@ -23,3 +23,9 @@
   
 //   throw error(404, 'Not found');
 // }
+
+export async function load({ url }) {
+	let id = url.searchParams.get('id');
+	console.log(id);
+	return { id };
+}

@@ -46,7 +46,7 @@
                             distance = {distance}
                             pace = {pace}
                             emotion = {emotion}
-                            link = '/activity/pastrun/run{id}'
+                            link = '/activity/pastrun/?id={id}'
                         ></RunThumbnail>
                     {/each}
                 </div>
@@ -61,7 +61,7 @@
                             nextXP = {filtered_data.xp}
                             streakNum = {filtered_data.streak}
                         ></LevelCard>
-                        <AchievementsButton link="/achievements/levels" text="View All Run Levels"></AchievementsButton>
+                        <AchievementsButton link="/activity/levels" text="View All Run Levels"></AchievementsButton>
                     </div>
                     <div class="otherSections">
                         <h6>Personal Records</h6>
@@ -79,7 +79,7 @@
                                 stat = "1.93mi"
                             ></AchievementsFlowerContainer>
                         </div>
-                        <AchievementsButton link="/achievements/records" text="View Your Records"></AchievementsButton>
+                        <AchievementsButton link="/activity/records" text="View Your Records"></AchievementsButton>
                     </div>
                     <div class="otherSections">
                         <h6>Awards Badges</h6>
@@ -97,7 +97,7 @@
                                 stat = "1.93mi"
                             ></AchievementsFlowerContainer>
                         </div>
-                        <AchievementsButton link="/achievements/awards" text="View All Awards"></AchievementsButton>
+                        <AchievementsButton link="activity/awards" text="View All Awards"></AchievementsButton>
                     </div>
                 </div>
             </div>

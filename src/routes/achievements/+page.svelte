@@ -18,6 +18,7 @@
 </script>
 
 <slot>
+	<h1>Old achievements page!!</h1>
 	<BlankHeader page="achievements"></BlankHeader>
 	<PillButton link="/activity" text="Activity"></PillButton>
 	<TabToggler page="activity"></TabToggler>

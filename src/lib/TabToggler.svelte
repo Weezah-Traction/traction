@@ -13,14 +13,29 @@
         rightText = 'Achievements';
     }
 
+	export let state;
+
+	function changeState(){
+
+		if (state == 'activity'){
+			state = 'achievements';
+		} 
+		
+		else if (state == 'achievements'){
+			state = 'activity';
+		}
+	
+	}
+
+
 </script>
 
 <slot>
      <div class="container">
           <div class="tabs">
-               <input type="radio" id="radio-1" name="tabs" checked />
+               <input type="radio" id="radio-1" on:click={changeState} value="activity" name="tabs" checked />
                <label class="tab" for="radio-1">Activity</label>
-               <input type="radio" id="radio-2" name="tabs" />
+               <input type="radio" id="radio-2" on:click={changeState} value="achievements" name="tabs" />
                <label class="tab" for="radio-2">Achievements</label>
                <span class="glider"></span>
           </div>
@@ -35,9 +50,6 @@
            
            @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
-:root {
-	--secondary-color: #e6eef9;
-}
 
 *,
 *:after,
@@ -45,9 +57,6 @@
 	box-sizing: border-box;
 }
 
-body {
-	background-color: rgba(#e6eef9, 0.5);
-}
 .container {
 	display: flex;
 	align-items: center;
@@ -56,10 +65,11 @@ body {
 .tabs {
 	display: flex;
 	position: relative;
-	background-color: var(--lavender-100);
+	background-color: white;
 	box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
-	padding: 0rem;
 	border-radius: 99px;
+	margin-top: 1em;
+	border: 2px solid var(--lavender-300);
 
 }
 
@@ -72,8 +82,8 @@ input[type="radio"] {
 	align-items: center;
 	justify-content: center;
 	height: 54px;
-	width: 200px;
-	font-size: 1.25rem;
+	width: 180px;
+	font-size: 1rem;
 	font-weight: 500;
 	border-radius: 99px; 
 	cursor: pointer;
@@ -133,17 +143,11 @@ input[id="radio-3"] {
 	position: absolute;
 	display: flex;
 	height: 54px;
-	width: 200px;
+	width: 180px;
 	background-color: var(--lavender-300);
 	z-index: 0;
 	border-radius: 99px;
 	transition: 0.25s ease-out;
-}
-
-@media (max-width: 700px) {
-	.tabs {
-		transform: scale(0.6);
-	}
 }
 
 </style>

@@ -39,7 +39,70 @@ export const plans = [
 ];
 
 export const widgets = [
-    {id: "1",title: 'Title', icon: 'Icon', value: 'Small information', details: 'Full information'}
+    {
+        id: 1,
+        state: 1, 
+        title: 'Map',
+        icon: '$lib/assets/widgIcons/mapIcon.svg', 
+        value: '', 
+        details: ''
+    },
+    {
+        id: 2,
+        state: 1, 
+        title: 'Pre-Run Checklist',
+        icon: '$lib/assets/widgIcons/prerunIcon.svg', 
+        value: '0/4 done', 
+        details: ''
+    },
+    {
+        id: 3,
+        state: 1, 
+        title: 'Experience',
+        icon: '$lib/assets/widgIcons/expIcon.svg', 
+        value: '320 XP', 
+        details: ''
+    },
+    {
+        id: 4,
+        state: 1, 
+        title: 'Total Distance',
+        icon: '$lib/assets/widgIcons/distIcon.svg', 
+        value: '0.0 mi', 
+        details: ''
+    },
+    {
+        id: 5,
+        state: 1, 
+        title: 'Average Pace',
+        icon: '$lib/assets/widgIcons/paceIcon.svg', 
+        value: '0.0 mi/min',
+        details: ''
+    },
+    {
+        id: 6,
+        state: 1, 
+        title: 'Awards',
+        icon: '$lib/assets/widgIcons/awardsIcon.svg', 
+        value: 'Expand to See More',
+        details: ''
+    },
+    {
+        id: 7,
+        state: 1, 
+        title: 'Records',
+        icon: '$lib/assets/widgIcons/recordsIcon.svg', 
+        value: 'Expand to See More',
+        details: ''
+    },
+    {
+        id: 8,
+        state: 1, 
+        title: 'Last Run',
+        icon: '$lib/assets/widgIcons/lastrunIcon.svg', 
+        value: '2/24/2024',
+        details: ''
+    }
 ];
 
 export const levels = [
@@ -77,29 +140,29 @@ export const runs = [
 ]
 
 export const records = [
-    {title: 'Longest Run', data: '20:45 ', measurement: '', icon: '$lib/assets/flower.svg'},
-    {title: 'Farthest Run', data: '1.93 ', measurement: 'mi.', icon: '$lib/assets/flower.svg'},
-    {title: 'Longest Streak', data: '1.93 ', measurement: 'days', icon: '$lib/assets/flower.svg'},
-    {title: 'Fastest 5K', data: '24:45 ', measurement: '', icon: '$lib/assets/flower.svg'},
-    {title: 'Fastest 10K', data: '34:40 ', measurement: '', icon: '$lib/assets/flower.svg'},
-    {title: 'Fastest Half Marathon', data: '45:00 ', measurement: '', icon: '$lib/assets/flower.svg'},
-    {title: 'Farthest Marathon', data: '1:03:34 ', measurement: '', icon: '$lib/assets/flower.svg'}
+    {id: 1, title: 'Longest Run', data: '20:45 ', measurement: '', icon: '$lib/assets/flower.svg'},
+    {id: 2, title: 'Farthest Run', data: '1.93 ', measurement: 'mi.', icon: '$lib/assets/flower.svg'},
+    {id: 3, title: 'Longest Streak', data: '1.93 ', measurement: 'days', icon: '$lib/assets/flower.svg'},
+    {id: 4, title: 'Fastest 5K', data: '24:45 ', measurement: '', icon: '$lib/assets/flower.svg'},
+    {id: 5, title: 'Fastest 10K', data: '34:40 ', measurement: '', icon: '$lib/assets/flower.svg'},
+    {id: 6, title: 'Fastest Half Marathon', data: '45:00 ', measurement: '', icon: '$lib/assets/flower.svg'},
+    {id: 7, title: 'Farthest Marathon', data: '1:03:34 ', measurement: '', icon: '$lib/assets/flower.svg'}
 ]
 
 export const awards = [
-    {title: 'Take 10K Steps', type: 1, date:'3/9/2024', xp: '100', icon: '$lib/assets/backIcon.svg'},
-    {title: 'Take 50K Steps', type: 0, date:'', xp: '500', icon: '$lib/assets/flower.svg'},
-    {title: 'Take 100K Steps', type: 0, date:'', xp: '1000', icon: '$lib/assets/flower.svg'},
-    {title: 'First Run', type: 1, date:'1/28/2024', xp: '50', icon: '$lib/assets/flower.svg'},
-    {title: '10 Runs', type: 1, date:'2/7/2024', xp: '100', icon: '$lib/assets/flower.svg'},
-    {title: '50 Runs', type: 0, date:'', xp: '500', icon: '$lib/assets/flower.svg'},
-    {title: '100 Runs', type: 0, date:'', xp: '1000', icon: '$lib/assets/flower.svg'},
-    {title: '7 Day Streak', type: 1, date:'2/4/2024', xp: '100', icon: '$lib/assets/flower.svg'},
-    {title: '20 Day Streak', type: 0, date:'', xp: '250', icon: '$lib/assets/flower.svg'},
-    {title: '50 Day Streak', type: 0, date:'', xp: '750', icon: '$lib/assets/flower.svg'},
-    {title: '100 Day Streak', type: 0, date:'', xp: '1000', icon: '$lib/assets/flower.svg'},
-    {title: 'Run for a Month', type: 0, date:'', xp: '250', icon: '$lib/assets/flower.svg'},
-    {title: 'Run for a Year', type: 0, date:'', xp: '1000', icon: '$lib/assets/flower.svg'}
+    {title: 'Take 10K Steps', type: 1, date:'3/9/2024', xp: '100 XP', icon: '$lib/assets/backIcon.svg'},
+    {title: 'Take 50K Steps', type: 0, date:'', xp: '500 XP', icon: '$lib/assets/flower.svg'},
+    {title: 'Take 100K Steps', type: 0, date:'', xp: '1000 XP', icon: '$lib/assets/flower.svg'},
+    {title: 'First Run', type: 1, date:'1/28/2024', xp: '50 XP', icon: '$lib/assets/flower.svg'},
+    {title: '10 Runs', type: 1, date:'2/7/2024', xp: '100 XP', icon: '$lib/assets/flower.svg'},
+    {title: '50 Runs', type: 0, date:'', xp: '500 XP', icon: '$lib/assets/flower.svg'},
+    {title: '100 Runs', type: 0, date:'', xp: '1000 XP', icon: '$lib/assets/flower.svg'},
+    {title: '7 Day Streak', type: 1, date:'2/4/2024', xp: '100 XP', icon: '$lib/assets/flower.svg'},
+    {title: '20 Day Streak', type: 0, date:'', xp: '250 XP', icon: '$lib/assets/flower.svg'},
+    {title: '50 Day Streak', type: 0, date:'', xp: '750 XP', icon: '$lib/assets/flower.svg'},
+    {title: '100 Day Streak', type: 0, date:'', xp: '1000 XP', icon: '$lib/assets/flower.svg'},
+    {title: 'Run for a Month', type: 0, date:'', xp: '250 XP', icon: '$lib/assets/flower.svg'},
+    {title: 'Run for a Year', type: 0, date:'', xp: '1000 XP', icon: '$lib/assets/flower.svg'}
 ]
 
 export const details = [

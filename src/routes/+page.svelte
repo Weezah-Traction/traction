@@ -17,6 +17,7 @@
     // once you have the data...
 
     import { plans } from '$lib/data';
+    import { runs } from '$lib/data';
 
     function filter_plans(id) {
     return plans.find((plans) => plans.id === id);
@@ -43,6 +44,18 @@
         </div>
 
         <div class="homebody">
+            {#each runs as {num, header, description}}
+                <li>
+                    <a class="dayBox" href="/plans">
+                        <p class="dayBoxText">DAY</p>
+                        <h3 class="dayBoxText">{num}</h3>
+                    </a>
+                    <div class="dayContent">
+                        <h6>{header}</h6>
+                        <p>{description}</p>
+                    </div>
+                </li>
+            {/each}
             <div class="map"><HomeWidget widgType = "map" data=" " status = 'closed'></HomeWidget></div>
             <div class="lav200"><HomeWidget widgType = "prerun" status = 'closed' data = "0/4"></HomeWidget></div>
             <div class="lav100"><HomeWidget widgType = "experience" status = 'closed' data = "320"></HomeWidget></div>

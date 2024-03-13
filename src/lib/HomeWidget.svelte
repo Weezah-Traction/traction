@@ -1,5 +1,6 @@
 <script>
      // import expandIcon from "../../lib/expandIcon.svelte";
+     import { onMount } from 'svelte';
 
      import iconMap from '$lib/assets/widgIcons/mapIcon.svg';
      import iconPreRun from '$lib/assets/widgIcons/prerunIcon.svg';
@@ -11,10 +12,13 @@
      import iconAwards from '$lib/assets/widgIcons/awardsIcon.svg';
      import iconRecords from '$lib/assets/widgIcons/recordsIcon.svg';
      import iconLastRun from '$lib/assets/widgIcons/lastrunIcon.svg';
-
      import expanderOpen from '$lib/assets/expOpen.svg';
      import expanderClosed from '$lib/assets/expClose.svg';
 	import LevelCard from './LevelCard.svelte';
+
+     import { widgets } from '$lib/data';
+     import { levels } from '$lib/data';
+     import { runs } from '$lib/data';
      
      export let status;
      let expanderType;
@@ -48,7 +52,7 @@
      if (widgType == "prerun"){
           name = 'Pre-Run Checklist';
           icon = iconPreRun;
-          end = "done";
+          end = "/ 4 done";
           details = PreRunChecklist;
      }
 
@@ -95,7 +99,32 @@
           map = true;
      }
  
-   
+	function filter_levels(id) {
+	return levels.find((levels) => levels.id === id);
+	}
+
+	const filtered_levels = filter_levels(1);
+
+     function filter_runs(id) {
+	return runs.find((runs) => runs.id === id);
+	}
+
+	const filtered_runs = filter_runs(1);
+
+
+
+     // Add Up Checkboxes
+
+     onMount(() => {
+    const selectedElm = document.getElementById('selected');
+
+    function showChecked(){
+        selectedElm.innerHTML = document.querySelectorAll('input[name=prerun]:checked').length;
+    }
+
+        document.querySelectorAll("input[name=prerun]").forEach(i=>{
+        i.onclick = () => showChecked();
+    })});
 
 </script>
 
@@ -145,27 +174,44 @@
           <div class="widgContentExpanded">
                {#if (widgType == "prerun")}
                     <PreRunChecklist></PreRunChecklist>
+                    <div id="result"><span id="selected">0</span>/4 done</div> 
 
                {:else if (widgType == "map")}
                     <div class="map"></div>
 
                {:else if (widgType == "experience")}
-                    <LevelCard></LevelCard>
+               <LevelCard
+                    levelName = {filtered_levels.title}
+                    currentXP = {filtered_levels.currentXP}
+                    nextXP = {filtered_levels.xp}
+                    streakNum = {filtered_levels.streak}
+               ></LevelCard>
 
                {:else if (widgType == "dist")}
                     <div class="milesContainer">
                          <h3 class="Fugaz">0.0</h3>
                          <p class="miles_text">miles ran total</p>
                     </div>
-                    <RunThumbnail></RunThumbnail>
+                    <RunThumbnail
+                         date = {filtered_runs.date}
+                         distance = {filtered_runs.distance}
+                         pace = {filtered_runs.pace}
+                         emotion = {filtered_runs.emotion}
+                         link = '/activity/pastrun/?id={filtered_runs.id}'
+                    ></RunThumbnail>
                     
                {:else if (widgType == "pace")}
                     <div class="milesContainer">
                          <h3 class="Fugaz">0.0</h3>
                          <p class="miles_text">min/mi on average</p>
                     </div>
-                    <RunThumbnail></RunThumbnail>
-
+                    <RunThumbnail
+                         date = {filtered_runs.date}
+                         distance = {filtered_runs.distance}
+                         pace = {filtered_runs.pace}
+                         emotion = {filtered_runs.emotion}
+                         link = '/activity/pastrun/?id={filtered_runs.id}'
+                    ></RunThumbnail>
                {/if}
           </div>
      </details>

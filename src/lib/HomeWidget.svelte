@@ -98,6 +98,10 @@
           end = "";
           map = true;
      }
+
+
+
+     // Current Level
  
 	function filter_levels(id) {
 	return levels.find((levels) => levels.id === id);
@@ -105,11 +109,45 @@
 
 	const filtered_levels = filter_levels(1);
 
+
+
+     // Latest Run
+
      function filter_runs(id) {
 	return runs.find((runs) => runs.id === id);
 	}
 
 	const filtered_runs = filter_runs(1);
+
+
+
+     // Add Up Distance
+
+     const runs_dist = runs.map((i) => i.distance)
+     console.log(runs_dist);
+
+     let dist_sum = 0;
+     for (let i = 0; i < runs_dist.length; i++) {
+     dist_sum += runs_dist[i];
+     }
+
+     console.log(dist_sum);
+
+
+
+     // Add Up Pace
+
+     const runs_pace = runs.map((i) => i.pace)
+     console.log(runs_pace);
+
+     let pace_sum = 0;
+     for (let i = 0; i < runs_pace.length; i++) {
+     pace_sum += runs_pace[i];
+
+     }
+
+     console.log(pace_sum);
+
 
 
 
@@ -189,7 +227,7 @@
 
                {:else if (widgType == "dist")}
                     <div class="milesContainer">
-                         <h3 class="Fugaz">0.0</h3>
+                         <h3 class="Fugaz">{dist_sum}</h3>
                          <p class="miles_text">miles ran total</p>
                     </div>
                     <RunThumbnail
@@ -202,7 +240,7 @@
                     
                {:else if (widgType == "pace")}
                     <div class="milesContainer">
-                         <h3 class="Fugaz">0.0</h3>
+                         <h3 class="Fugaz">{pace_sum}</h3> <!--Currently added up instead of avg-->
                          <p class="miles_text">min/mi on average</p>
                     </div>
                     <RunThumbnail

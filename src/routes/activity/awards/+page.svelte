@@ -105,21 +105,23 @@
 </slot>
 
 <style>
-     .mostRecentAwards {
-          display: flex;
-          flex-direction: row;
-          gap: 20px;
-          margin: 0 20px;
-     }
      .allAwards {
           display: flex;
           flex-direction: column;
+          gap: 20px;
+          margin: 0 20px;
+          padding-top: 30px;
+     }
+      .mostRecentAwards {
+          display: flex;
+          flex-direction: row;
           gap: 20px;
           margin: 0 20px;
      }
      .allAwardsContainer {
           display: grid;
           grid-template-columns: 33% 33% 33%;
+          grid-row-gap: 20px;
      }
      .flowerBox {
           margin: 10px 0;

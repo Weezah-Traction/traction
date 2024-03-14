@@ -66,7 +66,7 @@
           height: 100px;
           align-items: center;
           gap: 10px;
-          padding-top: 8px;
+          padding: 10px;
           /* padding: 8px; */ 
           
           /* ^^^ Had to comment this out for the homescreen widget. 

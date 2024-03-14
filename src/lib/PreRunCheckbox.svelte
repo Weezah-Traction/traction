@@ -1,5 +1,5 @@
 <script>
-    let type = 'cat';
+    export let type = 'cat';
 
     export let title;
 </script>
@@ -7,7 +7,7 @@
 <slot>
     <div class="custom_checkbox">
         <label class="container"> {title}
-            <input type="checkbox" id={type} name={type} />
+            <input type="checkbox" id=1 name='prerun' />
             <span class="checkmark"></span>
         </label>
     </div>

@@ -90,12 +90,14 @@
                <h6>All Awards</h6>
                <div class="allAwardsContainer">
                     {#each awards as {title, xp, icon, date}}
-                         <AchievementsFlowerContainer
-                              name = {title}
-                              xp = {xp}
-                              thumb = {icon}
-                              date = {date}
-                         ></AchievementsFlowerContainer>
+                         <div class="flowerBox">
+                              <AchievementsFlowerContainer
+                                   name = {title}
+                                   xp = {xp}
+                                   thumb = {icon}
+                                   date = {date}
+                              ></AchievementsFlowerContainer>
+                         </div>
                     {/each}
                </div>
           </div>
@@ -118,6 +120,9 @@
      .allAwardsContainer {
           display: grid;
           grid-template-columns: 33% 33% 33%;
+     }
+     .flowerBox {
+          margin: 10px 0;
      }
 
 </style>

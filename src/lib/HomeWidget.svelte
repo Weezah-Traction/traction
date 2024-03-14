@@ -146,7 +146,11 @@
 
      }
 
-     console.log(pace_sum);
+     var pace_avg = pace_sum / runs_pace.length;
+
+     console.log(pace_avg);
+
+
 
 
 
@@ -240,7 +244,7 @@
                     
                {:else if (widgType == "pace")}
                     <div class="milesContainer">
-                         <h3 class="Fugaz">{pace_sum}</h3> <!--Currently added up instead of avg-->
+                         <h3 class="Fugaz">{pace_avg}</h3> <!--Currently added up instead of avg-->
                          <p class="miles_text">min/mi on average</p>
                     </div>
                     <RunThumbnail

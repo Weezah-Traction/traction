@@ -6,21 +6,30 @@
     import pauseIcon from '$lib/assets/Pause_Button.svg';
     
     let alt = "Alt Text";
+    let link = "/postrun"
+    
+    if (type == "resume"){
+        alt = "Resume Button"
+        link = "/run"
+        icon = resumeIcon;
+    }
 
     if (type == "stop"){
         alt = "Stop Button"
+        link = "/end"
         icon = stopIcon;
     }
 
     if (type == "pause"){
         alt = "Pause Button"
+        link = ""
         icon = pauseIcon;
     }
 
 </script>
 
 <slot>
-    <a href="/postrun" class={type}><img src={icon} alt={alt}></a>
+    <a href={link} class={type}><img src={icon} alt={alt}></a>
 </slot>
 
 <style>

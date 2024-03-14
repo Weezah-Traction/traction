@@ -7,6 +7,16 @@
     export let color = 'highlighted';
     let backgroundColor = 'background-color: var(--lavender-400)'
 
+    export let link = "/run"
+
+    if (content == 'No') {
+        link = '/run';
+    }
+
+    if (content == 'Yes') {
+        link = '/postrun';
+    }
+
     if (color == 'highlighted') {
         backgroundColor = 'background-color: var(--lavender-300)';
     }
@@ -15,10 +25,14 @@
 
 
 <slot>
-    <button style="{backgroundColor}" type="{type}">{content}</button>
+    <button style="{backgroundColor}" type="{type}"><a href={link}>{content}</a></button>
 </slot>
 
 <style>
+    a {
+        text-decoration: none;
+    }
+
     button {
         border-radius: 10px;
         width: 100%;

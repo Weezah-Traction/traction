@@ -22,7 +22,7 @@
           width: 100px;
           flex-direction: column;
           align-items: center;
-          gap: 10px;
+          gap: 5px;
           flex-shrink: 0;
           align-self: stretch;
      }

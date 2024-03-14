@@ -93,15 +93,17 @@
 </slot>
 
 <style>
-     .allAwards {
+     .allAwards { 
           display: flex;
           flex-direction: column;
           gap: 20px;
           margin: 0 20px;
+          padding-top: 30px;
      }
      .allAwardsContainer {
           display: grid;
           grid-template-columns: 33% 33% 33%;
+          grid-row-gap: 20px;
      }
 
 </style>

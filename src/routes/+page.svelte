@@ -11,12 +11,15 @@
 	import HomePlanItem from "../lib/HomePlanItem.svelte";
 	import { onMount } from "svelte";
 
+
+
     //onMount(() => {
     //    console.log(plans)
     //});
     // once you have the data...
 
     import { plans } from '$lib/data';
+    import { runs } from '$lib/data';
 
     function filter_plans(id) {
     return plans.find((plans) => plans.id === id);
@@ -43,11 +46,23 @@
         </div>
 
         <div class="homebody">
+            <!-- {#each runs as {num, header, description}}
+                <li>
+                    <a class="dayBox" href="/plans">
+                        <p class="dayBoxText">DAY</p>
+                        <h3 class="dayBoxText">{num}</h3>
+                    </a>
+                    <div class="dayContent">
+                        <h6>{header}</h6>
+                        <p>{description}</p>
+                    </div>
+                </li>
+            {/each} -->
             <div class="map"><HomeWidget widgType = "map" data=" " status = 'closed'></HomeWidget></div>
-            <div class="lav200"><HomeWidget widgType = "prerun" status = 'closed' data = "0/4"></HomeWidget></div>
-            <div class="lav100"><HomeWidget widgType = "experience" status = 'closed' data = "320"></HomeWidget></div>
-            <div class="lav200"><HomeWidget widgType = "dist" status = 'closed' data = "0.0"></HomeWidget></div>
-            <div class="lav100"><HomeWidget widgType = "pace" status = 'closed' data = "0.0"></HomeWidget></div>
+            <div class="lav200"><HomeWidget widgType = "prerun" status = 'closed' data = 'replace me'></HomeWidget></div>
+            <div class="lav100"><HomeWidget widgType = "experience" status = 'closed' data = 320></HomeWidget></div>
+            <div class="lav200"><HomeWidget widgType = "dist" status = 'closed' data = 0.0></HomeWidget></div>
+            <div class="lav100"><HomeWidget widgType = "pace" status = 'closed' data = 0.0></HomeWidget></div>
             <!--<div class="lav300"><MediumWidget widgetType = totalDist1></MediumWidget></div>
             <div class="lav100"><MediumWidget widgetType = avgPace1></MediumWidget></div>
             <div class="lav300"><MediumWidget widgetType = time></MediumWidget></div>

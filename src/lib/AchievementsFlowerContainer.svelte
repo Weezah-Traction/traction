@@ -3,13 +3,15 @@
 
      export let name = "Name";
      export let xp = "Und";
+     export let date = "";
 </script>
 
 <slot>
      <div class="achievementsFlowerContainer">
           <img class="flower" src={thumb} alt="Flower">
           <p>{name}</p>
-          <p><b>{xp} XP</b></p>
+          <p><b>{xp}</b></p>
+          <p>{date}</p>
      </div>
 </slot>
 
@@ -22,6 +24,7 @@
           width: 100px;
           flex-direction: column;
           align-items: center;
+          justify-content: space-between;
           gap: 10px;
           flex-shrink: 0;
           align-self: stretch;

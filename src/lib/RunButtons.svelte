@@ -4,6 +4,7 @@
 
     import stopIcon from '$lib/assets/Stop_Button.svg';
     import pauseIcon from '$lib/assets/Pause_Button.svg';
+    import resumeIcon from '$lib/assets/Resume_Button.svg';
     
     let alt = "Alt Text";
     let link = "/postrun"
@@ -22,7 +23,7 @@
 
     if (type == "pause"){
         alt = "Pause Button"
-        link = ""
+        link = "/pause"
         icon = pauseIcon;
     }
 

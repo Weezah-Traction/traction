@@ -1,7 +1,6 @@
 <script>
     import LongButton from "./LongButton.svelte";
     export let title="Are you sure you want to end your run?"; 
-    export let modalContent="textcontent";
 
 
 </script>
@@ -10,7 +9,6 @@
     <div class="modal-background">
         <div class="modal-container">
             <h4>{title}</h4>
-            <p>{modalContent}</p>
             <LongButton content='No' color='default'></LongButton>
             <LongButton content='Yes'></LongButton>
         </div>

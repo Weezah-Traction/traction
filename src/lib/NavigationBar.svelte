@@ -11,7 +11,7 @@
 <slot>
     <nav>
         <ul>
-        {#if (target == "/plans") || (target == "/plans/guidance")}
+        {#if (target == "/plans/") || (target == "/plans/guidance/")}
             <NavigationBarButton type="plans" selected="true"></NavigationBarButton>
         {:else}
             <NavigationBarButton type="plans" selected="false"></NavigationBarButton>
@@ -24,7 +24,7 @@
         {/if}
 
 
-        {#if (target == "/activity")}
+        {#if (target == "/activity/")}
             <NavigationBarButton type="activity" selected="true"></NavigationBarButton>
         {:else}
             <NavigationBarButton type="activity" selected="false"></NavigationBarButton>

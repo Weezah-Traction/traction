@@ -7,7 +7,7 @@
     import TabToggler from "../../lib/TabToggler.svelte";
 	import TimeToggler from "../../lib/TimeToggler.svelte";
 	import LevelCard from "../../lib/LevelCard.svelte";
-	import AchievementsButton from "../../lib/AchievementsButton.svelte";
+	import AchievementsButton from "$lib/AchievementsButton.svelte";
 	import AchievementsFlowerContainer from "../../lib/AchievementsFlowerContainer.svelte";
     import RecordItem from "../../lib/RecordItem.svelte";
 

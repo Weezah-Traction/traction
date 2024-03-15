@@ -10,12 +10,12 @@
 
 
 
-    if (target == ("/widgetshome")){
+    if (target == ("/widgetshome/")){
         leftText = 'Home';
         rightText = 'Run';
     }
 
-    if (target == ("/activity")){
+    if (target == ("/activity/")){
         leftText = 'Activity';
         rightText = 'Achievements';
     }

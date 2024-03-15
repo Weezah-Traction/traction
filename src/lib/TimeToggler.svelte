@@ -62,9 +62,10 @@
 .tabs {
 	display: flex;
 	position: relative;
-	background-color: var(--lavender-100);
+	background-color: white;
 	box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
 	border-radius: 99px;
+	border: 2px solid var(--lavender-300);
 
 }
 

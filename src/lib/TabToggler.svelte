@@ -1,14 +1,21 @@
 <script>
-    export let page = 'widget';
+
+	import {page} from '$app/stores';
+    let target = $page.url.pathname.substr($page.url.pathname);
+
+	console.log(target);
+
     let leftText;
     let rightText;
 
-    if (page == 'widget'){
+
+
+    if (target == ("/widgetshome/")){
         leftText = 'Home';
         rightText = 'Run';
     }
 
-    if (page == 'activity'){
+    if (target == ("/activity/")){
         leftText = 'Activity';
         rightText = 'Achievements';
     }
@@ -24,6 +31,18 @@
 		else if (state == 'achievements'){
 			state = 'activity';
 		}
+
+		/* Home Screen Widgets */
+
+
+		if (state == 'home'){
+			state = 'run';
+		} 
+		
+		else if (state == 'run'){
+			state = 'home';
+		}
+
 	
 	}
 
@@ -34,9 +53,9 @@
      <div class="container">
           <div class="tabs">
                <input type="radio" id="radio-1" on:click={changeState} value="activity" name="tabs" checked />
-               <label class="tab" for="radio-1">Activity</label>
+               <label class="tab" for="radio-1">{leftText}</label>
                <input type="radio" id="radio-2" on:click={changeState} value="achievements" name="tabs" />
-               <label class="tab" for="radio-2">Achievements</label>
+               <label class="tab" for="radio-2">{rightText}</label>
                <span class="glider"></span>
           </div>
      </div>

@@ -135,7 +135,7 @@
 
 
 
-     // Add Up Pace
+     // Get Average Pace
 
      const runs_pace = runs.map((i) => i.pace)
      console.log(runs_pace);

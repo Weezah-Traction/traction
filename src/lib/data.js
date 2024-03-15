@@ -121,7 +121,7 @@ export const runs = [
         starttime: '10:30pm',
         distance: 1.9,
         pace: 12.45,
-        duration: '25:57',
+        duration: 1536000, //25:57
         emotion: "normal",
         problems: 'Problems',
         map: 'Map'
@@ -132,7 +132,7 @@ export const runs = [
         starttime: '2:35pm',
         distance: 2.1,
         pace: 13.34,
-        duration: '23:03',
+        duration: 1383000, //23:03
         emotion: "vhappy",
         problems: 'Problems',
         map: 'Map'

@@ -1,5 +1,9 @@
 <script>
+
+    import {page} from '$app/stores'
+
     export let type = 'Type'; // Declares the property
+    export let selected;
     let icon;
     let link;
 
@@ -13,10 +17,11 @@
     let alt = "Alt Text"; // default value for icon alt-text.
 
 
+
     // These change the content in each button based on the value of property "type"
 
     if (type == "plans"){ 
-        alt = "Plans"
+        alt = "Plans";
         icon = planIcon;
         link = '/plans'
     }
@@ -37,21 +42,30 @@
 
 <slot>
     <li>
-        <a href={link} class={type}>
-            <img src={icon} alt={alt}>
+        <a href={link} class={selected}>
+            <img src={icon} alt={alt} class={selected}>
             <p>{alt}</p>
         </a>
     </li>
 </slot>
 
 <style>
+
+    .true{
+        color: var(--lavender-100);
+    }
+
+    .false{
+        opacity: 0.66;
+        color: var(--lavender-300);
+    }
+    
     a{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-decoration: none;
-        color: var(--lavender-100);
     }
 
     img {

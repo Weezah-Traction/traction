@@ -1,14 +1,35 @@
 <script>
 	import NavigationBarButton from "./NavigationBarButton.svelte";
+
+    import {page} from '$app/stores'
+    let target = $page.url.pathname.substr($page.url.pathname);
+
+    console.log(target)
     
 </script>
 
 <slot>
     <nav>
         <ul>
-        <NavigationBarButton type="plans"></NavigationBarButton>
-        <NavigationBarButton type="home"></NavigationBarButton>
-        <NavigationBarButton type="activity"></NavigationBarButton>
+        {#if (target == "/plans/") || (target == "/plans/guidance/")}
+            <NavigationBarButton type="plans" selected="true"></NavigationBarButton>
+        {:else}
+            <NavigationBarButton type="plans" selected="false"></NavigationBarButton>
+        {/if}
+
+        {#if (target == "/")}
+            <NavigationBarButton type="home" selected="true"></NavigationBarButton>
+        {:else}
+            <NavigationBarButton type="home" selected="false"></NavigationBarButton>
+        {/if}
+
+
+        {#if (target == "/activity/")}
+            <NavigationBarButton type="activity" selected="true"></NavigationBarButton>
+        {:else}
+            <NavigationBarButton type="activity" selected="false"></NavigationBarButton>
+        {/if}
+
         </ul>
     </nav>
 </slot>

@@ -100,7 +100,6 @@
 
     let state = 'activity';
 
-
 </script>
 
 <BlankHeader page="activity"></BlankHeader>

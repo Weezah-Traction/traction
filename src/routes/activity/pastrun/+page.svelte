@@ -48,6 +48,14 @@ if (filtered_data.emotion == 'vhappy'){
      pulledEmotion = vhappyIcon;
 }
 
+    // For Making distance look right
+    let durMinutes = (Math.floor((filtered_data.duration % (1000 * 60 * filtered_data.duration)) / (1000 * 60)));
+    let durSeconds = (Math.floor((filtered_data.duration % (1000 * 60)) / 1000));
+
+    let durMinutesFormatted = durMinutes.toLocaleString('en-US');
+     let durSecondsFormatted = durSeconds.toLocaleString('en-US' , {minimumIntegerDigits: 2});
+
+     //    timeReported = formattedMinutes + ":" + formattedSeconds;
 
 
 </script>
@@ -73,7 +81,7 @@ if (filtered_data.emotion == 'vhappy'){
                          <p>Avg. Pace</p>
                     </div>
                     <div class="statContainer">
-                         <h5 class="Fugaz">{filtered_data.duration}</h5>
+                         <h5 class="Fugaz">{durMinutesFormatted} : {durSecondsFormatted}</h5>
                          <p>Duration</p>
                     </div>
                </div>

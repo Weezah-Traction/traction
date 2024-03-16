@@ -7,7 +7,7 @@
     import ModalComponent from "../../lib/ModalComponent.svelte";
     import LongButton from "../../lib/LongButton.svelte";
 
-    let run_state = "running";
+    let run_state = "playing";
 
     /* Fancy Timer Interactions */
 
@@ -19,13 +19,80 @@
     let formattedMinutes;
     let formattedSeconds;
 
+    let paused = false;
+
+    let pausedTimeSince;
+    let pausedTimerMinutes;
+    let pausedTimerSeconds;
+    let pausedTimeReported;
+    let pausedFormattedMinutes;
+    let pausedFormattedSeconds;
+
     let pace = 0;
     let distance = 0.00;
 
     let startTime = new Date().getTime(); // Gets the current time
     setInterval(function() {
+        updateTimer();
+        // let currentTime = new Date().getTime();
+        // timeSince = currentTime - startTime;
+        // timerMinutes = (Math.floor((timeSince % (1000 * 60 * timeSince)) / (1000 * 60)));
+        // timerSeconds = (Math.floor((timeSince % (1000 * 60)) / 1000));
+
+
+        // formattedMinutes = timerMinutes.toLocaleString('en-US');
+        // formattedSeconds = timerSeconds.toLocaleString('en-US' , {minimumIntegerDigits: 2});
+
+        // timeReported = formattedMinutes + ":" + formattedSeconds;
+        // // console.log(timeSince);
+        
+    }, 100);
+ 
+    setInterval(function() {
+        // console.log(distance);
+        distance= (parseFloat(distance) + .01).toFixed(2);
+        // console.log(distance);
+        pace = (distance / (timeSince/60000)).toFixed(2);
+    }, 2500);
+
+
+    // let pausedStartTime = new Date().getTime(); // WHEN PAUSED, Gets the current time
+    // setInterval(function() {
+    //     let pausedTime = new Date().getTime();
+    //     pausedTimeSince = pausedTime - pausedStartTime;
+    //     pausedTimerMinutes = (Math.floor((pausedTimeSince % (1000 * 60 * pausedTimeSince)) / (1000 * 60)));
+    //     pausedTimerSeconds = (Math.floor((pausedTimeSince % (1000 * 60)) / 1000));
+
+
+    //     pausedFormattedMinutes = pausedTimerMinutes.toLocaleString('en-US');
+    //     pausedFormattedSeconds = pausedTimerSeconds.toLocaleString('en-US' , {minimumIntegerDigits: 2});
+
+    //     pausedtimeReported = pausedFormattedMinutes + ":" + pausedFormattedSeconds;
+    //     // console.log(timeSince);
+        
+    // }, 100);
+
+    function updateTimer(){
         let currentTime = new Date().getTime();
-        timeSince = currentTime - startTime;
+        if(run_state == 'playing'){
+            timeSince = currentTime - startTime;
+        }
+        else{
+            startTime += 100;
+        }
+        printTimer(timeSince);
+        // timerMinutes = (Math.floor((timeSince % (1000 * 60 * timeSince)) / (1000 * 60)));
+        // timerSeconds = (Math.floor((timeSince % (1000 * 60)) / 1000));
+
+
+        // formattedMinutes = timerMinutes.toLocaleString('en-US');
+        // formattedSeconds = timerSeconds.toLocaleString('en-US' , {minimumIntegerDigits: 2});
+
+        // timeReported = formattedMinutes + ":" + formattedSeconds;
+        // // console.log(timeSince);
+    }
+
+    function printTimer(time){
         timerMinutes = (Math.floor((timeSince % (1000 * 60 * timeSince)) / (1000 * 60)));
         timerSeconds = (Math.floor((timeSince % (1000 * 60)) / 1000));
 
@@ -35,16 +102,7 @@
 
         timeReported = formattedMinutes + ":" + formattedSeconds;
         // console.log(timeSince);
-        
-    }, 100);
-    let temp = 0;
- 
-    setInterval(function() {
-        console.log(distance);
-        distance= (parseFloat(distance) + .01).toFixed(2);
-        console.log(distance);
-        pace = (distance / (timeSince/60000)).toFixed(2);
-    }, 2500);
+    }
 
 // Pause play buttons
 

@@ -42,33 +42,6 @@
 
     <!-- Widgets -->
 
-    {#if (page == 'widget')}
-        <TabToggler bind:state></TabToggler>
-
-        {#if (state == 'home')}
-            <div class="bodyContent">
-                <div class="widgetList">
-                    <div class="lav200"><HomeWidget widgType = "awards" status = 'closed' data = "Expand to See More"></HomeWidget></div>
-                    <div class="lav100"><HomeWidget widgType = "records" status = 'closed' data = "Expand to See More"></HomeWidget></div>
-                    <div class="lav200"><HomeWidget widgType = "lastrun" status = 'closed' data = "2/24/2024"></HomeWidget></div>
-                </div>
-            </div>
-        
-        {:else if (state == 'run')}
-            <div class="bodyContent">
-                <!--<TabToggler></TabToggler>-->
-                <div class="widgetList">
-                    <div class="lav100"><RunWidget widgType = "distance" data = "0.00"></RunWidget></div>
-                    <div class="lav200"><RunWidget widgType = "pace" data = "0.00"></RunWidget></div>
-                    <div class="lav100"><RunWidget widgType = "timer" data = "0:00"></RunWidget></div>
-                    <div class="lav200"><RunWidget widgType = "c25k" data = "WALK"></RunWidget></div>
-                </div>
-            </div>
-        {/if}
-
-    <!-- Home -->
-    {:else if (page == 'home')}
-
         <div class="bodyContent">
             <div class = "homehead">
                 <a class="dayBox" href="/plans">
@@ -106,7 +79,6 @@
             </div>
         </div>
         <StartRunButton></StartRunButton>
-    {/if}
     <NavigationBar></NavigationBar>
 </slot>
 

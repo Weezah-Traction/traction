@@ -150,9 +150,20 @@
 
      console.log(pace_avg);
 
+     let state = 'shown'
 
+     let box
+     let xScroll = 0
+     let yScroll = 0
 
+     function parseScroll() {
+          xScroll=box.scrollLeft;
+          yScroll=box.scrollTop;
 
+          if(xScroll > 340){
+               state = 'hidden';
+          }
+     };
 
 
      // Add Up Checkboxes
@@ -167,6 +178,8 @@
         document.querySelectorAll("input[name=prerun]").forEach(i=>{
         i.onclick = () => showChecked();
     })});
+
+
 
 </script>
 
@@ -187,80 +200,128 @@
                <img class='expanderImg' src={expanderType} alt='Expander'>
           </div>
      </div>-->
+     {#if (state == 'shown')}
+     <div class="swipe-container" id="widget" bind:this={box} on:scroll={parseScroll}>
 
-     
-     <details bind:open={isOpen}>
-          <summary>
-               <div class="homeWidg">
-                    <div class="widgContent">
-                         <div class="iconandtext"> 
-                              <div class="icon">
-                                   <img class="iconImg" src={icon} alt="Widget Icon">
+
+          <details class="swipe-element" bind:open={isOpen}>
+               <summary>
+                    <div class="homeWidg">
+                         <div class="widgContent">
+                              <div class="iconandtext"> 
+                                   <div class="icon">
+                                        <img class="iconImg" src={icon} alt="Widget Icon">
+                                   </div>
+                                   <p class="widgetName">{name}</p>
                               </div>
-                              <p class="widgetName">{name}</p>
+                              <div class="expandIconandtext">
+                                   <h4 class="widgetData">{data} {end}</h4>
+                              </div>
+                         </div>          
+                         <div class="expander">
+                              {#if isOpen}
+                                        <img class='expanderImg' src={expanderClosed} alt='Expander'>
+                              {:else}
+                                        <img class='expanderImg' src={expanderOpen} alt='Expander'>
+                              {/if}
                          </div>
-                         <div class="expandIconandtext">
-                              <h4 class="widgetData">{data} {end}</h4>
-                         </div>
-                    </div>          
-                    <div class="expander">
-                         {#if isOpen}
-                                   <img class='expanderImg' src={expanderClosed} alt='Expander'>
-                         {:else}
-                                   <img class='expanderImg' src={expanderOpen} alt='Expander'>
-                         {/if}
-                    </div>
 
+                    </div>
+               </summary>
+               <div class="widgContentExpanded">
+                    {#if (widgType == "prerun")}
+                         <PreRunChecklist></PreRunChecklist>
+                         <div id="result"><span id="selected">0</span>/4 done</div> 
+
+                    {:else if (widgType == "map")}
+                         <div class="map"></div>
+
+                    {:else if (widgType == "experience")}
+                    <LevelCard
+                         levelName = {filtered_levels.title}
+                         currentXP = {filtered_levels.currentXP}
+                         nextXP = {filtered_levels.xp}
+                         streakNum = {filtered_levels.streak}
+                    ></LevelCard>
+
+                    {:else if (widgType == "dist")}
+                         <div class="milesContainer">
+                              <h3 class="Fugaz">{dist_sum}</h3>
+                              <p class="miles_text">miles ran total</p>
+                         </div>
+                         <RunThumbnail
+                              date = {filtered_runs.date}
+                              distance = {filtered_runs.distance}
+                              pace = {filtered_runs.pace}
+                              emotion = {filtered_runs.emotion}
+                              link = '/activity/pastrun/?id={filtered_runs.id}'
+                         ></RunThumbnail>
+                         
+                    {:else if (widgType == "pace")}
+                         <div class="milesContainer">
+                              <h3 class="Fugaz">{pace_avg}</h3> <!--Currently added up instead of avg-->
+                              <p class="miles_text">min/mi on average</p>
+                         </div>
+                         <RunThumbnail
+                              date = {filtered_runs.date}
+                              distance = {filtered_runs.distance}
+                              pace = {filtered_runs.pace}
+                              emotion = {filtered_runs.emotion}
+                              link = '/activity/pastrun/?id={filtered_runs.id}'
+                         ></RunThumbnail>
+                    {/if}
                </div>
-          </summary>
-          <div class="widgContentExpanded">
-               {#if (widgType == "prerun")}
-                    <PreRunChecklist></PreRunChecklist>
-                    <div id="result"><span id="selected">0</span>/4 done</div> 
+          </details>
 
-               {:else if (widgType == "map")}
-                    <div class="map"></div>
-
-               {:else if (widgType == "experience")}
-               <LevelCard
-                    levelName = {filtered_levels.title}
-                    currentXP = {filtered_levels.currentXP}
-                    nextXP = {filtered_levels.xp}
-                    streakNum = {filtered_levels.streak}
-               ></LevelCard>
-
-               {:else if (widgType == "dist")}
-                    <div class="milesContainer">
-                         <h3 class="Fugaz">{dist_sum}</h3>
-                         <p class="miles_text">miles ran total</p>
-                    </div>
-                    <RunThumbnail
-                         date = {filtered_runs.date}
-                         distance = {filtered_runs.distance}
-                         pace = {filtered_runs.pace}
-                         emotion = {filtered_runs.emotion}
-                         link = '/activity/pastrun/?id={filtered_runs.id}'
-                    ></RunThumbnail>
-                    
-               {:else if (widgType == "pace")}
-                    <div class="milesContainer">
-                         <h3 class="Fugaz">{pace_avg}</h3> <!--Currently added up instead of avg-->
-                         <p class="miles_text">min/mi on average</p>
-                    </div>
-                    <RunThumbnail
-                         date = {filtered_runs.date}
-                         distance = {filtered_runs.distance}
-                         pace = {filtered_runs.pace}
-                         emotion = {filtered_runs.emotion}
-                         link = '/activity/pastrun/?id={filtered_runs.id}'
-                    ></RunThumbnail>
-               {/if}
+          <div class="action right">
+               <i>Trash!</i>
           </div>
-     </details>
+     </div>  
+     {:else if (state == 'hidden')}
+
+     <div></div>
+     {/if}
 
 </slot>
 
 <style>
+     .swipe-container {
+          display: flex;
+          overflow: hidden;
+          overflow-x: scroll;
+          scroll-snap-type: x proximity;
+     }
+
+     .swipe-element{
+          min-width: 100%;
+          overflow: hidden;
+          scroll-snap-type: x proximity;
+          scroll-snap-align: start;
+     }
+
+     .action, .swipe-element{
+          min-width: 100%;
+     }
+
+     .right{
+          justify-content: flex-end;
+          background-color: orchid;
+     }
+
+     .action {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+     }
+
+     i{
+          color: white;
+          position: sticky;
+          left: 50px;
+          right: 200px;
+     }
+
+
      .homeWidg {  
           display: flex;
           width: 393px;

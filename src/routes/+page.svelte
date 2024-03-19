@@ -9,6 +9,8 @@
     import HeaderWithButton from "$lib/HeaderWithButton.svelte";
 	import HomeWidget from "../lib/HomeWidget.svelte";
 	import HomePlanItem from "../lib/HomePlanItem.svelte";
+    import TabToggler from "$lib/TabToggler.svelte";
+    import RunWidget from "$lib/RunWidget.svelte";
 	import { onMount } from "svelte";
 
 
@@ -29,47 +31,82 @@
     // { id: '3', num: '3', header: 'Run for Fun, Again!', description: 'Just enjoy nature!', current: '0', },
     //console.log(filtered_data);
 
+
+    let state = 'home';
+    let page = 'home';
+
 </script>
 
 <slot>
     <HeaderWithButton page="home"></HeaderWithButton>
-    <div class="bodyContent">
-        <div class = "homehead">
-            <a class="dayBox" href="/plans">
-                <p class="dayBoxText">DAY</p>
-                <h3 class="dayBoxText">{filtered_data.num}</h3>
-            </a>
-            <div class="dayContent">
-                <h6>{filtered_data.header}</h6>
-                <p>{filtered_data.description}</p>
+
+    <!-- Widgets -->
+
+    {#if (page == 'widget')}
+        <TabToggler bind:state></TabToggler>
+
+        {#if (state == 'home')}
+            <div class="bodyContent">
+                <div class="widgetList">
+                    <div class="lav200"><HomeWidget widgType = "awards" status = 'closed' data = "Expand to See More"></HomeWidget></div>
+                    <div class="lav100"><HomeWidget widgType = "records" status = 'closed' data = "Expand to See More"></HomeWidget></div>
+                    <div class="lav200"><HomeWidget widgType = "lastrun" status = 'closed' data = "2/24/2024"></HomeWidget></div>
+                </div>
+            </div>
+        
+        {:else if (state == 'run')}
+            <div class="bodyContent">
+                <!--<TabToggler></TabToggler>-->
+                <div class="widgetList">
+                    <div class="lav100"><RunWidget widgType = "distance" data = "0.00"></RunWidget></div>
+                    <div class="lav200"><RunWidget widgType = "pace" data = "0.00"></RunWidget></div>
+                    <div class="lav100"><RunWidget widgType = "timer" data = "0:00"></RunWidget></div>
+                    <div class="lav200"><RunWidget widgType = "c25k" data = "WALK"></RunWidget></div>
+                </div>
+            </div>
+        {/if}
+
+    <!-- Home -->
+    {:else if (page == 'home')}
+
+        <div class="bodyContent">
+            <div class = "homehead">
+                <a class="dayBox" href="/plans">
+                    <p class="dayBoxText">DAY</p>
+                    <h3 class="dayBoxText">{filtered_data.num}</h3>
+                </a>
+                <div class="dayContent">
+                    <h6>{filtered_data.header}</h6>
+                    <p>{filtered_data.description}</p>
+                </div>
+            </div>
+
+            <div class="homebody">
+                <!-- {#each runs as {num, header, description}}
+                    <li>
+                        <a class="dayBox" href="/plans">
+                            <p class="dayBoxText">DAY</p>
+                            <h3 class="dayBoxText">{num}</h3>
+                        </a>
+                        <div class="dayContent">
+                            <h6>{header}</h6>
+                            <p>{description}</p>
+                        </div>
+                    </li>
+                {/each} -->
+                <div class="map"><HomeWidget widgType = "map" data=" " status = 'closed'></HomeWidget></div>
+                <div class="lav200"><HomeWidget widgType = "prerun" status = 'closed' data = 'replace me'></HomeWidget></div>
+                <div class="lav100"><HomeWidget widgType = "experience" status = 'closed' data = 320></HomeWidget></div>
+                <div class="lav200"><HomeWidget widgType = "dist" status = 'closed' data = 0.0></HomeWidget></div>
+                <div class="lav100"><HomeWidget widgType = "pace" status = 'closed' data = 0.0></HomeWidget></div>
+                <!--<div class="lav300"><MediumWidget widgetType = totalDist1></MediumWidget></div>
+                <div class="lav100"><MediumWidget widgetType = avgPace1></MediumWidget></div>
+                <div class="lav300"><MediumWidget widgetType = time></MediumWidget></div>
+                <div class="lav100"><MediumWidget widgetType = distanceCovered></MediumWidget></div>-->
             </div>
         </div>
-
-        <div class="homebody">
-            <!-- {#each runs as {num, header, description}}
-                <li>
-                    <a class="dayBox" href="/plans">
-                        <p class="dayBoxText">DAY</p>
-                        <h3 class="dayBoxText">{num}</h3>
-                    </a>
-                    <div class="dayContent">
-                        <h6>{header}</h6>
-                        <p>{description}</p>
-                    </div>
-                </li>
-            {/each} -->
-            <div class="map"><HomeWidget widgType = "map" data=" " status = 'closed'></HomeWidget></div>
-            <div class="lav200"><HomeWidget widgType = "prerun" status = 'closed' data = 'replace me'></HomeWidget></div>
-            <div class="lav100"><HomeWidget widgType = "experience" status = 'closed' data = 320></HomeWidget></div>
-            <div class="lav200"><HomeWidget widgType = "dist" status = 'closed' data = 0.0></HomeWidget></div>
-            <div class="lav100"><HomeWidget widgType = "pace" status = 'closed' data = 0.0></HomeWidget></div>
-            <!--<div class="lav300"><MediumWidget widgetType = totalDist1></MediumWidget></div>
-            <div class="lav100"><MediumWidget widgetType = avgPace1></MediumWidget></div>
-            <div class="lav300"><MediumWidget widgetType = time></MediumWidget></div>
-            <div class="lav100"><MediumWidget widgetType = distanceCovered></MediumWidget></div>-->
-        </div>
-    </div>
-    <StartRunButton></StartRunButton>
+        <StartRunButton></StartRunButton>
+    {/if}
     <NavigationBar></NavigationBar>
 </slot>
 
@@ -78,9 +115,10 @@
 
 
     .map{
-        background-image: url($lib/assets/fakeMap.png);
+     /*    background-image: url($lib/assets/fakeMap.png);
         background-size: cover;
-        background-position: center;
+        background-position: center; */
+        background-color: var(--blue-100);
         border-radius: 0px;
         /* margin: 16px 0px 16px 20px; */
         /* grid-column: 2/ span 5; */

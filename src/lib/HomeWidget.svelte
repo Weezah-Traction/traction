@@ -357,6 +357,7 @@
           border: 3px solid var(--lavender-600);
           background: none;
           border-radius: 50em;
+          padding: 0;
      }
 
      .swipe-container {

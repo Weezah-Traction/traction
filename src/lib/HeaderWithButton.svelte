@@ -1,22 +1,25 @@
 <script>
 	import PillButton from "./PillButton.svelte";
 
-export let page = 'home';
-let header;
-let link;
-let text;
+let header = 'Traction';
+let text = 'Add Widgets'
 
-if (page == 'home'){
-    header = 'Traction';
-    link = "/widgetshome";
-    text = "Add Widgets";
-}
 
-if (page == 'widgets'){
-    header = 'Widgets';
-    link = "../";
-    text = "Home";
-}
+
+   export let tab = 'home';
+
+    function changeTab(){
+        if (tab == 'home'){
+            header = "Widgets"
+            tab = 'widgets';
+            text = "Home";
+        } else if (tab == 'widgets'){
+            header = "Home"
+            tab = 'home';
+            text = "Add Widgets";
+        }
+    };
+
 
 
 </script>
@@ -25,7 +28,7 @@ if (page == 'widgets'){
     <div class="container">
         <div class="headerText">
             <h1 class="headerPageTitle">{header}</h1>
-            <PillButton link={link} text={text}></PillButton>
+            <button on:click={changeTab}>{text}</button>
         </div>
     </div> 
 </slot>
@@ -56,4 +59,18 @@ if (page == 'widgets'){
         margin: 0;
         font-family: 'Fugaz One';
     }
+
+    button{
+          display: flex;
+          width: 150px;
+          height: 50px;
+          padding: 7px 14px;
+          justify-content: center;
+          align-items: center;
+          border-radius: 40px;
+          background: var(--Lavender-300, #DFCEFD);
+          border: none;
+          cursor: pointer;
+          color: var(--lavender-700);
+     }
 </style>

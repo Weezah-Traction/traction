@@ -16,11 +16,25 @@
      import expanderClosed from '$lib/assets/expClose.svg';
 	import LevelCard from './LevelCard.svelte';
 
+/*      import { widgetStates } from '$lib/store.js'; */
+
+     import { toggles } from '$lib/stores.js';
+
+     let widgetControl;
+     toggles.subscribe((value) => {
+     widgetControl = value;
+     });
+
+
      import { widgets } from '$lib/data';
      import { levels } from '$lib/data';
      import { runs } from '$lib/data';
      
      export let status;
+     export let enabled;
+     export let where;
+     export let id;
+
      let expanderType;
 
      export let widgType = "default";
@@ -150,7 +164,22 @@
 
      console.log(pace_avg);
 
-     let state = 'shown'
+     let state;
+  
+     if (where == 'list'){
+          if (enabled == 'shown'){
+               state = 'hidden';
+          } else if (enabled = 'hidden'){
+               state = 'shown';
+          };
+     };
+
+     if (where == 'home'){
+          state = enabled;
+     };
+
+
+
 
      let box
      let xScroll = 0
@@ -161,9 +190,22 @@
           yScroll=box.scrollTop;
 
           if(xScroll > 340){
+               widgetControl[id] = 'hidden';
+               toggles.set(widgetControl);
                state = 'hidden';
+
+           /*     toggles.update((toggles) => { // Use update function
+               toggles[id] = 'hidden';
+           }); */
           }
-     };
+     }
+
+     function addWidget(){
+          widgetControl[id] = 'shown';
+          toggles.set(widgetControl);
+          state = 'hidden';
+     }
+
 
 
      // Add Up Checkboxes
@@ -203,6 +245,7 @@
      {#if (state == 'shown')}
      <div class="swipe-container" id="widget" bind:this={box} on:scroll={parseScroll}>
 
+          {#if (where == 'home')}
 
           <details class="swipe-element" bind:open={isOpen}>
                <summary>
@@ -276,6 +319,29 @@
           <div class="action right">
                <i>Trash!</i>
           </div>
+          {:else if (where == 'list')}
+               <div class="homeWidg">
+                    <div class="widgContent">
+                         <div class="iconandtext"> 
+                              <div class="icon">
+                                   <img class="iconImg" src={icon} alt="Widget Icon">
+                              </div>
+                              <p class="widgetName">{name}</p>
+                         </div>
+                         <div class="expandIconandtext">
+                              <h4 class="widgetData">{data} {end}</h4>
+                         </div>
+                    </div>          
+                    <div class="expander">
+                         <button class="plusImg" on:click={addWidget}>
+                             +
+                         </button>
+                    </div>
+               </div>
+               
+
+          {/if}
+     
      </div>  
      {:else if (state == 'hidden')}
 
@@ -285,6 +351,14 @@
 </slot>
 
 <style>
+
+     button{
+          cursor: pointer;
+          border: 3px solid var(--lavender-600);
+          background: none;
+          border-radius: 50em;
+     }
+
      .swipe-container {
           display: flex;
           overflow: hidden;
@@ -324,7 +398,7 @@
 
      .homeWidg {  
           display: flex;
-          width: 393px;
+          min-width: 100%;
           height: 100px;
           align-items: center;
           gap: 10px;
@@ -419,9 +493,17 @@
           height: 14px;
      }
 
+     .plusImg {
+          width: 1.5em;
+          height: 1.5em;
+          font-size: 1.5em;
+          color: var(--lavender-600);
+     }
+
      .map{
           height: 12em;
      }
+
 
      details {
           cursor: pointer;

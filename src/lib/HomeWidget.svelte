@@ -16,11 +16,17 @@
      import expanderClosed from '$lib/assets/expClose.svg';
 	import LevelCard from './LevelCard.svelte';
 
+/*      import { widgetStates } from '$lib/store.js'; */
+
      import { widgets } from '$lib/data';
      import { levels } from '$lib/data';
      import { runs } from '$lib/data';
      
      export let status;
+     export let enabled;
+     export let where;
+     export let id;
+
      let expanderType;
 
      export let widgType = "default";
@@ -150,7 +156,22 @@
 
      console.log(pace_avg);
 
-     let state = 'shown'
+     let state;
+  
+     if (where == 'list'){
+          if (enabled == 'shown'){
+               state = 'hidden';
+          } else if (enabled = 'hidden'){
+               state = 'shown';
+          };
+     };
+
+     if (where == 'home'){
+          state = enabled;
+     };
+
+
+
 
      let box
      let xScroll = 0
@@ -161,7 +182,7 @@
           yScroll=box.scrollTop;
 
           if(xScroll > 340){
-               state = 'hidden';
+              /*  widgetStates[id].update('hidden'); */
           }
      };
 

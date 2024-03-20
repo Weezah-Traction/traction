@@ -10,7 +10,7 @@
 
 
 
-    if (target == ("/widgetshome/")){
+    if (target == ("/")){
         leftText = 'Home';
         rightText = 'Run';
     }

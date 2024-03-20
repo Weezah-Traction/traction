@@ -12,16 +12,39 @@
     import TabToggler from "$lib/TabToggler.svelte";
     import RunWidget from "$lib/RunWidget.svelte";
 	import { onMount } from "svelte";
+    import { plans } from '$lib/data';
+    import { runs } from '$lib/data';
 
+
+/*      widgetStates.subscribe((value) => {
+        widgetControl = value;
+    }); 
+ */
+
+    import { toggles } from '$lib/stores.js';
+
+        let widgetControl;
+
+        toggles.subscribe((value) => {
+    widgetControl = value;
+    });
+
+    let state = 'home';
+    let tab = 'widgets';
+
+    function changeTab(){
+        if (tab == 'home'){
+            tab = 'widgets';
+        } else if (tab == 'widgets'){
+            tab = 'home';
+        }
+    };
 
 
     //onMount(() => {
     //    console.log(plans)
     //});
     // once you have the data...
-
-    import { plans } from '$lib/data';
-    import { runs } from '$lib/data';
 
     function filter_plans(id) {
     return plans.find((plans) => plans.id === id);
@@ -32,15 +55,49 @@
     //console.log(filtered_data);
 
 
-    let state = 'home';
-    let page = 'home';
 
 </script>
 
 <slot>
+
+
+
     <HeaderWithButton page="home"></HeaderWithButton>
 
+    <button on:click={changeTab}>Test Button</button>
+
     <!-- Widgets -->
+    {#if (tab == 'widgets')}
+    <TabToggler bind:state></TabToggler>
+
+        {#if (state == 'home')}
+        <div class="bodyContent">
+            <div class="widgetList">
+                <div class="map"><HomeWidget where = 'list' id=0 enabled = {widgetControl[0]} widgType = "map" data=" " status = 'closed'></HomeWidget></div>
+                <div class="lav200"><HomeWidget where = 'list' id=1 enabled = {widgetControl[1]} widgType = "prerun" status = 'closed' data = 'replace me'></HomeWidget></div>
+                <div class="lav100"><HomeWidget where = 'list' id=2 enabled = {widgetControl[2]} widgType = "experience" status = 'closed' data = 320></HomeWidget></div>
+                <div class="lav200"><HomeWidget where = 'list' id=3 enabled = {widgetControl[3]} widgType = "dist" status = 'closed' data = 0.0></HomeWidget></div>
+                <div class="lav100"><HomeWidget where = 'list' id=4 enabled = {widgetControl[4]} widgType = "pace" status = 'closed' data = 0.0></HomeWidget></div>
+                <div class="lav200"><HomeWidget where = 'list' id=5 enabled = {widgetControl[5]} widgType = "awards" status = 'closed' data = "Expand to See More"></HomeWidget></div>
+                <div class="lav100"><HomeWidget where = 'list' id=6 enabled = {widgetControl[6]} widgType = "records" status = 'closed' data = "Expand to See More"></HomeWidget></div>
+                <div class="lav200"><HomeWidget where = 'list' id=7 enabled = {widgetControl[7]} widgType = "lastrun" status = 'closed' data = "2/24/2024"></HomeWidget></div>
+            </div>
+        </div>
+
+        {:else if (state == 'run')}
+            <div class="bodyContent">
+                <!--<TabToggler></TabToggler>-->
+                <div class="widgetList">
+                    <div class="lav100"><RunWidget widgType = "distance" data = "0.00"></RunWidget></div>
+                    <div class="lav200"><RunWidget widgType = "pace" data = "0.00"></RunWidget></div>
+                    <div class="lav100"><RunWidget widgType = "timer" data = "0:00"></RunWidget></div>
+                    <div class="lav200"><RunWidget widgType = "c25k" data = "WALK"></RunWidget></div>
+                </div>
+            </div>
+        {/if}
+
+    {:else if (tab == 'home')}
+<!-- Home -->
 
         <div class="bodyContent">
             <div class = "homehead">
@@ -67,11 +124,16 @@
                         </div>
                     </li>
                 {/each} -->
-                <div class="map"><HomeWidget widgType = "map" data=" " status = 'closed'></HomeWidget></div>
-                <div class="lav200"><HomeWidget widgType = "prerun" status = 'closed' data = 'replace me'></HomeWidget></div>
-                <div class="lav100"><HomeWidget widgType = "experience" status = 'closed' data = 320></HomeWidget></div>
-                <div class="lav200"><HomeWidget widgType = "dist" status = 'closed' data = 0.0></HomeWidget></div>
-                <div class="lav100"><HomeWidget widgType = "pace" status = 'closed' data = 0.0></HomeWidget></div>
+
+                <div class="map"><HomeWidget where = 'home' id=0 enabled = {widgetControl[0]} widgType = "map" data=" " status = 'closed'></HomeWidget></div>
+                <div class="lav200"><HomeWidget where = 'home' id=1 enabled = {widgetControl[1]} widgType = "prerun" status = 'closed' data = 'replace me'></HomeWidget></div>
+                <div class="lav100"><HomeWidget where = 'home' id=2 enabled = {widgetControl[2]} widgType = "experience" status = 'closed' data = 320></HomeWidget></div>
+                <div class="lav200"><HomeWidget where = 'home' id=3 enabled = {widgetControl[3]} widgType = "dist" status = 'closed' data = 0.0></HomeWidget></div>
+                <div class="lav100"><HomeWidget where = 'home' id=4 enabled = {widgetControl[4]} widgType = "pace" status = 'closed' data = 0.0></HomeWidget></div>
+                <div class="lav200"><HomeWidget where = 'home' id=5 enabled = {widgetControl[5]} widgType = "awards" status = 'closed' data = "Expand to See More"></HomeWidget></div>
+                <div class="lav100"><HomeWidget where = 'home' id=6 enabled = {widgetControl[6]} widgType = "records" status = 'closed' data = "Expand to See More"></HomeWidget></div>
+                <div class="lav200"><HomeWidget where = 'home' id=7 enabled = {widgetControl[7]} widgType = "lastrun" status = 'closed' data = "2/24/2024"></HomeWidget></div>
+
                 <!--<div class="lav300"><MediumWidget widgetType = totalDist1></MediumWidget></div>
                 <div class="lav100"><MediumWidget widgetType = avgPace1></MediumWidget></div>
                 <div class="lav300"><MediumWidget widgetType = time></MediumWidget></div>
@@ -79,6 +141,7 @@
             </div>
         </div>
         <StartRunButton></StartRunButton>
+     {/if}
     <NavigationBar></NavigationBar>
 </slot>
 

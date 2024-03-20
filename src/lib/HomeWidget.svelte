@@ -15,6 +15,15 @@
      import expanderOpen from '$lib/assets/expOpen.svg';
      import expanderClosed from '$lib/assets/expClose.svg';
 	import LevelCard from './LevelCard.svelte';
+     import AchievementsFlowerContainer from '$lib/AchievementsFlowerContainer.svelte';
+     import AchievementsButton from '$lib/AchievementsButton.svelte';
+     import RecordItem from './RecordItem.svelte';
+
+     import vhappyIcon from '$lib/assets/faceIcons/VHappyIcon.svg';
+     import happyIcon from '$lib/assets/faceIcons/HappyIcon.svg';
+     import normalIcon from '$lib/assets/faceIcons/NormalIcon.svg';
+     import sadIcon from '$lib/assets/faceIcons/SadIcon.svg';
+     import vsadIcon from '$lib/assets/faceIcons/VSadIcon.svg';
 
 /*      import { widgetStates } from '$lib/store.js'; */
 
@@ -29,6 +38,8 @@
      import { widgets } from '$lib/data';
      import { levels } from '$lib/data';
      import { runs } from '$lib/data';
+     import { awards } from '$lib/data';
+     import { records } from '$lib/data';
      
      export let status;
      export let enabled;
@@ -115,6 +126,9 @@
 
 
 
+
+
+
      // Current Level
  
 	function filter_levels(id) {
@@ -124,14 +138,47 @@
 	const filtered_levels = filter_levels(1);
 
 
-
-     // Latest Run
+     /////////////////////////////////////
+     /////////////////////////////////////
+     // Runs Code
 
      function filter_runs(id) {
 	return runs.find((runs) => runs.id === id);
 	}
 
 	const filtered_runs = filter_runs(1);
+
+     // Pulled Emotion
+
+     let pulledEmotion;
+
+     if (filtered_runs.emotion == 'vsad'){
+          pulledEmotion = vsadIcon;
+     }
+
+     if (filtered_runs.emotion == 'sad'){
+          pulledEmotion = sadIcon;
+     }
+
+     if (filtered_runs.emotion == 'normal'){
+          pulledEmotion = normalIcon;
+     }
+
+     if (filtered_runs.emotion == 'happy'){
+          pulledEmotion = happyIcon;
+     }
+
+     if (filtered_runs.emotion == 'vhappy'){
+          pulledEmotion = vhappyIcon;
+     }
+
+     // For Making distance look right
+
+     let durMinutes = (Math.floor((filtered_runs.duration % (1000 * 60 * filtered_runs.duration)) / (1000 * 60)));
+     let durSeconds = (Math.floor((filtered_runs.duration % (1000 * 60)) / 1000));
+
+     let durMinutesFormatted = durMinutes.toLocaleString('en-US');
+     let durSecondsFormatted = durSeconds.toLocaleString('en-US' , {minimumIntegerDigits: 2});
 
 
 
@@ -221,6 +268,79 @@
         i.onclick = () => showChecked();
     })});
 
+     // <><><><><><><><><><><><><><><><><><><><><><><>
+     // <><><><><><><><><><><><><><><><><><><><><><><>
+     // <><><><><><><> Awards Functions <><><><><><><>
+
+     const awards_type_one = awards.filter((item) => item.type === 1);
+     const awards_dates = awards_type_one.map((i) => i.date)
+
+    /**
+     * This line of code is using the `map` function to transform each element
+     * of the `dates` array into a new array called `new_dates`.
+     * The callback function is `(date) => new Date(date)`, which takes a date
+     * string in the format 'MM/DD/YYYY' and returns a new `Date` object representing that date.
+     * `new_dates` is an array of `Date` objects, each representing a date in the `dates` array.
+     */
+    const new_dates = awards_dates.map((date) => new Date(date));
+    console.log(new_dates);
+
+    /**
+     * This function takes an array of Date objects, sorts them from most recent to least recent,
+     * takes the first three dates, and returns them as strings in the format MM/DD/YYYY.
+     *
+     * @param {Date[]} dates_array - An array of Date objects.
+     * @returns {string[]} An array of the three most recent dates, formatted as strings.
+     */
+    function get_most_recent_dates(dates_array) {
+    return dates_array
+        .sort((a, b) => b.getTime() - a.getTime()) //Sort by newest first
+        .slice(0, 3) // Get the first 3 items
+        .map(
+        (date) => `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`
+        ); // Format as strings
+    }
+
+    const most_recent_dates = get_most_recent_dates(new_dates);
+    console.log(most_recent_dates);
+
+    // const filtered_awards_data = awards.filter((item) => item.date === most_recent_dates);
+    // console.log(filtered_awards_data);
+
+    // const filtered_awards_data = awards.filter((item) => {
+    //     console.log(item);
+    //     console.log(item.date);
+    //     console.log(most_recent_dates);
+    //     return item.date === most_recent_dates
+    // });
+
+    function filter_by_most_recent_dates(awards, most_recent_dates) {
+        return awards.filter((award) => most_recent_dates.includes(award.date));
+    }
+
+    const filtered_awards = filter_by_most_recent_dates(awards, most_recent_dates);
+    console.log(filtered_awards);
+
+
+
+
+     function filter_awards(type) {
+          return awards.find((awards) => awards.type === type);
+     }
+
+     const filtered_data = filter_awards(1);
+     console.log(filtered_data);
+
+     // <><><><><><><><><><><><><><><><><><><><><><><>
+     // <><><><><><><><><><><><><><><><><><><><><><><>
+     // <><><><><><><> Records Functions <><><><><><><>
+
+	function filter_records(id) {
+	return records.find((records) => records.id === id);
+	}
+
+	const filtered_records = filter_records(1);
+
 
 
 </script>
@@ -273,45 +393,105 @@
                </summary>
                <div class="widgContentExpanded">
                     {#if (widgType == "prerun")}
-                         <PreRunChecklist></PreRunChecklist>
                          <div id="result"><span id="selected">0</span>/4 done</div> 
+                         <PreRunChecklist></PreRunChecklist>
 
                     {:else if (widgType == "map")}
                          <div class="map"></div>
 
                     {:else if (widgType == "experience")}
-                    <LevelCard
-                         levelName = {filtered_levels.title}
-                         currentXP = {filtered_levels.currentXP}
-                         nextXP = {filtered_levels.xp}
-                         streakNum = {filtered_levels.streak}
-                    ></LevelCard>
+                         <div class="expandedContent">
+                              <LevelCard
+                                   levelName = {filtered_levels.title}
+                                   currentXP = {filtered_levels.currentXP}
+                                   nextXP = {filtered_levels.xp}
+                                   streakNum = {filtered_levels.streak}
+                              ></LevelCard>
+                         </div>
 
                     {:else if (widgType == "dist")}
-                         <div class="milesContainer">
-                              <h3 class="Fugaz">{dist_sum}</h3>
-                              <p class="miles_text">miles ran total</p>
+                         <div class="expandedContent">
+                              <div class="milesContainer">
+                                   <h3 class="Fugaz">{dist_sum}</h3>
+                                   <p class="miles_text">miles ran total</p>
+                              </div>
+                              <RunThumbnail
+                                   date = {filtered_runs.date}
+                                   distance = {filtered_runs.distance}
+                                   pace = {filtered_runs.pace}
+                                   emotion = {filtered_runs.emotion}
+                                   link = '/activity/pastrun/?id={filtered_runs.id}'
+                              ></RunThumbnail>
                          </div>
-                         <RunThumbnail
-                              date = {filtered_runs.date}
-                              distance = {filtered_runs.distance}
-                              pace = {filtered_runs.pace}
-                              emotion = {filtered_runs.emotion}
-                              link = '/activity/pastrun/?id={filtered_runs.id}'
-                         ></RunThumbnail>
-                         
+
                     {:else if (widgType == "pace")}
-                         <div class="milesContainer">
-                              <h3 class="Fugaz">{pace_avg}</h3> <!--Currently added up instead of avg-->
-                              <p class="miles_text">min/mi on average</p>
+                         <div class="expandedContent">
+                              <div class="milesContainer">
+                                   <h3 class="Fugaz">{pace_avg}</h3> <!--Currently added up instead of avg-->
+                                   <p class="miles_text">min/mi on average</p>
+                              </div>
+                              <RunThumbnail
+                                   date = {filtered_runs.date}
+                                   distance = {filtered_runs.distance}
+                                   pace = {filtered_runs.pace}
+                                   emotion = {filtered_runs.emotion}
+                                   link = '/activity/pastrun/?id={filtered_runs.id}'
+                              ></RunThumbnail>
                          </div>
-                         <RunThumbnail
-                              date = {filtered_runs.date}
-                              distance = {filtered_runs.distance}
-                              pace = {filtered_runs.pace}
-                              emotion = {filtered_runs.emotion}
-                              link = '/activity/pastrun/?id={filtered_runs.id}'
-                         ></RunThumbnail>
+
+                    {:else if (widgType == "awards")}
+                         <div class="expandedContent">
+                              <div class="mostRecentAwards">
+                                   {#each filtered_awards as {title, date, xp}}
+                                   <AchievementsFlowerContainer
+                                        name = {title}
+                                        xp = {xp}
+                                        date = {date}
+                                   ></AchievementsFlowerContainer>
+                                   {/each}
+                              </div>
+                              <AchievementsButton link="/activity/levels" text="View All Run Levels"></AchievementsButton>
+                         </div>
+
+                    {:else if (widgType == "records")}
+                         <div class="expandedContent">
+                              <div class="lav100 recordContainer"><RecordItem
+                                  name={filtered_records.title} 
+                                  stat={filtered_records.data}{filtered_records.measurement} 
+                                  thumb={filtered_records.icon}
+                              ></RecordItem></div>
+                              <div class="recordFix">
+                                  <AchievementsButton link="/activity/records" text="View Your Records"></AchievementsButton>
+                              </div>
+                         </div>
+
+                    {:else if (widgType == "lastrun")}
+                         <div class="expandedContent">
+                              <div class="pastRunContent">
+                                   <div class="dateNTime">
+                                        <h6>{filtered_runs.date}</h6>
+                                        <h6>{filtered_runs.starttime}</h6>
+                                   </div>
+                                   <div class="milesNEmotion">
+                                        <div class="newMilesContainer">
+                                             <h3 class="Fugaz">{filtered_runs.distance}</h3>
+                                             <p>Miles</p>
+                                        </div>
+                                        <img class="faceIcon" src={pulledEmotion} alt="Emotion Icon">
+                                   </div>
+                                   <div class="otherStats">
+                                        <div class="statContainer">
+                                             <h5 class="Fugaz">{filtered_runs.pace}</h5>
+                                             <p>Avg. Pace</p>
+                                        </div>
+                                        <div class="statContainer">
+                                             <h5 class="Fugaz">{durMinutesFormatted} : {durSecondsFormatted}</h5>
+                                             <p>Duration</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
                     {/if}
                </div>
           </details>
@@ -503,6 +683,7 @@
 
      .map{
           height: 12em;
+          /* background-image: url('$lib/assets/fakeMap.png'); */
      }
 
 
@@ -548,5 +729,66 @@
           margin-bottom: 10px;
      }
      
+     .mostRecentAwards {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+          margin: 0 20px;
+     }
+
+     .expandedContent {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          gap: 20px;
+          margin-bottom: 20px;
+     }
+
+     /* Past Run Styling */
+
+     .pastRunContent {
+          display: flex;
+          flex-direction: column;
+          margin: 20px 20px;
+          gap: 20px;
+     }
+
+     .pastRunContent {
+          display: flex;
+          flex-direction: column;
+          margin: 20px 20px;
+          gap: 20px;
+          width: 80%;
+     }
+
+     .dateNTime {
+          display: flex;
+          justify-content: space-between;
+     }
+
+     .milesNEmotion {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+     }
+
+     .newMilesContainer {
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-start;
+          gap: 10px;
+     }
+
+     .statContainer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+     }
+
+     .otherStats {
+          display: flex;
+          justify-content: space-between
+     }
     
 </style>

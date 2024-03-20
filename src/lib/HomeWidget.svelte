@@ -14,6 +14,7 @@
      import iconLastRun from '$lib/assets/widgIcons/lastrunIcon.svg';
      import expanderOpen from '$lib/assets/expOpen.svg';
      import expanderClosed from '$lib/assets/expClose.svg';
+     import plusIcon from '$lib/assets/plusIcon.svg';
 	import LevelCard from './LevelCard.svelte';
 
 /*      import { widgetStates } from '$lib/store.js'; */
@@ -192,12 +193,19 @@
           if(xScroll > 340){
                widgetControl[id] = 'hidden';
                toggles.set(widgetControl);
+               state = 'hidden';
 
            /*     toggles.update((toggles) => { // Use update function
                toggles[id] = 'hidden';
            }); */
           }
-          }
+     }
+
+     function addWidget(){
+          widgetControl[id] = 'shown';
+          toggles.set(widgetControl);
+          state = 'hidden';
+     }
 
 
 
@@ -238,6 +246,7 @@
      {#if (state == 'shown')}
      <div class="swipe-container" id="widget" bind:this={box} on:scroll={parseScroll}>
 
+          {#if (where == 'home')}
 
           <details class="swipe-element" bind:open={isOpen}>
                <summary>
@@ -311,6 +320,29 @@
           <div class="action right">
                <i>Trash!</i>
           </div>
+          {:else if (where == 'list')}
+               <div class="homeWidg">
+                    <div class="widgContent">
+                         <div class="iconandtext"> 
+                              <div class="icon">
+                                   <img class="iconImg" src={icon} alt="Widget Icon">
+                              </div>
+                              <p class="widgetName">{name}</p>
+                         </div>
+                         <div class="expandIconandtext">
+                              <h4 class="widgetData">{data} {end}</h4>
+                         </div>
+                    </div>          
+                    <div class="expander">
+                         <button on:click={addWidget}>
+                              <img class='plusImg' src={plusIcon} alt='Expander'>
+                         </button>
+                    </div>
+               </div>
+               
+
+          {/if}
+     
      </div>  
      {:else if (state == 'hidden')}
 
@@ -359,7 +391,7 @@
 
      .homeWidg {  
           display: flex;
-          width: 393px;
+          min-width: 100%;
           height: 100px;
           align-items: center;
           gap: 10px;
@@ -454,8 +486,19 @@
           height: 14px;
      }
 
+     .plusImg {
+          width: 28px;
+          height: 28px;
+     }
+
      .map{
           height: 12em;
+     }
+
+     button{
+          background: none;
+          border: none;
+          cursor: pointer;
      }
 
      details {

@@ -18,6 +18,14 @@
 
 /*      import { widgetStates } from '$lib/store.js'; */
 
+     import { toggles } from '$lib/stores.js';
+
+     let widgetControl;
+     toggles.subscribe((value) => {
+     widgetControl = value;
+     });
+
+
      import { widgets } from '$lib/data';
      import { levels } from '$lib/data';
      import { runs } from '$lib/data';
@@ -182,9 +190,15 @@
           yScroll=box.scrollTop;
 
           if(xScroll > 340){
-              /*  widgetStates[id].update('hidden'); */
+               widgetControl[id] = 'hidden';
+               toggles.set(widgetControl);
+
+           /*     toggles.update((toggles) => { // Use update function
+               toggles[id] = 'hidden';
+           }); */
           }
-     };
+          }
+
 
 
      // Add Up Checkboxes

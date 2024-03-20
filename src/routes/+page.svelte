@@ -23,9 +23,8 @@
 
     import { toggles } from '$lib/stores.js';
 
-        let widgetControl;
-
-        toggles.subscribe((value) => {
+    let widgetControl;
+    toggles.subscribe((value) => {
     widgetControl = value;
     });
 
@@ -64,7 +63,7 @@
 
     <HeaderWithButton page="home"></HeaderWithButton>
 
-    <button on:click={changeTab}>Test Button</button>
+    <button on:click={changeTab}>Swap Page</button>
 
     <!-- Widgets -->
     {#if (tab == 'widgets')}

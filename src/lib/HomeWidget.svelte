@@ -14,7 +14,6 @@
      import iconLastRun from '$lib/assets/widgIcons/lastrunIcon.svg';
      import expanderOpen from '$lib/assets/expOpen.svg';
      import expanderClosed from '$lib/assets/expClose.svg';
-     import plusIcon from '$lib/assets/plusIcon.svg';
 	import LevelCard from './LevelCard.svelte';
 
 /*      import { widgetStates } from '$lib/store.js'; */
@@ -334,8 +333,8 @@
                          </div>
                     </div>          
                     <div class="expander">
-                         <button on:click={addWidget}>
-                              <img class='plusImg' src={plusIcon} alt='Expander'>
+                         <button class="plusImg" on:click={addWidget}>
+                             +
                          </button>
                     </div>
                </div>
@@ -352,6 +351,14 @@
 </slot>
 
 <style>
+
+     button{
+          cursor: pointer;
+          border: 3px solid var(--lavender-600);
+          background: none;
+          border-radius: 50em;
+     }
+
      .swipe-container {
           display: flex;
           overflow: hidden;
@@ -487,19 +494,16 @@
      }
 
      .plusImg {
-          width: 28px;
-          height: 28px;
+          width: 1.5em;
+          height: 1.5em;
+          font-size: 1.5em;
+          color: var(--lavender-600);
      }
 
      .map{
           height: 12em;
      }
 
-     button{
-          background: none;
-          border: none;
-          cursor: pointer;
-     }
 
      details {
           cursor: pointer;

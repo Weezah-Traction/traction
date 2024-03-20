@@ -7,11 +7,11 @@
 
 
 <slot>
-    <a href={link}>{text}</a>
+    <button>{text}</button>
 </slot>
 
 <style>
-     a{
+     button{
           display: flex;
           width: 123px;
           height: 34px;

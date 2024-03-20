@@ -28,16 +28,10 @@
     widgetControl = value;
     });
 
-    let state = 'home';
-    let tab = 'widgets';
+   let state = 'home';
 
-    function changeTab(){
-        if (tab == 'home'){
-            tab = 'widgets';
-        } else if (tab == 'widgets'){
-            tab = 'home';
-        }
-    };
+    let tab = 'home';
+
 
 
     //onMount(() => {
@@ -61,9 +55,8 @@
 
 
 
-    <HeaderWithButton page="home"></HeaderWithButton>
+    <HeaderWithButton page="home" bind:tab></HeaderWithButton>
 
-    <button on:click={changeTab}>Swap Page</button>
 
     <!-- Widgets -->
     {#if (tab == 'widgets')}

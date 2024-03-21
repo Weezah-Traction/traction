@@ -1,7 +1,7 @@
 <script>
     import BlankHeader from "../../../lib/BlankHeader.svelte";
 
-    import stretchImg from '$lib/assets/stretchExample.svg'; /* Replace with actual stretch image later*/
+    import stretchImg from '$lib/assets/stretch1.svg'; /* Replace with actual stretch image later*/
 	import PostrunButtons from "../../../lib/PostrunButtons.svelte";
 
 	import StretchesRadio from "../../../lib/StretchesRadio.svelte";

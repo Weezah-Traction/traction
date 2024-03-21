@@ -77,7 +77,7 @@
      if (widgType == "prerun"){
           name = 'Pre-Run Checklist';
           icon = iconPreRun;
-          end = "/ 4 done";
+          end = "";
           details = PreRunChecklist;
      }
 
@@ -393,7 +393,10 @@
                </summary>
                <div class="widgContentExpanded">
                     {#if (widgType == "prerun")}
-                         <div id="result"><span id="selected">0</span>/4 done</div> 
+                         <div id="result">
+                              <h6 id="selected">0</h6>
+                              <h6>/4 done</h6>
+                         </div> 
                          <PreRunChecklist></PreRunChecklist>
 
                     {:else if (widgType == "map")}
@@ -789,6 +792,12 @@
      .otherStats {
           display: flex;
           justify-content: space-between
+     }
+
+     #result {
+          display: flex;
+          margin-left: 20px;
+          margin-bottom: 20px;
      }
     
 </style>

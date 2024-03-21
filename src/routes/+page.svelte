@@ -116,7 +116,7 @@
         <div class="bodyContent">
             <div class="widgetList">
                 <div class="map"><HomeWidget where = 'list' id=0 enabled = {widgetControl[0]} widgType = "map" data=" " status = 'closed'></HomeWidget></div>
-                <div class="lav200"><HomeWidget where = 'list' id=1 enabled = {widgetControl[1]} widgType = "prerun" status = 'closed' data = 'replace me'></HomeWidget></div>
+                <div class="lav200"><HomeWidget where = 'list' id=1 enabled = {widgetControl[1]} widgType = "prerun" status = 'closed' data = ''></HomeWidget></div>
                 <div class="lav100"><HomeWidget where = 'list' id=2 enabled = {widgetControl[2]} widgType = "experience" status = 'closed' data = 320></HomeWidget></div>
                 <div class="lav200"><HomeWidget where = 'list' id=3 enabled = {widgetControl[3]} widgType = "dist" status = 'closed' data = {dist_sum}></HomeWidget></div>
                 <div class="lav100"><HomeWidget where = 'list' id=4 enabled = {widgetControl[4]} widgType = "pace" status = 'closed' data = {pace_avg}></HomeWidget></div>
@@ -168,7 +168,7 @@
                 {/each} -->
 
                 <div class="map"><HomeWidget where = 'home' id=0 enabled = {widgetControl[0]} widgType = "map" data=" " status = 'closed'></HomeWidget></div>
-                <div class="lav200"><HomeWidget where = 'home' id=1 enabled = {widgetControl[1]} widgType = "prerun" status = 'closed' data = 'replace me'></HomeWidget></div>
+                <div class="lav200"><HomeWidget where = 'home' id=1 enabled = {widgetControl[1]} widgType = "prerun" status = 'closed' data = ''></HomeWidget></div>
                 <div class="lav100"><HomeWidget where = 'home' id=2 enabled = {widgetControl[2]} widgType = "experience" status = 'closed' data = 320></HomeWidget></div>
                 <div class="lav200"><HomeWidget where = 'home' id=3 enabled = {widgetControl[3]} widgType = "dist" status = 'closed' data = {dist_sum}></HomeWidget></div>
                 <div class="lav100"><HomeWidget where = 'home' id=4 enabled = {widgetControl[4]} widgType = "pace" status = 'closed' data = {pace_avg}></HomeWidget></div>

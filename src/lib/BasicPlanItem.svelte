@@ -20,7 +20,7 @@
         display: flex;
         flex-direction: row;
         grid-column: 1/ span 5;
-        padding: 10px 0px 10px 20px;
-        margin: 10px 0px 20px 0px;
+        padding: 20px 0px 20px 20px;
+        margin: 0px 0px 0px 0px;
     }    
 </style>

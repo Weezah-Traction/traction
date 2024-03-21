@@ -17,5 +17,6 @@
           align-items: center;
           border-radius: 40px;
           background: var(--Lavender-300, #DFCEFD);
+          align-self: center;
       }
  </style>

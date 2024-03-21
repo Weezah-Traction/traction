@@ -129,6 +129,7 @@
             <div id="achievements">
                 <div class="bodyContent">
                     <div class="levelSection">
+                        <h6 class="runlvl">Run Level</h6>
                         <LevelCard
                             levelName = {filtered_levels.title}
                             currentXP = {filtered_levels.currentXP}
@@ -173,7 +174,7 @@
     .levelSection {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 		gap: 10px;
 	}
 
@@ -199,7 +200,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 10px;
-		margin: 20px 0 10px 20px;
+		margin: 20px 0 20px 20px;
 	}
 
 	.threeFlower {
@@ -208,5 +209,9 @@
 		justify-content: space-between;
 		align-items: center;
 	}
+
+    .runlvl {
+        margin: 10px 0px 0px 20px;
+    }
 
 </style>

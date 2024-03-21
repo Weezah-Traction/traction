@@ -25,7 +25,7 @@
           flex-direction: column;
           align-items: center;
           justify-content: space-between;
-          gap: 10px;
+          gap: 5px;
           flex-shrink: 0;
           align-self: stretch;
      }

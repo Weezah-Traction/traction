@@ -42,7 +42,7 @@
           display: flex;
           flex-direction: column;
           /* gap: 10px; */
-          margin: 20px 0px 20px 20px
+          margin: 0px 0px 0px 20px
      }
 
      .guidanceItemHeader {

@@ -26,7 +26,7 @@
             </ul>
         -->
 
-        <h2>Week 1 Plan</h2>
+        <h2 class="ndheader">Week 1 Plan</h2>
         <!--Database Linking-->
         <ul> 
             {#each data.plans as {num, header, description}}
@@ -88,8 +88,12 @@
     }
 
     h2 {
-        margin: 0 20px;
+        margin: 0px 0px 0px 20px;
     }
 
+
+    .ndheader{
+        margin-top: 20px;
+    }
 
 </style>

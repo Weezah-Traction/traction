@@ -24,7 +24,7 @@
                     link="/plans/guidance/after_runs"
                ></GuidanceItem></div>
                <div class="lav200"><GuidanceItem
-                    header="General Care & Motivation"
+                    header="General Care"
                     desc="Take care of yourself! This guide will help."
                     link="/plans/guidance/general_care_motivation"
                ></GuidanceItem></div>
@@ -41,5 +41,6 @@
           display: flex;
           flex-direction: column;
           gap: 0;
+     
      }
 </style>

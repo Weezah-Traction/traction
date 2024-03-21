@@ -77,7 +77,9 @@
 <slot>
      <HeaderWithBack page="awards"></HeaderWithBack>
      <div class="bodyContent">
+          <h6 class="rctawards">Recent Awards</h6>
           <div class="mostRecentAwards">
+               
                {#each filtered_awards as {title, date, xp}}
                <AchievementsFlowerContainer
                     name = {title}
@@ -125,6 +127,10 @@
      }
      .flowerBox {
           margin: 10px 0;
+     }
+
+     .rctawards {
+          margin: 10px 0px 0px 20px;
      }
 
 </style>

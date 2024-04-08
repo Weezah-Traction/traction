@@ -587,6 +587,9 @@
           align-items: center;
           gap: 10px;
           flex-shrink: 0;
+          border-top: 2px solid var(--lavender-200);
+          padding: .5em 0 .5em 0;
+          color: var(--lavender-700);
      }
 
      .widgContent {
@@ -599,7 +602,6 @@
           margin: 0px;
           height: 100px;
           /* gap: 10px; */
-
           border-radius: 0px;
           /* background: var(--Lavender-300, #DFCEFD); */
      }
@@ -631,7 +633,7 @@
      }
 
      .widgetName {
-          color: var(--Lavender-700, #2A2534);
+          color: var(--lavender-700, #2A2534);
           text-align: center;
           /* Poppins/Bold/Body */
           font-family: "Fugaz One";
@@ -645,7 +647,7 @@
 
      .widgetData {
           /*padding-left: 20px;*/
-          color: var(--Lavender-700, #2A2534);
+          color: var(--lavender-700);
           text-align: center;
           /* Fugaz/H4 */
           font-family: Poppins;

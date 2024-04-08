@@ -8,7 +8,7 @@
     --lavender-400: #CEB8F3;
     --lavender-500: #9074C1;
     --lavender-600: #634990;
-    --lavender-700: #2A2534;
+    --lavender-700: #27085A;
 
        /* Yellows */
 
@@ -189,6 +189,7 @@
   margin: 20px 0;
   padding-bottom: 125px;
   width: 100%;
+  color: var(--lavender-700);
 }
 
 .lav100 {
@@ -338,6 +339,7 @@ h5.Fugaz {
   h1 {
     font-size: 2em;
     margin: 0.67em 0;
+    font-weight: normal;
   }
   
   /* Grouping content

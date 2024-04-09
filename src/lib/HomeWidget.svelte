@@ -25,6 +25,8 @@
      import sadIcon from '$lib/assets/faceIcons/SadIcon.svg';
      import vsadIcon from '$lib/assets/faceIcons/VSadIcon.svg';
 
+     import cross from '$lib/assets/cross.svg';
+
 /*      import { widgetStates } from '$lib/store.js'; */
 
      import { toggles } from '$lib/stores.js';
@@ -500,8 +502,13 @@
           </details>
 
           <div class="action right">
-               <i>Trash!</i>
+               <i>
+                    <img src={cross} alt="delete"> 
+                    Delete
+               </i>
           </div>
+
+
           {:else if (where == 'list')}
                <div class="homeWidg">
                     <div class="widgContent">
@@ -563,7 +570,7 @@
 
      .right{
           justify-content: flex-end;
-          background-color: orchid;
+          background-color: var(--red);
      }
 
      .action {
@@ -577,8 +584,21 @@
           position: sticky;
           left: 50px;
           right: 200px;
+          display:flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          margin-left: 1em;
+          font-style: normal;
+          font-weight: normal;
      }
 
+
+     i img{
+          width: 1.5em;
+          height: 1.5em;
+          padding-bottom: 1em;
+     }
 
      .homeWidg {  
           display: flex;

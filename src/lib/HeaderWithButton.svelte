@@ -69,7 +69,7 @@ let text = 'Add Widgets'
           justify-content: center;
           align-items: center;
           border-radius: 40px;
-          background: var(--lavender-300, #DFCEFD);
+          background: var(--lavender-300);
           border: none;
           cursor: pointer;
           color: var(--lavender-700);

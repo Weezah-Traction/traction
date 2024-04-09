@@ -22,7 +22,7 @@
           <div class="levelCardInfo">
                <p>{currentXP} XP</p>
                <!-- <img class="progbar" src={progbar} alt="Progbar"> -->
-               <progress value="10" max="50"></progress>
+               <progress value="20" max="50"></progress>
                <div class="nextNStreak">
                     <p>{nextXP} XP to next level</p>
                     <div class="streakContainer">

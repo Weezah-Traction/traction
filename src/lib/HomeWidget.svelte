@@ -25,6 +25,8 @@
      import sadIcon from '$lib/assets/faceIcons/SadIcon.svg';
      import vsadIcon from '$lib/assets/faceIcons/VSadIcon.svg';
 
+     import cross from '$lib/assets/cross.svg';
+
 /*      import { widgetStates } from '$lib/store.js'; */
 
      import { toggles } from '$lib/stores.js';
@@ -500,8 +502,13 @@
           </details>
 
           <div class="action right">
-               <i>Trash!</i>
+               <i>
+                    <img src={cross} alt="delete"> 
+                    Delete
+               </i>
           </div>
+
+
           {:else if (where == 'list')}
                <div class="homeWidg">
                     <div class="widgContent">
@@ -563,7 +570,7 @@
 
      .right{
           justify-content: flex-end;
-          background-color: orchid;
+          background-color: var(--red);
      }
 
      .action {
@@ -577,8 +584,21 @@
           position: sticky;
           left: 50px;
           right: 200px;
+          display:flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          margin-left: 1em;
+          font-style: normal;
+          font-weight: normal;
      }
 
+
+     i img{
+          width: 1.5em;
+          height: 1.5em;
+          padding-bottom: 1em;
+     }
 
      .homeWidg {  
           display: flex;
@@ -587,6 +607,9 @@
           align-items: center;
           gap: 10px;
           flex-shrink: 0;
+          border-top: 2px solid var(--lavender-200);
+          padding: .5em 0 .5em 0;
+          color: var(--lavender-700);
      }
 
      .widgContent {
@@ -599,7 +622,6 @@
           margin: 0px;
           height: 100px;
           /* gap: 10px; */
-
           border-radius: 0px;
           /* background: var(--Lavender-300, #DFCEFD); */
      }
@@ -631,13 +653,13 @@
      }
 
      .widgetName {
-          color: var(--Lavender-700, #2A2534);
+          color: var(--lavender-700, #2A2534);
           text-align: center;
           /* Poppins/Bold/Body */
           font-family: "Fugaz One";
           font-size: 23.5px;
           font-style: normal;
-          font-weight: 700;
+          font-weight: normal;
           line-height: normal;
           letter-spacing: 0.8px;
           margin: 0;
@@ -645,7 +667,7 @@
 
      .widgetData {
           /*padding-left: 20px;*/
-          color: var(--Lavender-700, #2A2534);
+          color: var(--lavender-700);
           text-align: center;
           /* Fugaz/H4 */
           font-family: Poppins;

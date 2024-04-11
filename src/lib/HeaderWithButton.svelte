@@ -37,7 +37,7 @@ let text = 'Add Widgets'
     .container {
         position: sticky;
         font-family: 'Poppins';
-        background-color:  var(--lavender-200);
+        background-color:  var(--lavender-100);
         display: flex;
         top: 0;
         justify-content: space-between;
@@ -47,12 +47,13 @@ let text = 'Add Widgets'
     }
 
     .headerText {
-        width: 393px;
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding: 10px 20px;
+        color: var(--lavender-700);
     }
 
     .headerPageTitle {
@@ -68,7 +69,7 @@ let text = 'Add Widgets'
           justify-content: center;
           align-items: center;
           border-radius: 40px;
-          background: var(--Lavender-300, #DFCEFD);
+          background: var(--lavender-300);
           border: none;
           cursor: pointer;
           color: var(--lavender-700);

@@ -101,14 +101,13 @@
 
      .widgetName {
       
-     padding-left: 8px;
+          padding-left: 8px;
           color: var(--Lavender-700, #2A2534);
           text-align: center;
           /* Poppins/Bold/Body */
           font-family: "Fugaz One";
           font-size: 23.5px;
           font-style: normal;
-          font-weight: 700;
           line-height: normal;
           letter-spacing: 0.8px;
           margin: 0;

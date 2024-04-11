@@ -1,6 +1,6 @@
 <script>
     let link = '/plans/guidance';
-    import thumb from '$lib/assets/purple.jpg';
+    import thumb from '$lib/assets/book.svg';
     let alt = 'A solid purple block.'
 </script>
 
@@ -11,10 +11,23 @@
 </slot>
 
 <style>
+
+    a{
+        background-color: var(--lavender-500);
+        border-radius: var(--standard-radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 110px;
+        width: 110px;
+    }
+
     img{
         grid-column: 2 / span 2;
-        height: 110px;
-        border-radius: 1em;
+        width: 30px;
+        height: 24px;
+
         margin-left: 8px 0px 16px 20px;
+        
     }
 </style>

@@ -8,7 +8,7 @@
     --lavender-400: #CEB8F3;
     --lavender-500: #9074C1;
     --lavender-600: #634990;
-    --lavender-700: #2A2534;
+    --lavender-700: #27085A;
 
        /* Yellows */
 
@@ -29,6 +29,29 @@
     --blue-500: #486999;
     --blue-600: #2D4871;
     --blue-700: #172439;
+
+  /* Actions */
+
+  --red: #fb1b66;
+
+
+  /* Plan Colors */ 
+
+
+
+
+
+
+   --relax: #FFB26B;
+   --fun: #79AAD8;
+  --tough: #e0497b;
+
+
+
+  /* Radius */
+
+ --standard-radius: 1em;
+ --standard-padding: 10px;
 
 }
 
@@ -187,8 +210,9 @@
   flex-direction: column;
   gap: 20px;
   margin: 20px 0;
-  padding-bottom: 125px;
+  padding-bottom: 10em;
   width: 100%;
+  color: var(--lavender-700);
 }
 
 .lav100 {
@@ -328,6 +352,7 @@ h5.Fugaz {
   
   main {
     display: block;
+    padding-bottom: 1em;
   }
   
   /**
@@ -338,6 +363,7 @@ h5.Fugaz {
   h1 {
     font-size: 2em;
     margin: 0.67em 0;
+    font-weight: normal;
   }
   
   /* Grouping content

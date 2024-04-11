@@ -28,10 +28,10 @@
 
         <h2 class="ndheader">Week 1 Plan</h2>
         <!--Database Linking-->
-        <ul> 
-            {#each data.plans as {num, header, description}}
+        <ul>
+             {#each data.plans as {num, header, description, color}}
                 <li>
-                    <a class="dayBox" href="/plans">
+                    <a class={color} id={num} href="/plans">
                         <p class="dayBoxText">DAY</p>
                         <h3 class="dayBoxText">{num}</h3>
                     </a>
@@ -49,16 +49,40 @@
 
 <style>
 
-    .dayBox {
+
+    .relax{
         display: flex;
         width: 80px;
         height: 80px;
         flex-direction: column;
-        justify-content: space-around;
         align-items: center;
-        border-radius: 20px;
-        background: var(--Lavender-500, #9074C1);
+        justify-content: center;
+        border-radius: var(--standard-radius);
+        background-color: var(--relax);
     }
+
+    .fun{
+        display: flex;
+        width: 80px;
+        height: 80px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--standard-radius);
+        background-color: var(--fun);
+    }
+
+    .tough{
+        display: flex;
+        width: 80px;
+        height: 80px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--standard-radius);
+        background-color: var(--tough);
+    }
+
 
     .dayContent {
         display: flex;

@@ -116,13 +116,13 @@
         <div class="bodyContent">
             <div class="widgetList">
                 <div class="map"><HomeWidget where = 'list' id=0 enabled = {widgetControl[0]} widgType = "map" data=" " status = 'closed'></HomeWidget></div>
-                <div class="lav200"><HomeWidget where = 'list' id=1 enabled = {widgetControl[1]} widgType = "prerun" status = 'closed' data = ''></HomeWidget></div>
-                <div class="lav100"><HomeWidget where = 'list' id=2 enabled = {widgetControl[2]} widgType = "experience" status = 'closed' data = 320></HomeWidget></div>
-                <div class="lav200"><HomeWidget where = 'list' id=3 enabled = {widgetControl[3]} widgType = "dist" status = 'closed' data = {dist_sum}></HomeWidget></div>
-                <div class="lav100"><HomeWidget where = 'list' id=4 enabled = {widgetControl[4]} widgType = "pace" status = 'closed' data = {pace_avg}></HomeWidget></div>
-                <div class="lav200"><HomeWidget where = 'list' id=5 enabled = {widgetControl[5]} widgType = "awards" status = 'closed' data = "Expand to See More"></HomeWidget></div>
-                <div class="lav100"><HomeWidget where = 'list' id=6 enabled = {widgetControl[6]} widgType = "records" status = 'closed' data = "Expand to See More"></HomeWidget></div>
-                <div class="lav200"><HomeWidget where = 'list' id=7 enabled = {widgetControl[7]} widgType = "lastrun" status = 'closed' data = {filtered_runs.date}></HomeWidget></div>
+                <div><HomeWidget where = 'list' id=1 enabled = {widgetControl[1]} widgType = "prerun" status = 'closed' data = ''></HomeWidget></div>
+                <div><HomeWidget where = 'list' id=2 enabled = {widgetControl[2]} widgType = "experience" status = 'closed' data = 320></HomeWidget></div>
+                <div><HomeWidget where = 'list' id=3 enabled = {widgetControl[3]} widgType = "dist" status = 'closed' data = {dist_sum}></HomeWidget></div>
+                <div><HomeWidget where = 'list' id=4 enabled = {widgetControl[4]} widgType = "pace" status = 'closed' data = {pace_avg}></HomeWidget></div>
+                <div><HomeWidget where = 'list' id=5 enabled = {widgetControl[5]} widgType = "awards" status = 'closed' data = "Expand to See More"></HomeWidget></div>
+                <div><HomeWidget where = 'list' id=6 enabled = {widgetControl[6]} widgType = "records" status = 'closed' data = "Expand to See More"></HomeWidget></div>
+                <div><HomeWidget where = 'list' id=7 enabled = {widgetControl[7]} widgType = "lastrun" status = 'closed' data = {filtered_runs.date}></HomeWidget></div>
             </div>
         </div>
 
@@ -130,10 +130,10 @@
             <div class="bodyContent">
                 <!--<TabToggler></TabToggler>-->
                 <div class="widgetList">
-                    <div class="lav100"><RunWidget widgType = "distance" data = "0.00"></RunWidget></div>
-                    <div class="lav200"><RunWidget widgType = "pace" data = "0.00"></RunWidget></div>
-                    <div class="lav100"><RunWidget widgType = "timer" data = "0:00"></RunWidget></div>
-                    <div class="lav200"><RunWidget widgType = "c25k" data = "WALK"></RunWidget></div>
+                    <div><RunWidget widgType = "distance" data = "0.00"></RunWidget></div>
+                    <div><RunWidget widgType = "pace" data = "0.00"></RunWidget></div>
+                    <div><RunWidget widgType = "timer" data = "0:00"></RunWidget></div>
+                    <div><RunWidget widgType = "c25k" data = "WALK"></RunWidget></div>
                 </div>
             </div>
         {/if}
@@ -168,13 +168,13 @@
                 {/each} -->
 
                 <div class="map"><HomeWidget where = 'home' id=0 enabled = {widgetControl[0]} widgType = "map" data=" " status = 'closed'></HomeWidget></div>
-                <div class="lav200"><HomeWidget where = 'home' id=1 enabled = {widgetControl[1]} widgType = "prerun" status = 'closed' data = ''></HomeWidget></div>
-                <div class="lav100"><HomeWidget where = 'home' id=2 enabled = {widgetControl[2]} widgType = "experience" status = 'closed' data = 320></HomeWidget></div>
-                <div class="lav200"><HomeWidget where = 'home' id=3 enabled = {widgetControl[3]} widgType = "dist" status = 'closed' data = {dist_sum}></HomeWidget></div>
-                <div class="lav100"><HomeWidget where = 'home' id=4 enabled = {widgetControl[4]} widgType = "pace" status = 'closed' data = {pace_avg}></HomeWidget></div>
-                <div class="lav200"><HomeWidget where = 'home' id=5 enabled = {widgetControl[5]} widgType = "awards" status = 'closed' data = "Expand to See More"></HomeWidget></div>
-                <div class="lav100"><HomeWidget where = 'home' id=6 enabled = {widgetControl[6]} widgType = "records" status = 'closed' data = "Expand to See More"></HomeWidget></div>
-                <div class="lav200"><HomeWidget where = 'home' id=7 enabled = {widgetControl[7]} widgType = "lastrun" status = 'closed' data = {filtered_runs.date}></HomeWidget></div>
+                <div><HomeWidget where = 'home' id=1 enabled = {widgetControl[1]} widgType = "prerun" status = 'closed' data = ''></HomeWidget></div>
+                <div><HomeWidget where = 'home' id=2 enabled = {widgetControl[2]} widgType = "experience" status = 'closed' data = 320></HomeWidget></div>
+                <div><HomeWidget where = 'home' id=3 enabled = {widgetControl[3]} widgType = "dist" status = 'closed' data = {dist_sum}></HomeWidget></div>
+                <div><HomeWidget where = 'home' id=4 enabled = {widgetControl[4]} widgType = "pace" status = 'closed' data = {pace_avg}></HomeWidget></div>
+                <div><HomeWidget where = 'home' id=5 enabled = {widgetControl[5]} widgType = "awards" status = 'closed' data = "Expand to See More"></HomeWidget></div>
+                <div><HomeWidget where = 'home' id=6 enabled = {widgetControl[6]} widgType = "records" status = 'closed' data = "Expand to See More"></HomeWidget></div>
+                <div><HomeWidget where = 'home' id=7 enabled = {widgetControl[7]} widgType = "lastrun" status = 'closed' data = {filtered_runs.date}></HomeWidget></div>
 
                 <!--<div class="lav300"><MediumWidget widgetType = totalDist1></MediumWidget></div>
                 <div class="lav100"><MediumWidget widgetType = avgPace1></MediumWidget></div>

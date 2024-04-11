@@ -70,6 +70,6 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 10px 20px;
+        padding: var(--standard-padding);
     }
 </style>

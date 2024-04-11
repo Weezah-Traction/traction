@@ -19,7 +19,7 @@ export const records = [
 export const flowers = [
     {title: 'Name of Flower', type: 'Record or Award', xp: 'XP Awarded', icon: 'Icon File'}
 ]
-
+s
 export const details = [
     {title: 'Name of Guide', thumbnail: 'Thumbnail', description: 'Description', images: 'Image file', content: 'Text for Guide...'}
 ]
@@ -29,13 +29,13 @@ export const progress = [
 ]*/
 
 export const plans = [
-    {id: 1, num: '1', header: 'Run for Fun', description: 'Aim for light jog for 5 mins'},
-    {id: 2, num: '2', header: 'Relax & Assess', description: 'Give yourself some love!'},
-    {id: 3, num: '3', header: 'Run for Fun, Again!', description: 'Just enjoy nature!'},
-    {id: 4, num: '4', header: 'Small Steps', description: 'Aim for a light jog for 10 mins'},
-    {id: 5, num: '5', header: 'Touch Grass!', description: 'Reconnect with nature'},
-    {id: 6, num: '6', header: 'First Challenge', description: 'Try to keep pace for 1 minute!'},
-    {id: 7, num: '7', header: 'Party Time!', description: 'Celebrate your first week!'},
+    {id: 1, num: '1', header: 'Run for Fun', description: 'Aim for light jog for 5 mins', color: 'fun'},
+    {id: 2, num: '2', header: 'Relax & Assess', description: 'Give yourself some love!', color: 'relax'},
+    {id: 3, num: '3', header: 'Run for Fun, Again!', description: 'Just enjoy nature!', color: 'fun'},
+    {id: 4, num: '4', header: 'Small Steps', description: 'Aim for a light jog for 10 mins', color: 'fun'},
+    {id: 5, num: '5', header: 'Touch Grass!', description: 'Reconnect with nature', color: 'relax'},
+    {id: 6, num: '6', header: 'First Challenge', description: 'Try to keep pace for 1 minute!', color: 'tough'},
+    {id: 7, num: '7', header: 'Party Time!', description: 'Celebrate your first week!', color: 'relax'},
 ];
 
 export const widgets = [

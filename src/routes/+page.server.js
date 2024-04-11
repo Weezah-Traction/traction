@@ -6,7 +6,7 @@
  * The value for the 'name' and 'mascot' keys are derived from the corresponding properties of each 'team' object.
  *
  * @module {Function} load
- * @returns {{plans: {date: string, header: string, description: string}[]}} - An object with teams array
+ * @returns {{plans: {date: string, header: string, description: string, color: string}[]}} - An object with teams array
  */
 
 /*export function load() {

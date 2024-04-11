@@ -47,7 +47,7 @@ let text = 'Add Widgets'
     }
 
     .headerText {
-        width: 393px;
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;

@@ -659,7 +659,7 @@
           font-family: "Fugaz One";
           font-size: 23.5px;
           font-style: normal;
-          font-weight: 700;
+          font-weight: normal;
           line-height: normal;
           letter-spacing: 0.8px;
           margin: 0;

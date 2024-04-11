@@ -89,7 +89,7 @@
 	border-radius: 99px;
 	margin-top: 1em;
 	border: 2px solid var(--lavender-300);
-
+	height: 50px;
 }
 
 input[type="radio"] {
@@ -100,7 +100,7 @@ input[type="radio"] {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 54px;
+	height: 50px;
 	width: 180px;
 	font-size: 1rem;
 	font-weight: 500;
@@ -161,7 +161,7 @@ input[id="radio-3"] {
 .glider {
 	position: absolute;
 	display: flex;
-	height: 54px;
+	height: 46px;
 	width: 180px;
 	background-color: var(--lavender-300);
 	z-index: 0;

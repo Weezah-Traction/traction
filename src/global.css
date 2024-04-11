@@ -37,16 +37,21 @@
 
   /* Plan Colors */ 
 
-  --relax: #a1e7e8;
-  --easy: #a4b2e6;
-  --medium: #fdeeb1;
-  --hard: #fb98aa;
+
+
+
+
+
+   --relax: #FFB26B;
+   --fun: #79AAD8;
+  --tough: #e0497b;
+
 
 
   /* Radius */
 
  --standard-radius: 1em;
-
+ --standard-padding: 10px;
 
 }
 

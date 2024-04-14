@@ -52,20 +52,25 @@ if (page == 'guidance'){
     .container {
         position: sticky;
         font-family: 'Poppins';
-        background-color:  var(--lavender-200);
+        background-color:  var(--lavender-100);
         display: flex;
         top: 0;
         justify-content: space-between;
         align-items: flex-end;
-        width: 100%;
+        max-width: 100%;
         height: 120px;
+        z-index: 1;
     }
 
     .headerText {
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        padding-bottom: 15px;
-        padding-left: 15px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        color: var(--lavender-700);
+        height: 50px;
     }
 
     .headerPageTitle {

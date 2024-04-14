@@ -10,7 +10,7 @@
     <BlankHeader page="checkup"></BlankHeader>
     <div class="bodyContent">
         <div class="emotionContainer">
-            <h6>How do you emotionally feel after this run?</h6>
+            <h6>How do you feel after this run?</h6>
             <EmojiRadio></EmojiRadio>
         </div>
         <div class="issuesContainer">
@@ -22,6 +22,8 @@
 </slot>
 
 <style>
+
+
     .emotionContainer {
         display: flex;
         flex-direction: column;
@@ -33,5 +35,6 @@
         flex-direction: column;
         gap: 20px;
         margin: 0 20px;
+        margin-bottom: 1em;
     }
 </style>

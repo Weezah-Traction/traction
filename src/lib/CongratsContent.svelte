@@ -16,12 +16,12 @@
 <style>
      .congratsContent {
           display: flex;
-          width: 353px;
+          width: 100%;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           gap: 10px;
-          margin: 100px 20px 0 20px;
+          margin-bottom: 7em;
      }
 
      img {

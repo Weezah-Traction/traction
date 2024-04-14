@@ -10,8 +10,16 @@
      .dayTracker {
           display: flex;
           flex-direction: column;
+          justify-content: center;
           align-items: center;
-          width: 100%;
+          font-size: 2em;
+          padding-bottom: .5em;
+
+          border-radius: var(--standard-radius)
+     }
+
+     p{
+          font-weight: 700;
      }
 
      h2 {

@@ -19,7 +19,7 @@
      <HeaderWithBack page="records"></HeaderWithBack>
      <div class="bodyContent">
           {#each records as {title, data, measurement, icon}}
-               <div class="lav100"><RecordItem name={title} stat={data}{measurement} thumb={icon}></RecordItem></div>
+               <div><RecordItem name={title} stat={data}{measurement} thumb={icon}></RecordItem></div>
           {/each}
      </div>
      <NavigationBar></NavigationBar>
@@ -29,5 +29,6 @@
      .bodyContent {
           gap: 0;
           margin: 0;
+          margin-top: 1em;
      }
 </style>

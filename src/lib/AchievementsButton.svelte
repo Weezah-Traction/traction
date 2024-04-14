@@ -5,14 +5,23 @@
  
  
  <slot>
+    <div class="container">
      <a href={link}>{text}</a>
+    </div>
  </slot>
  
  <style>
+       .container{
+        display: flex;
+        width: 100%;
+     }
+
+
       a{
+          margin: auto;
+          width: 23em;
           display: flex;
-          width: 353px;
-          height: 50px;
+          height: 3em;
           justify-content: center;
           align-items: center;
           border-radius: 40px;

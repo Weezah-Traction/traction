@@ -152,10 +152,10 @@
     <div class="bodyContent">
         <div class="widgetList">
             <MapWidget size="medium"></MapWidget>
-            <div class="lav100"><RunWidget widgType = "distance" data = {distance}></RunWidget></div>
-            <div class="lav200"><RunWidget widgType = "pace" data = {pace}></RunWidget></div>
-            <div class="lav100"><RunWidget widgType = "timer" data = {timeReported}></RunWidget></div>
-            <div class="lav200"><RunWidget widgType = "c25k" data = "WALK"></RunWidget></div>
+            <div><RunWidget widgType = "distance" data = {distance}></RunWidget></div>
+            <div><RunWidget widgType = "pace" data = {pace}></RunWidget></div>
+            <div><RunWidget widgType = "timer" data = {timeReported}></RunWidget></div>
+            <div><RunWidget widgType = "c25k" data = "WALK"></RunWidget></div>
         </div>
         <!-- <PauseButton></PauseButton>
         <StopButton></StopButton> -->
@@ -187,6 +187,8 @@
         margin-top: 10px;
         font-size: 16px;
         font-weight: bold;
+        color: var(--lavender-700);
+        background-color: var(--lavender-200);
     }
 
     .modal-background {
@@ -194,9 +196,11 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: #A4A4A4;
-        height: 738px;
+        background-color: var(--lavender-500);
+        height: 100%;
+        width: 100vw;
         opacity: 0.9;
+        position: absolute;
     }
 
     .modal-container {
@@ -205,16 +209,19 @@
         width: 320px;
         padding: 20px;
         border-radius: 20px;
+        margin-bottom: 20vh;
         z-index: 15;
     }
 
     h4 {
-        font-family: 'Fugaz One';
+        text-align: center;
         font-size: 27.6px;
-        margin: 0;
+        margin: 1em .1em;
+        color: var(--lavender-700)
     }
 
     h2 {
         color: white;
+        margin-bottom: 20vh;
     }
 </style>

@@ -38,19 +38,23 @@
   
 
     ul{
-        background-color: var(--lavender-600);
         align-items: center;
+        background-color: var(--lavender-600);
         bottom: 0;
         display: flex;
         flex-direction: row;
-        margin: 0;
         justify-content: space-around;
         left: 0;
         list-style: none;
+        margin: 0;
         padding: 0;
+        padding-bottom: .75em;
         position: fixed;
         right: 0;
         z-index: 5;
-        margin: 0;
+    }
+
+    nav{
+
     }
 </style>

@@ -44,6 +44,7 @@ let text = 'Add Widgets'
         align-items: flex-end;
         max-width: 100%;
         height: 120px;
+        z-index: 1;
     }
 
     .headerText {
@@ -54,6 +55,7 @@ let text = 'Add Widgets'
         justify-content: space-between;
         padding: 10px 20px;
         color: var(--lavender-700);
+        line-height: 0;
     }
 
     .headerPageTitle {

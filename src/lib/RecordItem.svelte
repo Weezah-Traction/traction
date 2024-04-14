@@ -7,6 +7,7 @@
 </script>
 
 <slot>
+     <div class="container">
      <div class="recordItem">
           <div class="flower">
                <img src={thumb} alt={alt}>
@@ -16,6 +17,7 @@
                <h6>{stat}</h6>
           </div>
      </div>
+</div>
 </slot>
 
 <style>
@@ -24,13 +26,21 @@
           height: 55px;
           width: 55px;
      }
+
+     .container{
+          margin: .25em 1em;
+     }
+
+
      .recordItem {
           display: flex;
-          height: 100px;
-          padding: 0px 20px;
+          padding: 2em;
           align-items: center;
           gap: 20px;
           align-self: stretch;
+          background-color: var(--lavender-200);
+          color: var(--lavender-700);
+          border-radius: var(--standard-radius);
      }
 
      .nameNStat {

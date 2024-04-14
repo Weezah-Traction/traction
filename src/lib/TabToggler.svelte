@@ -84,12 +84,12 @@
 .tabs {
 	display: flex;
 	position: relative;
-	background-color: white;
+	background-color: var(--lavender-200);
 	box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
 	border-radius: 99px;
 	margin-top: 1em;
-	border: 2px solid var(--lavender-300);
 	height: 50px;
+	z-index: 0;
 }
 
 input[type="radio"] {
@@ -108,19 +108,9 @@ input[type="radio"] {
 	cursor: pointer;
 	transition: color 0.15s ease-in;
      z-index: 2;
+	 color: var(--lavender-700);
 }
 
-.notification {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 2rem;
-	height: 2rem;
-	margin-left: 0.75rem;
-	border-radius: 50%;
-	background-color: var(--lavender-700);
-	transition: 0.15s ease-in;
-}
 
 input[type="radio"] {
 	&:checked {
@@ -161,9 +151,9 @@ input[id="radio-3"] {
 .glider {
 	position: absolute;
 	display: flex;
-	height: 46px;
+	height: 50px;
 	width: 180px;
-	background-color: var(--lavender-300);
+	background-color: var(--lavender-400);
 	z-index: 0;
 	border-radius: 99px;
 	transition: 0.25s ease-out;

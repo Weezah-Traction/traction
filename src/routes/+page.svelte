@@ -192,9 +192,9 @@
 
 
     .map{
-     /*    background-image: url($lib/assets/fakeMap.png);
+        background-image: url($lib/assets/fakeMap.png);
         background-size: cover;
-        background-position: center; */
+        background-position: center; 
         background-color: var(--blue-100);
         border-radius: 0px;
         /* margin: 16px 0px 16px 20px; */
@@ -202,7 +202,7 @@
     }
 
     .homebody {
-        margin: 0px 0px 8px 0px;
+        margin: 0px 0px 2em 0px;
     }
 
     .dayBox {

@@ -19,6 +19,9 @@
      import AchievementsButton from '$lib/AchievementsButton.svelte';
      import RecordItem from './RecordItem.svelte';
 
+
+     import mapsrc from '$lib/assets/fakeMap.png';
+
      import vhappyIcon from '$lib/assets/faceIcons/VHappyIcon.svg';
      import happyIcon from '$lib/assets/faceIcons/HappyIcon.svg';
      import normalIcon from '$lib/assets/faceIcons/NormalIcon.svg';
@@ -460,7 +463,7 @@
 
                     {:else if (widgType == "records")}
                          <div class="expandedContent">
-                              <div class="lav100 recordContainer"><RecordItem
+                              <div class="recordContainer"><RecordItem
                                   name={filtered_records.title} 
                                   stat={filtered_records.data}{filtered_records.measurement} 
                                   thumb={filtered_records.icon}
@@ -541,7 +544,6 @@
 </slot>
 
 <style>
-
      button{
           cursor: pointer;
           border: 3px solid var(--lavender-600);
@@ -552,9 +554,13 @@
 
      .swipe-container {
           display: flex;
-          overflow: hidden;
           overflow-x: scroll;
           scroll-snap-type: x proximity;
+          scrollbar-width: none;
+     }
+
+     .swipe-container::-webkit-scrollbar{
+          display:none;
      }
 
      .swipe-element{
@@ -610,6 +616,7 @@
           border-top: 2px solid var(--lavender-200);
           padding: .5em 0 .5em 0;
           color: var(--lavender-700);
+          overflow: hidden;
      }
 
      .widgContent {
@@ -623,6 +630,7 @@
           height: 100px;
           /* gap: 10px; */
           border-radius: 0px;
+          overflow: hidden;
           /* background: var(--Lavender-300, #DFCEFD); */
      }
 
@@ -633,6 +641,8 @@
           align-items: flex-start;
           margin: 0px;
           border-radius: 0px;
+          position: relative;
+          top: -1.5em;
      } 
 
      .expander {
@@ -715,6 +725,7 @@
      details {
           cursor: pointer;
           width: 100%;
+          position: relative;
      }
 
      details summary::-webkit-details-marker {
@@ -820,6 +831,11 @@
           display: flex;
           margin-left: 20px;
           margin-bottom: 20px;
+          margin-top: -1;
      }
     
+     .recordContainer{
+          width: 100%;
+     }
+
 </style>

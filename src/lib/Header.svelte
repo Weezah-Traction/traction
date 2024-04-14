@@ -52,9 +52,10 @@
     .container {
         position: sticky;
         font-family: 'Poppins';
-        background-color:  var(--lavender-300);
+        background-color:  var(--lavender-100);
         display: flex;
         top: 0;
+        z-index: 1;
         justify-content: space-between;
         align-items: flex-end;
         width: 100%;

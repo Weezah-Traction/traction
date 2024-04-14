@@ -9,7 +9,7 @@
 <style>
     .startRunContainer {
         display: flex;
-        width: 393px;
+        width: 100%;
         justify-content: center;
         align-items: center;
         bottom: 110px;
@@ -19,15 +19,15 @@
 
     a{
         display: flex;
-        width: 353px;
+        width: 100%;
+        margin: 1em;
         height: 50px;
         justify-content: center;
         align-items: center;
         gap: 10px;
 
-
         border-radius: 10px;
-        border: 3px solid var(--Beige-300, #FCD29F);
+
         background: #FFB800;
     }
 </style>

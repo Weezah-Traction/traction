@@ -13,9 +13,12 @@
 <style>
     .bodyContent {
         height: 100%;
-        background-color: var(--lavender-100);
+        width: 100%;
         margin: 0;
         padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
 
 </style>

@@ -28,5 +28,9 @@
           gap: 5px;
           flex-shrink: 0;
           align-self: stretch;
+          padding: 1em .25em;
+          border-radius: var(--standard-radius);
+          margin: .25em;
+          background-color: var(--level-1);
      }
 </style>

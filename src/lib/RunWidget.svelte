@@ -71,11 +71,13 @@
 <style>
      .homeWidg {  
           display: flex;
-          width: 393px;
+          width: 100%;
           height: 125px;
           align-items: center;
           gap: 10px;
           flex-shrink: 0;
+          border-bottom: 2px solid var(--lavender-200);
+          color: var(--lavender-700);
      }
 
      .widgContent {
@@ -99,7 +101,7 @@
      }
 
      .widgetName {
-          color: var(--Lavender-700, #2A2534);
+          color: var(--lavender-700);
           text-align: center;
           /* Poppins/Bold/Body */
           font-family: "Fugaz One";
@@ -113,7 +115,7 @@
 
      .widgetData {
           /*padding-left: 20px;*/
-          color: var(--Lavender-700, #2A2534);
+          color: var(--lavender-700);
           text-align: center;
           /* Poppins/H3 */
           font-family: Poppins;

@@ -12,14 +12,17 @@
 </script>
 
 <slot>
+     <div class="container">
      <div class="levelCard">
           <div class="nameNFlower">
                <h4 class="Fugaz">{levelName}</h4>
-               <img class="flower" src={flower} alt="Flower">
+               <div class="flower">
+               <img src={flower} alt="Flower">
+               </div>
           </div>
           <div class="levelCardInfo">
                <p>{currentXP} XP</p>
-               <img class="progbar" src={progbar} alt="Progbar">
+               <progress value="320" max="1320"></progress>
                <div class="nextNStreak">
                     <p>{nextXP} XP to next level</p>
                     <div class="streakContainer">
@@ -29,17 +32,48 @@
                </div>
           </div>
      </div>
+</div>
 </slot>
 
 <style>
+
+
+     progress{
+          width: 100%;
+          height: 1em;
+          -webkit-appearance: none;
+          margin: .25em 0;
+          background-color: white;
+          border-radius: 1em;
+     }
+
+
+     ::-webkit-progress-bar {
+          background-color: white;
+          border-radius: 1em;
+     }
+
+
+     ::-webkit-progress-value {
+          background-color: var(--level-1-text);
+          border-radius: 1em 0 0 1em;
+     }
+
+
+     .container{
+          display: flex;
+          width: 100%;
+     }
      .levelCard {
           display: flex;
-          width: 393px;
-          height: 150px;
+          padding: 1em;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background: #FFE5C6;
+          background: var(--level-1);
+          border-radius: var(--standard-radius);
+          width: 100%;
+          margin: 0 1em;
      }
 
      .nameNFlower {
@@ -47,7 +81,7 @@
           justify-content: space-between;
           align-items: center;
           align-self: stretch;
-          margin: 0 20px;
+          color: var(--level-1-text);
      }
 
      .levelCardInfo {
@@ -55,6 +89,7 @@
           flex-direction: column;
           align-items: flex-start;
           gap: 5px;
+          width: 100%;
      }
 
      .nextNStreak {
@@ -70,4 +105,15 @@
           align-items: center;
           gap: 5px;
      }
+
+     .flower{
+          background-color: #ffffff;
+          padding: 1em;
+          border-radius: 3em;
+     }
+
+     .fireIcon{
+          height: 1.5em;
+     }
+
 </style>

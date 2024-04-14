@@ -44,29 +44,36 @@
 </script>
 
 <slot>
-     <a class="runThumbnail" href={link}>
-          <div class="mapNInfo">
-               <img class="map" src={mapThumb} alt="Map">
-               <div class="infoContainer">
-                    <h6 class="Poppins">{date}</h6>
-                    <p>{distance} mi</p>
-                    <p>{pace} min/mi</p>
+     <div class="container">
+          <a class="runThumbnail" href={link}>
+               <div class="mapNInfo">
+                    <img class="map" src={mapThumb} alt="Map">
+                    <div class="infoContainer">
+                         <h6 class="Poppins">{date}</h6>
+                         <p>{distance} mi</p>
+                         <p>{pace} min/mi</p>
+                    </div>
                </div>
-          </div>
-          <img class="faceIcon" src={thumb} alt={alt}>
-     </a>
+               <img class="faceIcon" src={thumb} alt={alt}>
+          </a>
+     </div>
 </slot>
 
 <style>
+     
+     .container{
+          margin: 0em 1em;
+     }
+
      .runThumbnail {
           display: flex;
           justify-content: space-between;
           background-color: var(--lavender-200);
-          width: 100%;
-          height: 100px;
+
           align-items: center;
           gap: 10px;
           padding: 10px;
+          border-radius: var(--standard-radius);
           /* padding: 8px; */ 
           
           /* ^^^ Had to comment this out for the homescreen widget. 

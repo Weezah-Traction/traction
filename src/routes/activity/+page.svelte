@@ -111,7 +111,6 @@
 
         {#if (state == 'activity')}
             <div id="activity">
-                <TimeToggler></TimeToggler>
                 <div class="bodyContent">
                     <ActivityStats></ActivityStats>
                     {#each runs as {id, date, distance, pace, emotion }}
@@ -140,14 +139,13 @@
                     </div>
                     <div class="recordSection">
                         <h6 class="recordFix">Records</h6>
-                        <div class="lav100 recordContainer"><RecordItem 
+                        <div class="recordContainer"><RecordItem 
                             name={filtered_records.title} 
                             stat={filtered_records.data}{filtered_records.measurement} 
                             thumb={filtered_records.icon}
                         ></RecordItem></div>
-                        <div class="recordFix">
-                            <AchievementsButton link="/activity/records" text="View Your Records"></AchievementsButton>
-                        </div>
+                        <AchievementsButton link="/activity/records" text="View Your Records"></AchievementsButton>
+          
                     </div>
                     <div class="otherSections">
                         <h6>Awards</h6>
@@ -160,8 +158,9 @@
                                 ></AchievementsFlowerContainer>
                             {/each}
                         </div>
-                        <AchievementsButton link="activity/awards" text="View All Awards"></AchievementsButton>
                     </div>
+                    <AchievementsButton link="activity/awards" text="View All Awards"></AchievementsButton>
+                    
                 </div>
             </div>
         {/if}

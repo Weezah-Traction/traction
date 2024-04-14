@@ -61,13 +61,14 @@
      .container {
           position: sticky;
           font-family: 'Poppins';
-          background-color:  var(--lavender-200);
+          background-color:  var(--lavender-100);
           display: flex;
           top: 0;
           justify-content: space-between;
           align-items: flex-end;
           width: 100%;
           height: 120px;
+          z-index: 1;
      }
 
      .headerText {
@@ -77,6 +78,7 @@
           gap: 10px;
           padding-bottom: 15px;
           padding-left: 15px;
+          color: var(--lavender-700);
      }
 
      .headerPageTitle {

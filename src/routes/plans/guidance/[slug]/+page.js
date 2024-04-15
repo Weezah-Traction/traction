@@ -16,7 +16,7 @@ export function load({ params }) {
     if (params.slug === 'during_runs') {
       return {
         header: 'During Runs',
-        blurb: "Time to prerun",
+        blurb: "This section covers what to do in order to make sure your runs are enjoyable and enriching!",
         title1: 'Practice Your Technique!',
         content1: "During your run, focus on maintaining proper form and rhythm. Start with a steady pace that allows you to find your stride without overexerting yourself. Keep your posture upright, shoulders relaxed, and arms swinging naturally at your sides. As you settle into your run, pay attention to your breathing – aim for deep, rhythmic inhales and exhales to fuel your muscles with oxygen.",
         title2: "Don't Stop Hydrating!",
@@ -29,7 +29,7 @@ export function load({ params }) {
     if (params.slug === 'after_runs') {
       return {
         header: 'After Runs',
-        blurb: "Time to prerun",
+        blurb: "After your runs are over, follow this guide to slow down, ground yourself, and make sure that you heal up.",
         title1: "Stretch When You Stop!",
         content1: "After crossing the finish line, it's time to prioritize your body's recovery. Start by cooling down with a few minutes of gentle walking or light jogging to gradually lower your heart rate and ease your muscles out of the intense activity. Then, transition into static stretches to help prevent stiffness and aid in muscle recovery. Focus on stretching major muscle groups such as your hamstrings, quads, calves, and hips, holding each stretch for 15-30 seconds.",
         title2: "Post-Run Fuel!",
@@ -42,7 +42,7 @@ export function load({ params }) {
     if (params.slug === 'general_care_motivation') {
       return {
         header: 'General Care',
-        blurb: "Time to prerun",
+        blurb: "This section contains general advice for running, mindset, and motivation!",
         title1: "Intentions",
         content1: "Every run is an opportunity to connect with your body, mind, and surroundings. Start by setting a clear intention for your run – whether it's to challenge yourself, relieve stress, or simply enjoy the moment. As you hit the pavement, focus on maintaining proper form and breathing rhythm, staying present in each step and embracing the journey.",
         title2: "Injury or Pain",

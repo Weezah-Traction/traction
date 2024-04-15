@@ -135,7 +135,7 @@
                             nextXP = {filtered_levels.xp}
                             streakNum = {filtered_levels.streak}
                         ></LevelCard>
-                        <AchievementsButton link="/activity/levels" text="View All Run Levels"></AchievementsButton>
+                        <AchievementsButton link="/activity/levels/" text="View All Run Levels"></AchievementsButton>
                     </div>
                     <div class="recordSection">
                         <h6 class="recordFix">Records</h6>
@@ -144,8 +144,8 @@
                             stat={filtered_records.data}{filtered_records.measurement} 
                             thumb={filtered_records.icon}
                         ></RecordItem></div>
-                        <AchievementsButton link="/activity/records" text="View Your Records"></AchievementsButton>
-          
+                        <AchievementsButton link="/activity/records/" text="View Your Records"></AchievementsButton>
+
                     </div>
                     <div class="otherSections">
                         <h6>Awards</h6>
@@ -159,7 +159,7 @@
                             {/each}
                         </div>
                     </div>
-                    <AchievementsButton link="activity/awards" text="View All Awards"></AchievementsButton>
+                    <AchievementsButton link="activity/awards/" text="View All Awards"></AchievementsButton>
                     
                 </div>
             </div>
@@ -199,14 +199,16 @@
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 10px;
-		margin: 20px 0 20px 20px;
+        margin: 0 20px;
 	}
 
 	.threeFlower {
-		display: flex;
-		width: 353px;
-		justify-content: space-between;
-		align-items: center;
+		width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 20px;
+        /* margin: .25em 1em; */
 	}
 
     .runlvl {

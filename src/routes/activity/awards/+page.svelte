@@ -77,16 +77,18 @@
 <slot>
      <HeaderWithBack page="awards"></HeaderWithBack>
      <div class="bodyContent">
-          <h6 class="rctawards">Recent Awards</h6>
-          <div class="mostRecentAwards">
-               
-               {#each filtered_awards as {title, date, xp}}
-               <AchievementsFlowerContainer
-                    name = {title}
-                    xp = {xp}
-                    date = {date}
-               ></AchievementsFlowerContainer>
-               {/each}
+          <div class="threeAwards">
+               <h6>Recent Awards</h6>
+               <div class="mostRecentAwards">
+                    
+                    {#each filtered_awards as {title, date, xp}}
+                    <AchievementsFlowerContainer
+                         name = {title}
+                         xp = {xp}
+                         date = {date}
+                    ></AchievementsFlowerContainer>
+                    {/each}
+               </div>
           </div>
           <div class="allAwards">
                <h6>All Awards</h6>
@@ -103,10 +105,17 @@
                     {/each}
                </div>
           </div>
+     </div>
      <NavigationBar></NavigationBar>
 </slot>
 
 <style>
+     .threeAwards {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          margin: 0 20px;
+     }
      .allAwards {
           display: flex;
           flex-direction: column;
@@ -115,22 +124,19 @@
           padding-top: 30px;
      }
       .mostRecentAwards {
-          display: flex;
-          flex-direction: row;
-          gap: 20px;
-          margin: 0 20px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-column-gap: 10px;
+          grid-row-gap: 20px;
      }
      .allAwardsContainer {
           display: grid;
-          grid-template-columns: 33% 33% 33%;
-          grid-row-gap: 20px;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-column-gap: 10px;
+          grid-row-gap: 10px;
      }
      .flowerBox {
           margin: 10px 0;
-     }
-
-     .rctawards {
-          margin: 10px 0px 0px 20px;
      }
 
 </style>

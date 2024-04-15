@@ -12,21 +12,25 @@
                     header="Pre-Run" 
                     desc="Stretches, mindset, and what to eat/drink." 
                     link="/plans/guidance/pre_run"
+                    icon="leaf"
                ></GuidanceItem></div>
                <div><GuidanceItem 
                     header="During Runs" 
                     desc="Learn the importance of posture and breathing."
                     link="/plans/guidance/during_runs"
+                    icon="rockon"
                ></GuidanceItem></div>
                <div><GuidanceItem
                     header="After Runs"
                     desc="Cool down and close your runs out with this guide."
                     link="/plans/guidance/after_runs"
+                    icon="blow"
                ></GuidanceItem></div>
                <div><GuidanceItem
                     header="General Care"
                     desc="Take care of yourself! This guide will help."
                     link="/plans/guidance/general_care_motivation"
+                    icon="coffee"
                ></GuidanceItem></div>
           </div>
      </div>

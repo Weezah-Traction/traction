@@ -20,6 +20,11 @@
         rightText = 'Achievements';
     }
 
+    if (target == ("/activity")){
+        leftText = 'Activity';
+        rightText = 'Achievements';
+    }
+
 	export let state;
 
 	function changeState(){
@@ -101,7 +106,7 @@ input[type="radio"] {
 	align-items: center;
 	justify-content: center;
 	height: 50px;
-	width: 180px;
+	width: 10rem;
 	font-size: 1rem;
 	font-weight: 500;
 	border-radius: 99px; 
@@ -152,7 +157,7 @@ input[id="radio-3"] {
 	position: absolute;
 	display: flex;
 	height: 50px;
-	width: 180px;
+	width: 10rem;
 	background-color: var(--lavender-400);
 	z-index: 0;
 	border-radius: 99px;

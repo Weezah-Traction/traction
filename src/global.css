@@ -222,7 +222,7 @@
   flex-direction: column;
   gap: 20px;
   margin: 20px 0;
-  padding-bottom: 10em;
+  padding-bottom: 6.875em;
   width: 100%;
   color: var(--lavender-700);
 }

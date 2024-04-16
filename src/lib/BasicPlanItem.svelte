@@ -19,7 +19,6 @@
     li{ 
         display: flex;
         flex-direction: row;
-        grid-column: 1/ span 5;
         padding: 20px 0px 20px 20px;
         margin: 0px 0px 0px 0px;
     }    

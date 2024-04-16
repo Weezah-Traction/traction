@@ -1,10 +1,33 @@
 <script>
      export let link;
-     import thumb from '$lib/assets/purple.jpg';
+     export let icon;
+
+     let thumb;
+     import blowThumb from '$lib/assets/blowIcon.svg';
+     import leafThumb from '$lib/assets/leafIcon.svg';
+     import rockonThumb from '$lib/assets/rockonIcon.svg';
+     import coffeeThumb from '$lib/assets/coffeeIcon.svg';
+
      let alt = 'A solid purple block.'
      
      export let desc;
      export let header;
+
+     if (icon == "blow"){
+          thumb = blowThumb;
+     }
+     
+     if (icon == "leaf"){
+          thumb = leafThumb;
+     }
+     
+     if (icon == "rockon"){
+          thumb = rockonThumb;
+     }
+     
+     if (icon == "coffee"){
+          thumb = coffeeThumb;
+     }
 
      import GuidanceItemText from "./GuidanceItemText.svelte";
 </script>
@@ -15,7 +38,7 @@
           <li class=guidanceItemContainer>
                <a href={link}>
                     <img src={thumb} alt={alt}>
-               </a>
+                </a>
                <div class="guidanceItemContent">
                     <h6 class="guidanceItemHeader">{header}</h6>
                     <GuidanceItemText desc={desc}></GuidanceItemText>
@@ -25,12 +48,22 @@
 </slot>
 
 <style>
-     img{
-          grid-column: 2 / span 2;
+     a {
+          background-color: var(--lavender-500);
+          border-radius: var(--standard-radius);
+          display: flex;
+          align-items: center;
+          justify-content: center;
           height: 110px;
-          width: 110px;
-          border-radius: 1em;
+          min-width: 110px;
      }
+
+     img{
+        grid-column: 2 / span 2;
+        width: 30px;
+        height: 24px;
+        margin-left: 8px 0px 16px 20px;
+    }
 
      li{
           display: flex;

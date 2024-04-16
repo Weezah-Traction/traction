@@ -14,7 +14,7 @@
 
 <style>
      .stretchesRadio {
-          width: 393px;
+          width: 100%;
           display: flex;
           justify-content: center;
      }

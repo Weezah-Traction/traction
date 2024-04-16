@@ -21,16 +21,16 @@
      }
      .achievementsFlowerContainer {
           display: flex;
-          width: 100px;
+          min-width: 6.25em;
+          min-height: 8.75em;
           flex-direction: column;
           align-items: center;
           justify-content: space-between;
           gap: 5px;
           flex-shrink: 0;
           align-self: stretch;
-          padding: 1em .25em;
+          padding: 20px .25em;
           border-radius: var(--standard-radius);
-          margin: .25em;
           background-color: var(--level-1);
      }
 </style>

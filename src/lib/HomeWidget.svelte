@@ -458,7 +458,7 @@
                                    ></AchievementsFlowerContainer>
                                    {/each}
                               </div>
-                              <AchievementsButton link="/activity/levels" text="View All Run Levels"></AchievementsButton>
+                              <AchievementsButton link="/activity/awards" text="View All Awards"></AchievementsButton>
                          </div>
 
                     {:else if (widgType == "records")}

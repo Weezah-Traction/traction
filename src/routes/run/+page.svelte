@@ -12,6 +12,9 @@
     /* Fancy Timer Interactions */
 
     /* 7 Minutes = 1 Mile*/
+
+    let c25kStatus;
+
     let timeSince;
     let timerMinutes;
     let timerSeconds;
@@ -122,12 +125,31 @@
             run_state = 'stopping';
             console.log(run_state);
         } 
+        else if (run_state == 'pausing'){
+            run_state = 'stopping';
+            console.log(run_state);
+        } 
         else if (run_state == 'stopping'){
             run_state = 'playing';
             console.log(run_state);
         }
         else {
-            run_state = 'stopping';
+            run_state = "stopping";
+        }
+    }
+
+    // Walk/Run C25k functionality
+
+    c25kStatus = "RUN";
+
+    setInterval(changeWalkRun, 30000);
+
+    function changeWalkRun() {
+        if (c25kStatus == "WALK"){
+            c25kStatus = "RUN";
+        }
+        else if (c25kStatus == "RUN"){
+            c25kStatus = "WALK";
         }
     }
 
@@ -155,7 +177,7 @@
             <div><RunWidget widgType = "distance" data = {distance}></RunWidget></div>
             <div><RunWidget widgType = "pace" data = {pace}></RunWidget></div>
             <div><RunWidget widgType = "timer" data = {timeReported}></RunWidget></div>
-            <div><RunWidget widgType = "c25k" data = "WALK"></RunWidget></div>
+            <div><RunWidget widgType = "c25k" data = {c25kStatus}></RunWidget></div>
         </div>
         <!-- <PauseButton></PauseButton>
         <StopButton></StopButton> -->

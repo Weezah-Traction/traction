@@ -38,9 +38,6 @@
             run_state = 'playing';
             console.log(run_state);
         }
-        else {
-            run_state = "pausing";
-        }
     }
 
     function stopIt(){
@@ -48,9 +45,16 @@
             run_state = 'stopping';
             console.log(run_state);
         } 
+        else if (run_state == 'pausing'){
+            run_state = 'stopping';
+            console.log(run_state);
+        } 
         else if (run_state == 'stopping'){
             run_state = 'playing';
             console.log(run_state);
+        }
+        else {
+            run_state = "stopping";
         }
     }
 

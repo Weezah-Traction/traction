@@ -141,7 +141,7 @@
     {:else if (tab == 'home')}
 <!-- Home -->
 
-        <div class="bodyContent">
+        <div class="bodyContentHome">
             <div class = "homehead">
                 <a class="dayBox" href="/plans">
                     <p class="dayBoxText">DAY</p>

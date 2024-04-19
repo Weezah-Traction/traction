@@ -25,7 +25,7 @@
     img{
         grid-column: 2 / span 2;
         width: 30px;
-        height: 24px;
+        height: 30px;
 
         margin-left: 8px 0px 16px 20px;
         

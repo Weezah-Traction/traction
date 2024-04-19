@@ -81,10 +81,11 @@
                <h6>Recent Awards</h6>
                <div class="mostRecentAwards">
                     
-                    {#each filtered_awards as {title, date, xp}}
+                    {#each filtered_awards as {title, xp, icon, date}}
                     <AchievementsFlowerContainer
                          name = {title}
                          xp = {xp}
+                         flowerType = {icon}
                          date = {date}
                     ></AchievementsFlowerContainer>
                     {/each}
@@ -98,7 +99,7 @@
                               <AchievementsFlowerContainer
                                    name = {title}
                                    xp = {xp}
-                                   thumb = {icon}
+                                   flowerType = {icon}
                                    date = {date}
                               ></AchievementsFlowerContainer>
                          </div>

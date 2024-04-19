@@ -150,8 +150,8 @@ export const records = [
 ]
 
 export const awards = [
-    {title: '10K Steps', type: 1, date:'3/9/2024', xp: '100 XP', icon: '$lib/assets/backIcon.svg'},
-    {title: '50K Steps', type: 0, date:'', xp: '500 XP', icon: '$lib/assets/flower.svg'},
+    {title: '10K Steps', type: 1, date:'3/9/2024', xp: '100 XP', icon: "clockBlue"},
+    {title: '50K Steps', type: 0, date:'', xp: '500 XP', icon: "crownBlue"},
     {title: '100K Steps', type: 0, date:'', xp: '1000 XP', icon: '$lib/assets/flower.svg'},
     {title: 'First Run', type: 1, date:'1/28/2024', xp: '50 XP', icon: '$lib/assets/flower.svg'},
     {title: '10 Runs', type: 1, date:'2/7/2024', xp: '100 XP', icon: '$lib/assets/flower.svg'},

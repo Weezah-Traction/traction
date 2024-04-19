@@ -5,7 +5,7 @@
 	import { onMount } from "svelte";
 
      export let data;
-     const {header, blurb, title1, content1, title2, content2, title3, content3} = data
+     const {header, blurb, title1, content1, title2, content2, title3, content3, title4, content4, title5, content5, title6, content6, title7, content7, title8, content8, title9, content9, title10, content10} = data
 
 </script>
 
@@ -20,6 +20,20 @@
                <p>{content2}</p>
                <h6>{title3}</h6>
                <p>{content3}</p>
+               <h6>{title4}</h6>
+               <p>{content4}</p>
+               <h6>{title5}</h6>
+               <p>{content5}</p>
+               <h6>{title6}</h6>
+               <p>{content6}</p>
+               <h6>{title7}</h6>
+               <p>{content7}</p>
+               <h6>{title8}</h6>
+               <p>{content8}</p>
+               <h6>{title9}</h6>
+               <p>{content9}</p>
+               <h6>{title10}</h6>
+               <p>{content10}</p>
           </div>
      </div>
      <NavigationBar></NavigationBar>

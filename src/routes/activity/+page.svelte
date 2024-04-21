@@ -142,7 +142,7 @@
                         <div class="recordContainer"><RecordItem 
                             name={filtered_records.title} 
                             stat={filtered_records.data}{filtered_records.measurement} 
-                            thumb={filtered_records.icon}
+                            flowerType={filtered_records.icon}
                         ></RecordItem></div>
                         <AchievementsButton link="/activity/records/" text="View Your Records"></AchievementsButton>
 
@@ -150,10 +150,11 @@
                     <div class="otherSections">
                         <h6>Awards</h6>
                         <div class="threeFlower">
-                            {#each filtered_awards as {title, date, xp}}
+                            {#each filtered_awards as {title, xp, icon, date}}
                                 <AchievementsFlowerContainer
                                     name = {title}
                                     xp = {xp}
+                                    flowerType = {icon}
                                     date = {date}
                                 ></AchievementsFlowerContainer>
                             {/each}

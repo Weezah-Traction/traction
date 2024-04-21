@@ -450,12 +450,13 @@
                     {:else if (widgType == "awards")}
                          <div class="expandedContent">
                               <div class="mostRecentAwards">
-                                   {#each filtered_awards as {title, date, xp}}
+                                   {#each filtered_awards as {title, xp, icon, date}}
                                    <AchievementsFlowerContainer
                                         name = {title}
                                         xp = {xp}
+                                        flowerType = {icon}
                                         date = {date}
-                                   ></AchievementsFlowerContainer>
+                               ></AchievementsFlowerContainer>
                                    {/each}
                               </div>
                               <AchievementsButton link="/activity/awards" text="View All Awards"></AchievementsButton>

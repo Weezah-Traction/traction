@@ -19,7 +19,7 @@
      <HeaderWithBack page="records"></HeaderWithBack>
      <div class="bodyContent">
           {#each records as {title, data, measurement, icon}}
-               <div><RecordItem name={title} stat={data}{measurement} thumb={icon}></RecordItem></div>
+               <div><RecordItem name={title} stat={data}{measurement} flowerType={icon}></RecordItem></div>
           {/each}
      </div>
      <NavigationBar></NavigationBar>

@@ -140,29 +140,34 @@ export const runs = [
 ]
 
 export const records = [
-    {id: 1, title: 'Longest Run', data: '20:45 ', measurement: '', icon: '$lib/assets/flower.svg'},
-    {id: 2, title: 'Farthest Run', data: '1.93 ', measurement: 'mi.', icon: '$lib/assets/flower.svg'},
-    {id: 3, title: 'Longest Streak', data: '1.93 ', measurement: 'days', icon: '$lib/assets/flower.svg'},
-    {id: 4, title: 'Fastest 5K', data: '24:45 ', measurement: '', icon: '$lib/assets/flower.svg'},
-    {id: 5, title: 'Fastest 10K', data: '34:40 ', measurement: '', icon: '$lib/assets/flower.svg'},
-    {id: 6, title: 'Fastest 1/2 Marathon', data: '45:00 ', measurement: '', icon: '$lib/assets/flower.svg'},
-    {id: 7, title: 'Farthest Marathon', data: '1:03:34 ', measurement: '', icon: '$lib/assets/flower.svg'}
+    {id: 1, title: 'Longest Run', data: '20:45 ', measurement: '', icon: "saplingBlue"},
+    {id: 2, title: 'Farthest Run', data: '1.93 ', measurement: 'mi.', icon: "saplingOrange"},
+    {id: 3, title: 'Longest Streak', data: '1.93 ', measurement: 'days', icon: "fireRed"},
+    {id: 4, title: 'Fastest 5K', data: '24:45 ', measurement: '', icon: "crownOrange"},
+    {id: 5, title: 'Fastest 10K', data: '34:40 ', measurement: '', icon: "crownBlue"},
+    {id: 6, title: 'Fastest 1/2 Marathon', data: '45:00 ', measurement: '', icon: "crownRed"},
+    {id: 7, title: 'Farthest Marathon', data: '1:03:34 ', measurement: '', icon: "crownPurple"}
 ]
 
 export const awards = [
-    {title: '10K Steps', type: 1, date:'3/9/2024', xp: '100 XP', icon: '$lib/assets/backIcon.svg'},
-    {title: '50K Steps', type: 0, date:'', xp: '500 XP', icon: '$lib/assets/flower.svg'},
-    {title: '100K Steps', type: 0, date:'', xp: '1000 XP', icon: '$lib/assets/flower.svg'},
-    {title: 'First Run', type: 1, date:'1/28/2024', xp: '50 XP', icon: '$lib/assets/flower.svg'},
-    {title: '10 Runs', type: 1, date:'2/7/2024', xp: '100 XP', icon: '$lib/assets/flower.svg'},
-    {title: '50 Runs', type: 0, date:'', xp: '500 XP', icon: '$lib/assets/flower.svg'},
-    {title: '100 Runs', type: 0, date:'', xp: '1000 XP', icon: '$lib/assets/flower.svg'},
-    {title: '7 Days', type: 1, date:'2/4/2024', xp: '100 XP', icon: '$lib/assets/flower.svg'},
-    {title: '20 Days', type: 0, date:'', xp: '250 XP', icon: '$lib/assets/flower.svg'},
-    {title: '50 Days', type: 0, date:'', xp: '750 XP', icon: '$lib/assets/flower.svg'},
-    {title: '100 Days', type: 0, date:'', xp: '1000 XP', icon: '$lib/assets/flower.svg'},
-    {title: '30 Days', type: 0, date:'', xp: '250 XP', icon: '$lib/assets/flower.svg'},
-    {title: '365 Days', type: 0, date:'', xp: '1000 XP', icon: '$lib/assets/flower.svg'}
+    {title: '10K Steps', type: 1, date:'3/9/2024', xp: '100 XP', icon: "saplingOrange"},
+    {title: '50K Steps', type: 0, date:'', xp: '500 XP', icon: "saplingOrange"},
+    {title: '100K Steps', type: 0, date:'', xp: '1000 XP', icon: 'saplingOrange'},
+    {title: 'Improve Your Mile Time by 1 Min.', type: 0, date:'', xp: '2000 XP', icon: 'clockBlue'},
+    {title: 'Improve Your Mile Time by 2 Min.', type: 0, date:'', xp: '3000 XP', icon: 'clockBlue'},
+    {title: 'Run a 5K in Under 45 Min.', type: 0, date:'', xp: '10000 XP', icon: 'crownBlue'},
+    {title: 'First Run', type: 1, date:'1/28/2024', xp: '50 XP', icon: 'saplingRed'},
+    {title: '10 Runs', type: 1, date:'2/7/2024', xp: '100 XP', icon: 'shoeRed'},
+    {title: '50 Runs', type: 0, date:'', xp: '500 XP', icon: 'shoeRed'},
+    {title: '100 Runs', type: 0, date:'', xp: '1000 XP', icon: 'shoeRed'},
+    {title: '7 Days', type: 1, date:'2/4/2024', xp: '100 XP', icon: 'fireOrange'},
+    {title: '20 Days', type: 0, date:'', xp: '250 XP', icon: 'fireOrange'},
+    {title: '50 Days', type: 0, date:'', xp: '750 XP', icon: 'fireOrange'},
+    {title: '100 Days', type: 0, date:'', xp: '1000 XP', icon: 'fireOrange'},
+    {title: 'Month-Long Streak', type: 0, date:'', xp: '250 XP', icon: 'fireOrange'},
+    {title: 'Year-Long Streak', type: 0, date:'', xp: '1000 XP', icon: 'fireOrange'},
+    {title: 'Early Bird', type: 0, date:'', xp: '1000 XP', icon: 'crownPurple'},
+    {title: 'Batman', type: 0, date:'', xp: '1000 XP', icon: 'crownPurple'}
 ]
 
 export const details = [

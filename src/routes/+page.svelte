@@ -224,7 +224,7 @@
     }
 
     .dayBoxText {
-        color: var(--lavender-100);
+        color: white;
         margin: 0;
     }
 

@@ -1,13 +1,23 @@
 <script>
+     export let stretch_state;
 
+	function changeToOne(){
+          stretch_state = 'stretch1';
+     }
+     function changeToTwo(){
+          stretch_state = 'stretch2';
+     }
+     function changeToThree(){
+          stretch_state = 'stretch3';
+     }
 </script>
 
 <slot>
      <div class="stretchesRadio">
           <fieldset>          
-               <input type="radio" id="one" name="stretches" value="one" checked />
-               <input type="radio" id="two" name="stretches" value="two" />
-               <input type="radio" id="three" name="stretches" value="three" />
+               <input type="radio" id="one" on:click={changeToOne} name="stretches" value="one" checked />
+               <input type="radio" id="two" on:click={changeToTwo} name="stretches" value="two" />
+               <input type="radio" id="three" on:click={changeToThree} name="stretches" value="three" />
           </fieldset>
      </div>
 </slot>

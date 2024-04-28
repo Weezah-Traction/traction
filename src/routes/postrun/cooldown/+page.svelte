@@ -19,6 +19,7 @@
         <!-- <div class="desc">
             <p>You can find more cooldown stretches on the Plans screen!</p>
         </div> -->
+        <StretchesRadio bind:stretch_state></StretchesRadio>
             {#if (stretch_state == 'stretch1')}
 
                 <div class="stretchContent"> <!--Might need to add a gallery component here for the stretches-->
@@ -50,7 +51,6 @@
             </div>
 
             {/if}
-            <StretchesRadio bind:stretch_state></StretchesRadio>
             <PostrunButtons page="cooldown"></PostrunButtons>
     </div>
 </slot>

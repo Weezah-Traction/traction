@@ -32,7 +32,8 @@
 
 <style>
      .nav-butts {
-          position: absolute; bottom: 0;
+          position: fixed; 
+          bottom: 0;
           width: 100%;
           display: flex;
           flex-direction: column;

@@ -33,7 +33,7 @@
     }
 
     if (type == "activity"){
-        alt = "Activity"
+        alt = "Summary"
         icon = activityIcon;
         link = '/activity'
     }

@@ -159,8 +159,9 @@
                                 ></AchievementsFlowerContainer>
                             {/each}
                         </div>
+                        <AchievementsButton link="activity/awards/" text="View All Awards"></AchievementsButton>
                     </div>
-                    <AchievementsButton link="activity/awards/" text="View All Awards"></AchievementsButton>
+                    
                     
                 </div>
             </div>
@@ -175,14 +176,14 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 10px;
+		gap: 1em;
 	}
 
     .recordSection {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 10px;
+		gap: .75em;
 		margin-top: 20px;
         margin-bottom: 10px;
 	}
@@ -199,7 +200,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 10px;
+		gap: 1em;
         margin: 0 20px;
 	}
 

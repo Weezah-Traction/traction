@@ -116,6 +116,10 @@
      img {
           height: 55px;
           width: 55px;
+
+          background-color: #ffffff;
+          padding: .5em;
+          border-radius: 3em;
      }
 
      .container{
@@ -129,7 +133,7 @@
           align-items: center;
           gap: 20px;
           align-self: stretch;
-          background-color: var(--lavender-200);
+          background-color: var(--level-2);
           color: var(--lavender-700);
           border-radius: var(--standard-radius);
      }

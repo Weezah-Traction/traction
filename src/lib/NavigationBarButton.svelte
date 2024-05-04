@@ -66,6 +66,7 @@
         align-items: center;
         justify-content: center;
         text-decoration: none;
+        width: 80px;
     }
 
     img {

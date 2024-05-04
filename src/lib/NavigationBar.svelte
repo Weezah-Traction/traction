@@ -43,18 +43,16 @@
         bottom: 0;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         left: 0;
         list-style: none;
         margin: 0;
-        padding: 0;
         padding-bottom: .75em;
+        padding: 0;
         position: fixed;
         right: 0;
         z-index: 5;
     }
 
-    nav{
 
-    }
 </style>

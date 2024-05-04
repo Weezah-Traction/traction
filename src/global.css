@@ -37,11 +37,13 @@
 
   /* Run Levels */
 
-  --level-1: #fff6fa;
-  --level-1-text: #ff629c;
+  --level-1: #ffe6f1;
+  --level-1-text: #e23273;
+  
+  --level-2: #ddeffb;
+  --level-2-text: #ffffff;
 
-  --level-2: #f9f6ff;
-  --level-3: #f9f6ff;
+  --level-3: #fff4e5;
   --level-4: #f9f6ff;
   --level-5: #f9f6ff;
   --level-6: #f9f6ff;

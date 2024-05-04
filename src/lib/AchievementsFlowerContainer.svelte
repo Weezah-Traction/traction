@@ -111,10 +111,17 @@
      p {
           text-align: center;
      }
+
+     .flower{
+          background-color: #ffffff;
+          padding: 1em;
+          border-radius: 3em;
+     }
+
      .achievementsFlowerContainer {
           display: flex;
-          min-width: 6.25em;
-          min-height: 8.75em;
+          min-width: 6.5em;
+          min-height: 12em;
           flex-direction: column;
           align-items: center;
           justify-content: space-between;
@@ -123,6 +130,6 @@
           align-self: stretch;
           padding: 20px .25em;
           border-radius: var(--standard-radius);
-          background-color: var(--level-1);
+          background-color: var(--level-3);
      }
 </style>

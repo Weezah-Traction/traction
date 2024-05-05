@@ -47,12 +47,13 @@
         left: 0;
         list-style: none;
         margin: 0;
-        padding-bottom: .75em;
-        padding: 0;
+        padding: 0 .25em .75em;
         position: fixed;
         right: 0;
         z-index: 5;
     }
+
+
 
 
 </style>

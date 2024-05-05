@@ -19,7 +19,7 @@
 
       a{
           margin: auto;
-          width: 23em;
+          width: 22em;
           display: flex;
           height: 3em;
           justify-content: center;

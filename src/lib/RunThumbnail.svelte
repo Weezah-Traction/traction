@@ -69,7 +69,7 @@
           display: flex;
           justify-content: space-between;
           background-color: var(--lavender-200);
-          margin: 0 .5em;
+          margin: 0;
           align-items: center;
           gap: 10px;
           padding: 10px;

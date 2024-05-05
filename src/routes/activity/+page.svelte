@@ -159,7 +159,7 @@
                                 ></AchievementsFlowerContainer>
                             {/each}
                         </div>
-                        <AchievementsButton link="activity/awards/" text="View All Awards"></AchievementsButton>
+                        <AchievementsButton link="/activity/awards/" text="View All Awards"></AchievementsButton>
                     </div>
                     
                     

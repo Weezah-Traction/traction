@@ -130,6 +130,7 @@
           flex-shrink: 0;
           align-self: stretch;
           padding: 20px .25em;
+          padding-top: .1em;
           border-radius: var(--standard-radius);
      }
 </style>

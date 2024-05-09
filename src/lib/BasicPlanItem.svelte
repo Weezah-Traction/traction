@@ -19,7 +19,7 @@
     li{ 
         display: flex;
         flex-direction: row;
-        padding: 20px 0px 20px 20px;
+        padding: 1em;
         margin: 0px 0px 0px 0px;
     }    
 </style>

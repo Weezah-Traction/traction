@@ -14,7 +14,7 @@
 
     a{
         background-color: var(--lavender-500);
-        border-radius: .75em;
+        border-radius: var(--standard-radius);
         display: flex;
         align-items: center;
         justify-content: center;

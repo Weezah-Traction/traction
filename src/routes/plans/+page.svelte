@@ -50,8 +50,6 @@
 <style>
 
     .guidance-block{
-        background-color: var(--lavender-200);
-        margin: auto 1em;
         border-radius: var(--standard-radius);
     }
 

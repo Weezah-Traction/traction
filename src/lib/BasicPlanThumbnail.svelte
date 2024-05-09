@@ -14,12 +14,12 @@
 
     a{
         background-color: var(--lavender-500);
-        border-radius: var(--standard-radius);
+        border-radius: .75em;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 110px;
-        width: 110px;
+        width: 110px; 
     }
 
     img{

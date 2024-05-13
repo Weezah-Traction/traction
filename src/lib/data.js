@@ -150,7 +150,7 @@ export const records = [
 ]
 
 export const awards = [
-    {title: '10K Steps', type: 1, date:'3/9/2024', xp: '100 XP', icon: "shoeOrange"},
+    {title: '10K Steps', type: 0, date:'', xp: '100 XP', icon: "shoeOrange"},
     {title: '50K Steps', type: 0, date:'', xp: '500 XP', icon: "shoeBlue"},
     {title: '100K Steps', type: 0, date:'', xp: '1000 XP', icon: 'shoeRed'},
     {title: 'Improve Your Mile Time by 1 Min.', type: 0, date:'', xp: '2000 XP', icon: 'clockOrange'},
@@ -160,10 +160,10 @@ export const awards = [
     {title: 'Run a Half Marathon', type: 0, date:'', xp: '10000 XP', icon: 'shoePurple'},
     {title: 'Run a Marathon', type: 0, date:'', xp: '20000 XP', icon: 'crownPurple'},
     {title: 'First Run', type: 1, date:'1/28/2024', xp: '50 XP', icon: 'saplingOrange'},
-    {title: '10 Runs', type: 1, date:'2/7/2024', xp: '100 XP', icon: 'saplingBlue'},
+    {title: '10 Runs', type: 0, date:'', xp: '100 XP', icon: 'saplingBlue'},
     {title: '50 Runs', type: 0, date:'', xp: '500 XP', icon: 'saplingRed'},
     {title: '100 Runs', type: 0, date:'', xp: '1000 XP', icon: 'saplingPurple'},
-    {title: '7-Day Streak', type: 1, date:'2/4/2024', xp: '100 XP', icon: 'fireOrange'},
+    {title: '7-Day Streak', type: 0, date:'', xp: '100 XP', icon: 'fireOrange'},
     {title: '20-Day Streak', type: 0, date:'', xp: '250 XP', icon: 'fireBlue'},
     {title: '50-Day Streak', type: 0, date:'', xp: '750 XP', icon: 'fireRed'},
     {title: '100-Day Steak', type: 0, date:'', xp: '1000 XP', icon: 'firePurple'},
